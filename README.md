@@ -28,4 +28,4 @@ You are free to share and adapt the material for **non-commercial** purposes, as
 استفاده از این کدها تحت لایسنس **CC BY-NC-SA 4.0** مجاز است. هرگونه استفاده تجاری یا انتشار بدون ذکر نام پدیدآورندگان ممنوع می‌باشد.
 
 ## 📥 Download
-You can download the latest compiled PDF from the [Releases](https://github.com/ArsalanDalvand/atomathix-latex) section.
+You can download the latest compiled PDF from the [Releases](https://github.com/ArsalanDalvand/atomathix-latex/releases/) section.
