@@ -1,0 +1,32 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۳: جابجایی دامنه و برد در وارون
+رابطه}\label{تمرین-۳---رابطه-دامنه-و-برد-با-وارون}
+\begin{tldr}{خلاصه سریع}
+وقتی رابطه را وارون می‌کنیم، جای ورودی‌ها و خروجی‌ها عوض می‌شود. پس دامنه
+تبدیل به برد و برد تبدیل به دامنه می‌شود.
+\end{tldr}
+\subsection{۱. صورت
+سوال}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644}
+ثابت کنید برای هر رابطه \(\mathcal{R}\): الف)
+\(Dom(\mathcal{R}^{-1}) = Im(\mathcal{R})\) ب)
+\(Im(\mathcal{R}^{-1}) = Dom(\mathcal{R})\)
+\lr{[cite\_start][cite: }830-832{]}
+\subsection{۲. اثبات}\label{ux627ux62bux628ux627ux62a}
+\begin{info}{اثبات قسمت (الف)}
+\[y \in Im(\mathcal{R})\]
+\[\iff \exists x \in A, (x,y) \in \mathcal{R}\] (تعریف برد)
+\[\iff \exists x \in A, (y,x) \in \mathcal{R}^{-1}\] (تعریف وارون)
+\[\iff y \in Dom(\mathcal{R}^{-1})\] (تعریف دامنه برای
+\(\mathcal{R}^{-1}\))
+\end{info}
+\begin{info}{اثبات قسمت (ب)}
+\[x \in Dom(\mathcal{R})\]
+\[\iff \exists y \in B, (x,y) \in \mathcal{R}\]
+\[\iff \exists y \in B, (y,x) \in \mathcal{R}^{-1}\]
+\[\iff x \in Im(\mathcal{R}^{-1})\]
+\end{info}

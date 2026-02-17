@@ -1,0 +1,53 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۲۲: یگانگی وارون (چپ و
+راست)}\label{تمرین-۲۲---یگانگی-تابع-وارون}
+\begin{tldr}{خلاصه سریع}
+اگر تابعی هم «وارون چپ» (\(g\)) داشته باشد و هم «وارون راست» (\(h\))،
+آنگاه تابع اصلی حتماً دوسویی است و آن دو وارون با هم برابرند
+(\(g=h=f^{-1}\)). \emph{این قضیه ثابت می‌کند که یک تابع نمی‌تواند دو وارون
+متفاوت داشته باشد.}
+\end{tldr}
+\subsection{۱. صورت
+تمرین}\label{ux635ux648ux631ux62a-ux62aux645ux631ux6ccux646}
+\begin{info}{سوال}
+فرض کنید \(f: X \rightarrow Y\). اگر توابع \(g: Y \rightarrow X\) و
+\(h: Y \rightarrow X\) طوری باشند که:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(g \circ f = I_X\) (وارون چپ)
+\item
+  \(f \circ h = I_Y\) (وارون راست)
+\end{enumerate}
+ثابت کنید \(f\) دوسویی است و \(g = h = f^{-1}\).
+\end{info}
+\subsection{۲. اثبات (بسیار زیبا و
+جبری)}\label{ux627ux62bux628ux627ux62a-ux628ux633ux6ccux627ux631-ux632ux6ccux628ux627-ux648-ux62cux628ux631ux6cc}
+\begin{info}{اثبات برابری \(g\) و \(h\)}
+از خاصیت شرکت‌پذیری و خاصیت همانی استفاده می‌کنیم.
+\[g = g \circ I_Y\] (چون \(I_Y\) خنثی است)
+\[= g \circ (f \circ h)\] (جایگذاری \(I_Y\) با فرض \(f \circ h\))
+\[= (g \circ f) \circ h\] (استفاده از خاصیت شرکت‌پذیری - پرانتز را جابجا
+کردیم)
+\[= I_X \circ h\] (جایگذاری \(g \circ f\) با فرض مسئله)
+\[= h\] (چون \(I_X\) خنثی است)
+\textbf{نتیجه:} \(g = h\). حال چون این تابع هم چپ و هم راست وارون \(f\)
+است، پس \(f\) وارون‌پذیر (دوسویی) است و \(g=h=f^{-1}\).
+\end{info}
+\subsection{۳. اثبات یک‌به‌یک و پوشا بودن (روش
+دوم)}\label{ux627ux62bux628ux627ux62a-ux6ccux6a9ux628ux647ux6ccux6a9-ux648-ux67eux648ux634ux627-ux628ux648ux62fux646-ux631ux648ux634-ux62fux648ux645}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{یک‌به‌یک:} اگر \(f(x_1)=f(x_2)\)، با اعمال \(g\) به طرفین داریم
+  \(g(f(x_1))=g(f(x_2)) \Rightarrow I(x_1)=I(x_2) \Rightarrow x_1=x_2\).
+\item
+  \textbf{پوشا:} برای هر \(y\)، اگر قرار دهیم \(x=h(y)\)، آنگاه
+  \(f(x)=f(h(y))=I_Y(y)=y\). پس برای هر \(y\)، یک \(x\) وجود دارد.
+\end{itemize}

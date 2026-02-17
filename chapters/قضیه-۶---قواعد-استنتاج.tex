@@ -1,0 +1,128 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قضیه ۶: قواعد استنتاج اصلی
+\lr{(Inference Rules)}}{قضیه ۶: قواعد استنتاج اصلی }}\label{قضیه-۶---قواعد-استنتاج}
+\begin{tldr}{خلاصه سریع}
+این قضیه «موتورهای محرک» اثبات‌های ریاضی هستند. قیاس استثنایی (تایید شرط)
+و قیاس دفع (انکار نتیجه)، دو روش بنیادین برای استخراج حقایق جدید از
+حقایق قبلی می‌باشند.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(p\) و \(q\) دو گزاره دلبخواه باشند. قواعد زیر، که همگی
+\textbf{راستگو \lr{(Tautology)}} هستند، اساس استدلال ریاضی را تشکیل
+می‌دهند:
+\begin{theorembox}{قضیه ۶}
+\textbf{الف) قیاس استثنایی \lr{(Modus Ponens):}}
+\[[(p \rightarrow q) \wedge p] \Rightarrow q\] \textbf{ب) قیاس دفع
+\lr{(Modus Tollens):}}
+\[[(p \rightarrow q) \wedge \sim q] \Rightarrow \sim p\] \textbf{ج)
+برهان خلف \lr{(Proof by Contradiction):}}
+\[(p \rightarrow q) \leftrightarrow [(p \wedge \sim q) \rightarrow c]\]
+\emph{(که در آن \(c\) نماد تناقض است)}
+\end{theorembox}
+\subsection{۲. اثبات و تحلیل (با جدول
+ارزش)}\label{ux627ux62bux628ux627ux62a-ux648-ux62aux62dux644ux6ccux644-ux628ux627-ux62cux62fux648ux644-ux627ux631ux632ux634}
+برای اطمینان از صحت «قیاس دفع»، جدول ارزش آن را رسم می‌کنیم. ما باید نشان
+دهیم که فرض‌های \([(p \to q) \wedge \sim q]\) منطقاً منجر به نتیجه
+\(\sim p\) می‌شوند.
+{\def\LTcaptype{none}
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0882}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0882}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0882}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0882}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2353}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0882}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.3235}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+\(p\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(q\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\((p \to q)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(\sim q\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+فرض کل: \((p \to q) \wedge \sim q\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(\sim p\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+کل استدلال \((\Rightarrow)\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\lr{T} & \lr{T} & \lr{T} & \lr{F} & \lr{F} & \lr{F} & \textbf{\lr{T}} \\
+\lr{T} & \lr{F} & \lr{F} & \lr{T} & \lr{F} & \lr{F} & \textbf{\lr{T}} \\
+\lr{F} & \lr{T} & \lr{T} & \lr{F} & \lr{F} & \lr{T} & \textbf{\lr{T}} \\
+\lr{F} & \lr{F} & \lr{T} & \lr{T} & \textbf{\lr{T}} & \textbf{\lr{T}} &
+\textbf{\lr{T}} \\
+\end{longtable}
+}
+\begin{info}{تحلیل اثبات}
+۱. ستون پنجم (فرض کل) تنها در \textbf{ردیف آخر} درست است (جایی که مقدم
+دروغ و تالی هم دروغ است). ۲. در همین ردیف آخر، نتیجه (\(\sim p\)) نیز
+\textbf{درست} است (چون \(p\) دروغ است). ۳. در سایر ردیف‌ها که فرض غلط
+است، طبق تعریف استلزام، کل گزاره شرطی به طور پیش‌فرض درست است (انتفای
+مقدم). ۴. نتیجه: ستون آخر تماماً \textbf{\lr{T}} است، پس قیاس دفع یک
+قانون معتبر است.
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه، نقطه همگرایی قضایای قبلی برای تولید نتیجه است:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۲---هم‌ارزی‌های-منطقی-پایه}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f2---ux647ux645ux627ux631ux632ux6ccux647ux627ux6cc-ux645ux646ux637ux642ux6cc-ux67eux627ux6ccux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ریشه نظری قیاس دفع:} قیاس دفع (قسمت ب) در واقع فرزندِ
+  \textbf{قانون عکس نقیض} (قضیه ۲) است.
+  \begin{itemize}
+  \tightlist
+  \item
+    طبق قضیه ۲ داریم: \((p \to q) \equiv (\sim q \to \sim p)\).
+  \item
+    حال اگر از «قیاس استثنایی» \lr{(Modus Ponens) }روی
+    \((\sim q \to \sim p)\) استفاده کنیم (یعنی \(\sim q\) را داشته
+    باشیم)، مستقیماً \(\sim p\) را نتیجه می‌دهد.
+  \item
+    بنابراین: \textbf{قیاس دفع = عکس نقیض + قیاس استثنایی}.
+  \end{itemize}
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با \autoref{قضیه-۵---قیاس-ها}
+(قیاس‌های
+ذو‌الوجهین)}{۲. ارتباط با  (قیاس‌های ذو‌الوجهین)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f5---ux642ux6ccux627ux633-ux647ux627-ux642ux6ccux627ux633ux647ux627ux6cc-ux630ux648ux627ux644ux648ux62cux647ux6ccux646}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تعمیم ساختاری:} قیاس‌های ذو‌الوجهین نسخه‌های پیشرفته و دوبلِ همین
+  قواعد هستند:
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{قیاس ذو‌الوجهین موجب}، تعمیم «قیاس استثنایی» است (دو شرط و
+    انتخاب یکی از مقدم‌ها).
+  \item
+    \textbf{قیاس ذو‌الوجهین منفی}، تعمیم «قیاس دفع» است (دو شرط و نفی یکی
+    از تالی‌ها).
+  \end{itemize}
+\end{itemize}
+\subsubsection{\texorpdfstring{۴. ارتباط با
+\autoref{قضیه-۷---قوانین-تناقض}
+(تناقض)}{۴. ارتباط با  (تناقض)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f7---ux642ux648ux627ux646ux6ccux646-ux62aux646ux627ux642ux636-ux62aux646ux627ux642ux636}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{زیربنای برهان خلف:} قسمت (ج) این قضیه (برهان خلف) مستقیماً به
+  مفهوم \(c\) (تناقض) وابسته است که ویژگی‌های جبری آن در قضیه ۷ بررسی
+  می‌شود. برهان خلف می‌گوید: «اگر فرض \(p\) و نفی \(q\) ما را به یک بن‌بست
+  منطقی (\(c\)) برساند، پس راه را اشتباه آمده‌ایم و \(p \to q\) باید درست
+  باشد».
+\end{itemize}

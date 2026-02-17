@@ -1,0 +1,77 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۱۰: عدم وجود مجموعه جهانی
+مطلق}\label{قضیه-۱۰---عدم-وجود-مجموعه-جهانی}
+\begin{tldr}{خلاصه سریع}
+این قضیه بیان می‌کند که چیزی به نام «مجموعه همه مجموعه‌ها» وجود ندارد. اگر
+چنین مجموعه‌ای وجود داشته باشد، ریاضیات دچار فروپاشی منطقی می‌شود. این
+حکم، راه حلی برای گریز از پارادوکس راسل است.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+هیچ مجموعه‌ای به نام \(\mathcal{U}\) (مجموعه جهانی) وجود ندارد که شامل
+تمام مجموعه‌ها باشد.
+\begin{theorembox}{قضیه ۱۰}
+\[\nexists \mathcal{U} : \forall S, (S \in \mathcal{U})\]
+\end{theorembox}
+\subsection{۲. اثبات صوری (برهان
+خلف)}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-ux628ux631ux647ux627ux646-ux62eux644ux641}
+این اثبات از \textbf{\autoref{مفهوم-پارادوکس-راسل}} به عنوان موتور محرک
+استفاده می‌کند.
+\begin{info}{مراحل اثبات}
+۱. \textbf{فرض خلف:} فرض کنید مجموعه جهانی \(\mathcal{U}\) وجود دارد که
+شامل تمام مجموعه‌هاست. ۲. طبق اصل تصریح
+\lr{(Axiom of Separation)، }می‌توانیم زیرمجموعه‌ای از \(\mathcal{U}\) را
+با یک ویژگی خاص جدا کنیم. زیرمجموعه \(R\) را چنین تعریف می‌کنیم:
+\[R = \{ S \in \mathcal{U} \mid S \notin S \}\] ۳. چون \(R\) یک
+زیرمجموعه خوش‌تعریف از \(\mathcal{U}\) است و \(\mathcal{U}\) شامل همه
+مجموعه‌هاست، پس خود \(R\) نیز باید عضوی از \(\mathcal{U}\) باشد
+(\(R \in \mathcal{U}\)). ۴. اکنون وضعیت عضویت \(R\) در خودش را بررسی
+می‌کنیم:
+\begin{itemize}
+\tightlist
+\item
+  اگر \(R \in R \implies R \notin R\) (طبق تعریف \(R\)).
+\item
+  اگر \(R \notin R \implies R \in R\) (طبق تعریف \(R\)). ۵. به تناقض
+  \((R \in R \iff R \notin R)\) می‌رسیم. ۶. \textbf{نتیجه:} فرض اولیه
+  (وجود \(\mathcal{U}\)) باطل است.
+\end{itemize}
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه مرزهای نظریه مجموعه‌ها را مشخص می‌کند:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{مفهوم-پارادوکس-راسل}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux645ux641ux647ux648ux645-ux67eux627ux631ux627ux62fux648ux6a9ux633-ux631ux627ux633ux644}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{رابطه علت و معلولی:} \autoref{مفهوم-پارادوکس-راسل} «مشکل» را
+  نشان می‌دهد و قضیه ۱۰ «راه حل» (حذف مجموعه جهانی) را ارائه می‌دهد. بدون
+  تعریف \(R\) در پارادوکس راسل، اثبات این قضیه ممکن نیست.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{پیشنیاز---تعریف-مجموعه-توانی}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux67eux6ccux634ux646ux6ccux627ux632---ux62aux639ux631ux6ccux641-ux645ux62cux645ux648ux639ux647-ux62aux648ux627ux646ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{قضیه کانتور:} قضیه ۱۰ با قضیه کانتور (که می‌گوید
+  \(|A| < |\mathcal{P}(A)|\)) هم‌خوانی دارد. اگر \(\mathcal{U}\) وجود
+  داشت، باید \(\mathcal{P}(\mathcal{U})\) زیرمجموعه‌ای از \(\mathcal{U}\)
+  می‌شد (چون \(\mathcal{U}\) شامل همه چیز است). این یعنی اندازه کل کوچکتر
+  از جزء می‌شود که محال است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۱---شمول-تهی}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1---ux634ux645ux648ux644-ux62aux647ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تضاد در کران‌ها:} در \autoref{قضیه-۱---شمول-تهی} ثابت کردیم
+  «کوچکترین» مجموعه (\(\emptyset\)) وجود دارد و یکتاست. قضیه ۱۰ ثابت
+  می‌کند که «بزرگترین» مجموعه (\(\mathcal{U}\)) وجود ندارد. ساختار
+  مجموعه‌ها از پایین بسته و از بالا باز است.
+\end{itemize}

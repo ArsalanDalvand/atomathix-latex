@@ -1,0 +1,94 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۱۳: حفظ اشتراک در توابع
+یک‌به‌یک}\label{قضیه-۱۳---حفظ-اشتراک-در-توابع-یک‌به‌یک}
+\begin{tldr}{خلاصه سریع}
+در حالت کلی، تصویر تابع با اشتراک جابجا نمی‌شود
+(\(f(A \cap B) \neq f(A) \cap f(B)\)). این قضیه شرط لازم و کافی برای
+برقراری این تساوی را بیان می‌کند: تابع باید \textbf{یک‌به‌یک
+\lr{(Injective)}} باشد. در این صورت، ساختار اشتراک دقیقاً در هم‌دامنه حفظ
+می‌شود.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(f: X \to Y\) یک تابع باشد و
+\(\{A_\gamma\}_{\gamma \in \Gamma}\) خانواده‌ای از زیرمجموعه‌های دامنه
+\(X\) باشد. اگر \(f\) \textbf{یک‌به‌یک} باشد، آنگاه:
+\begin{theorembox}{قضیه ۱۳}
+\[f\left(\bigcap_{\gamma \in \Gamma} A_\gamma\right) = \bigcap_{\gamma \in \Gamma} f(A_\gamma)\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+برای اثبات تساوی دو مجموعه، از روش شمول دوطرفه استفاده می‌کنیم.
+\subsubsection{\texorpdfstring{بخش اول: شمول مستقیم
+(\(\subseteq\))}{بخش اول: شمول مستقیم (\textbackslash subseteq)}}\label{ux628ux62eux634-ux627ux648ux644-ux634ux645ux648ux644-ux645ux633ux62aux642ux6ccux645-subseteq}
+این بخش برای \textbf{هر تابعی} (چه یک‌به‌یک باشد چه نباشد) صادق است و در
+\textbf{\autoref{قضیه-۱۰---تعمیم-تصویر-اجتماع-و-اشتراک}} اثبات شده است:
+\[f\left(\bigcap_{\gamma \in \Gamma} A_\gamma\right) \subseteq \bigcap_{\gamma \in \Gamma} f(A_\gamma)\]
+\subsubsection{\texorpdfstring{بخش دوم: شمول معکوس
+(\(\supseteq\))}{بخش دوم: شمول معکوس (\textbackslash supseteq)}}\label{ux628ux62eux634-ux62fux648ux645-ux634ux645ux648ux644-ux645ux639ux6a9ux648ux633-supseteq}
+این بخش نیازمند فرض \textbf{یک‌به‌یک} بودن تابع است.
+\begin{info}{برهان}
+۱. فرض کنیم \(y\) عضو دلخواهی از سمت راست تساوی باشد:
+\[y \in \bigcap_{\gamma \in \Gamma} f(A_\gamma)\]
+۲. طبق تعریف اشتراک تعمیم‌یافته:
+\[\forall \gamma \in \Gamma, \quad y \in f(A_\gamma)\]
+۳. طبق تعریف تصویر مجموعه، برای هر اندیس \(\gamma\)، باید عنصری در
+\(A_\gamma\) وجود داشته باشد که تصویرش \(y\) شود. فرض کنیم برای هر
+\(\gamma\)، این عنصر \(x_\gamma\) باشد:
+\[\forall \gamma \in \Gamma, \exists x_\gamma \in A_\gamma : f(x_\gamma) = y\]
+۴. \textbf{کاربرد فرض یک‌به‌یک:} اکنون مجموعه‌ای از پیش‌نگاره‌ها داریم
+\(\{x_\gamma\}_{\gamma \in \Gamma}\) که همگی توسط \(f\) به \(y\) نگاشته
+می‌شوند. چون \(f\) تابع است و مقدار \(y\) ثابت است، و مهم‌تر از آن چون
+\(f\) \textbf{یک‌به‌یک} است، تمام این پیش‌نگاره‌ها باید یکسان باشند (تابع
+یک‌به‌یک نمی‌تواند دو ورودی متمایز را به یک خروجی ببرد).
+\[f(x_\alpha) = y \wedge f(x_\beta) = y \implies f(x_\alpha) = f(x_\beta) \xrightarrow{\text{1-1}} x_\alpha = x_\beta\]
+بنابراین یک عنصر یکتا (مثلاً \(x_0\)) وجود دارد که:
+\[x_0 = x_\gamma, \quad \forall \gamma \in \Gamma\]
+۵. چون \(x_0\) همان \(x_\gamma\) است و \(x_\gamma \in A_\gamma\)، پس:
+\[\forall \gamma \in \Gamma, \quad x_0 \in A_\gamma\]
+۶. طبق تعریف اشتراک، \(x_0\) در اشتراک خانواده است:
+\[x_0 \in \bigcap_{\gamma \in \Gamma} A_\gamma\]
+۷. چون \(f(x_0) = y\)، پس:
+\[y \in f\left(\bigcap_{\gamma \in \Gamma} A_\gamma\right)\]
+\textbf{نتیجه:} \(\text{RHS} \subseteq \text{LHS}\).
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. تکمیل
+\autoref{قضیه-۱۰---تعمیم-تصویر-اجتماع-و-اشتراک}}{۱. تکمیل }}\label{ux62aux6a9ux645ux6ccux644-ux642ux636ux6ccux647-ux6f1ux6f0---ux62aux639ux645ux6ccux645-ux62aux635ux648ux6ccux631-ux627ux62cux62aux645ux627ux639-ux648-ux627ux634ux62aux631ux627ux6a9}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{رفع نقص:} قضیه ۱۰ بیان می‌کرد که
+  \(f(\cap A) \subseteq \cap f(A)\). قضیه ۱۳ متمم آن است و نشان می‌دهد که
+  ``یک‌به‌یک بودن'' شرط کافی برای تبدیل این زیرمجموعه به تساوی است. در
+  واقع، ناتوانی تابع معمولی در حفظ اشتراک، ناشی از ``تلاقی''
+  \lr{(Collision) }ورودی‌های متمایز در یک خروجی مشترک است که در توابع
+  یک‌به‌یک رخ نمی‌دهد.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{انواع-توابع---یک‌به‌یک-پوشا-و-دوسویی}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux627ux646ux648ux627ux639-ux62aux648ux627ux628ux639---ux6ccux6a9ux628ux647ux6ccux6a9-ux67eux648ux634ux627-ux648-ux62fux648ux633ux648ux6ccux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تعریف کاربردی:} اثبات این قضیه یکی از مهم‌ترین کاربردهای تعریف
+  صوری یک‌به‌یک بودن (\(f(x_1)=f(x_2) \implies x_1=x_2\)) در نظریه
+  مجموعه‌هاست. در گام ۴ اثبات، دقیقاً از همین استلزام منطقی برای یکی کردن
+  تمام \(x_\gamma\)ها استفاده شد.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۱۱---رفتار-جبری-تصویر-وارون}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1ux6f1---ux631ux641ux62aux627ux631-ux62cux628ux631ux6cc-ux62aux635ux648ux6ccux631-ux648ux627ux631ux648ux646}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تقارن جبری:} تصویر وارون (\(f^{-1}\)) همیشه اشتراک را حفظ
+  می‌کند (\(f^{-1}(\cap B) = \cap f^{-1}(B)\)). قضیه ۱۳ نشان می‌دهد که اگر
+  \(f\) یک‌به‌یک باشد، تصویر مستقیم (\(f\)) نیز رفتاری مشابه تصویر وارون
+  پیدا می‌کند و ``هم‌ریختی'' \lr{(Homomorphism) }کامل نسبت به عملیات
+  مجموعه‌ای برقرار می‌شود.
+\end{itemize}

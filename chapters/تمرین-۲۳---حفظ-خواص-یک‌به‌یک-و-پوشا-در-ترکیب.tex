@@ -1,0 +1,64 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۲۳: انتقال خواص در ترکیب
+توابع}\label{تمرین-۲۳---حفظ-خواص-یک‌به‌یک-و-پوشا-در-ترکیب}
+\begin{tldr}{خلاصه سریع}
+\begin{itemize}
+\tightlist
+\item
+  ترکیبِ توابع \textbf{یک‌به‌یک}، حتماً \textbf{یک‌به‌یک} است.
+\item
+  ترکیبِ توابع \textbf{پوشا}، حتماً \textbf{پوشا} است.
+\item
+  (و در نتیجه: ترکیب توابع دوسویی، دوسویی است).
+\end{itemize}
+\end{tldr}
+\subsection{۱. صورت
+تمرین}\label{ux635ux648ux631ux62a-ux62aux645ux631ux6ccux646}
+\begin{info}{سوال}
+فرض کنید \(f: X \rightarrow Y\) و \(g: Y \rightarrow Z\). الف) اگر
+\(f, g\) یک‌به‌یک باشند، ثابت کنید \(g \circ f\) یک‌به‌یک است. ب) اگر
+\(f, g\) پوشا باشند، ثابت کنید \(g \circ f\) پوشا است.
+\end{info}
+\subsection{۲. اثبات (الف) -
+یک‌به‌یک}\label{ux627ux62bux628ux627ux62a-ux627ux644ux641---ux6ccux6a9ux628ux647ux6ccux6a9}
+\begin{info}{اثبات}
+فرض کنید \((g \circ f)(x_1) = (g \circ f)(x_2)\). باید ثابت کنیم
+\(x_1 = x_2\).
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  طبق تعریف: \(g(f(x_1)) = g(f(x_2))\).
+\item
+  چون \(g\) \textbf{یک‌به‌یک} است، می‌توانیم \(g\) را از طرفین برداریم:
+  \[f(x_1) = f(x_2)\]
+\item
+  حالا چون \(f\) \textbf{یک‌به‌یک} است، می‌توانیم \(f\) را برداریم:
+  \[x_1 = x_2\] \(\blacksquare\)
+\end{enumerate}
+\end{info}
+\subsection{۳. اثبات (ب) -
+پوشا}\label{ux627ux62bux628ux627ux62a-ux628---ux67eux648ux634ux627}
+\begin{info}{اثبات}
+باید ثابت کنیم بردِ تابع ترکیبی، کل مجموعه \(Z\) است
+(\((g \circ f)(X) = Z\)).
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  چون \(g\) \textbf{پوشا} است، برد آن کل \(Z\) است (\(g(Y) = Z\)).
+\item
+  چون \(f\) \textbf{پوشا} است، برد آن کل \(Y\) است (\(f(X) = Y\)).
+\item
+  حال برد تابع مرکب را حساب می‌کنیم: \[(g \circ f)(X) = g(f(X))\]
+\item
+  جایگذاری رابطه (۲): \[= g(Y)\]
+\item
+  جایگذاری رابطه (۱): \[= Z\] \(\blacksquare\)
+\end{enumerate}
+\end{info}

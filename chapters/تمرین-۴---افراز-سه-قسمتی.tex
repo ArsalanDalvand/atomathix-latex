@@ -1,0 +1,59 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۴: افراز سه قسمتی و تعیین
+کلاس‌ها}\label{تمرین-۴---افراز-سه-قسمتی}
+\subsection{۱. صورت
+سوال}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644}
+\begin{info}{فرض کنید \(X=\{a,b,c,d,e\}\) و \(\mathcal{P}=\{\{a,b\},\{c\},\{d,e\}\}\) باشد.}
+\textbf{الف)} نشان دهید که \(\mathcal{P}\) یک افراز \(X\) است.
+\textbf{ب)} رابطه هم‌ارزی \(X/\mathcal{P}\) را به صورت مجموعه جفت‌های مرتب
+مشخص کنید. \textbf{پ)} مجموعه خارج‌قسمتی \(X/\mathcal{P}\) را
+\(\mathcal{E}\) بنامید و کلاس‌های \(a/\mathcal{E}\)، \(c/\mathcal{E}\)،
+\(d/\mathcal{E}\) و \(e/\mathcal{E}\) را صریحاً مشخص کنید.
+\end{info}
+\subsection{۲. استراتژی
+حل}\label{ux627ux633ux62aux631ux627ux62aux698ux6cc-ux62dux644}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{الف:} بررسی سه شرط افراز (ناتهی بودن، جدا بودن، پوشش کامل).
+\item
+  \textbf{ب:} تشکیل رابطه با ضرب دکارتی هر مجموعه در خودش (مشابه تمرین
+  ۱).
+\item
+  \textbf{پ:} تعیین کلاس هم‌ارزی برای هر عضو (یعنی آن عضو متعلق به کدام
+  زیرمجموعه از افراز است).
+\end{itemize}
+\subsection{۳. حل
+تشریحی}\label{ux62dux644-ux62aux634ux631ux6ccux62dux6cc}
+\begin{info}{پاسخ}
+\textbf{قسمت (الف):} فرض کنیم \(A_1=\{a,b\}\)، \(A_2=\{c\}\) و
+\(A_3=\{d,e\}\). ۱. هر سه مجموعه ناتهی هستند. ۲. اشتراک آنها دو به دو
+تهی است (\(A_1 \cap A_2 = \emptyset\) و \ldots). ۳. اجتماع آنها کل \(X\)
+را می‌سازد: \(\{a,b\} \cup \{c\} \cup \{d,e\} = X\). پس \(\mathcal{P}\)
+یک افراز است.
+\textbf{قسمت (ب): رابطه هم‌ارزی} رابطه برابر است با
+\((A_1 \times A_1) \cup (A_2 \times A_2) \cup (A_3 \times A_3)\):
+\[R = \{(a,a),(b,b),(a,b),(b,a)\} \cup \{(c,c)\} \cup \{(d,d),(e,e),(d,e),(e,d)\}\]
+مجموعاً ۹ زوج مرتب خواهد داشت.
+\textbf{قسمت (پ): کلاس‌های هم‌ارزی} کلاس هم‌ارزی \(x\) (نماد
+\(x/\mathcal{E}\)) همان زیرمجموعه‌ای از افراز است که \(x\) در آن قرار
+دارد:
+\begin{itemize}
+\tightlist
+\item
+  \(a\) در بسته \(\{a,b\}\) است \(\Rightarrow a/\mathcal{E} = \{a,b\}\)
+\item
+  \(b\) هم در همان بسته است \(\Rightarrow b/\mathcal{E} = \{a,b\}\)
+\item
+  \(c\) در بسته \(\{c\}\) است \(\Rightarrow c/\mathcal{E} = \{c\}\)
+\item
+  \(d\) در بسته \(\{d,e\}\) است \(\Rightarrow d/\mathcal{E} = \{d,e\}\)
+\item
+  \(e\) در بسته \(\{d,e\}\) است \(\Rightarrow e/\mathcal{E} = \{d,e\}\)
+\end{itemize}
+\end{info}

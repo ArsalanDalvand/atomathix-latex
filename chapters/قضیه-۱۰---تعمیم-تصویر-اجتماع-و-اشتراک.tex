@@ -1,0 +1,111 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۱۰: رفتار تصویر تابع با اجتماع و اشتراک
+تعمیم‌یافته}\label{قضیه-۱۰---تعمیم-تصویر-اجتماع-و-اشتراک}
+\begin{tldr}{خلاصه سریع}
+این قضیه، \textbf{\autoref{قضیه-۹---تصویر-و-تصویر-وارون-مجموعه}} را برای
+خانواده‌های نامتناهی تعمیم می‌دهد. نتیجه مهم این است که عملگر تصویر
+(\(f\)) با عملگر اجتماع (\(\bigcup\)) کاملاً جابجا می‌شود (هم‌ریختی)، اما
+در برابر اشتراک (\(\bigcap\)) ضعیف عمل کرده و تنها یک رابطه زیرمجموعه‌ای
+را حفظ می‌کند.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(f: X \to Y\) یک تابع باشد و
+\(\{A_\gamma\}_{\gamma \in \Gamma}\) خانواده‌ای از زیرمجموعه‌های دامنه
+\(X\) باشد.
+\begin{theorembox}{قضیه ۱۰}
+\textbf{الف) حفظ دقیق اجتماع:}
+\[f\left(\bigcup_{\gamma \in \Gamma} A_\gamma\right) = \bigcup_{\gamma \in \Gamma} f(A_\gamma)\]
+\textbf{ب) حفظ شمول در اشتراک:}
+\[f\left(\bigcap_{\gamma \in \Gamma} A_\gamma\right) \subseteq \bigcap_{\gamma \in \Gamma} f(A_\gamma)\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+\subsubsection{اثبات قسمت (الف): تساوی
+اجتماع}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux627ux644ux641-ux62aux633ux627ux648ux6cc-ux627ux62cux62aux645ux627ux639}
+برای اثبات تساوی، نشان می‌دهیم گزاره‌نمای عضویت در طرفین هم‌ارز است. نکته
+کلیدی، \textbf{جابه‎جایی دو سور وجودی} است.
+\begin{info}{برهان}
+\[y \in f\left(\bigcup_{\gamma \in \Gamma} A_\gamma\right)\] ۱. طبق
+تعریف تصویر مستقیم:
+\[\iff \exists x \left( x \in \bigcup_{\gamma \in \Gamma} A_\gamma \wedge f(x) = y \right)\]
+۲. طبق تعریف اجتماع تعمیم‌یافته (سور وجودی):
+\[\iff \exists x \left( [\exists \gamma \in \Gamma, x \in A_\gamma] \wedge f(x) = y \right)\]
+۳. طبق قوانین منطق مرتبه اول، می‌توانیم ترتیب دو سور وجودی را عوض کنیم و
+گزاره مستقل (\(f(x)=y\)) را به داخل ببریم:
+\[\iff \exists \gamma \in \Gamma \left( \exists x [x \in A_\gamma \wedge f(x) = y] \right)\]
+۴. عبارت داخل پرانتز دقیقاً تعریف \(y \in f(A_\gamma)\) است:
+\[\iff \exists \gamma \in \Gamma \left( y \in f(A_\gamma) \right)\]
+۵. طبق تعریف اجتماع تعمیم‌یافته:
+\[\iff y \in \bigcup_{\gamma \in \Gamma} f(A_\gamma)\]
+\textbf{نتیجه:} دو مجموعه با هم برابرند.
+\end{info}
+\subsubsection{اثبات قسمت (ب): شمول
+اشتراک}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux628-ux634ux645ux648ux644-ux627ux634ux62aux631ux627ux6a9}
+در اینجا تساوی برقرار نیست زیرا سور وجودی (در تعریف تصویر) و سور عمومی
+(در تعریف اشتراک) با هم جابجا نمی‌شوند.
+\begin{info}{برهان}
+۱. فرض کنید \(y\) عضو دلخواهی از سمت چپ باشد:
+\[y \in f\left(\bigcap_{\gamma \in \Gamma} A_\gamma\right)\]
+۲. طبق تعریف تصویر، عنصری مانند \(x_0\) وجود دارد که:
+\[x_0 \in \bigcap_{\gamma \in \Gamma} A_\gamma \quad \text{و} \quad f(x_0) = y\]
+۳. طبق تعریف اشتراک، \(x_0\) در تمام مجموعه‌ها حضور دارد:
+\[\forall \gamma \in \Gamma, x_0 \in A_\gamma\]
+۴. چون \(x_0 \in A_\gamma\) و \(f(x_0) = y\)، پس برای هر \(\gamma\)،
+عنصر \(y\) تصویری از عضوی در \(A_\gamma\) است. بنابراین:
+\[\forall \gamma \in \Gamma, y \in f(A_\gamma)\]
+۵. طبق تعریف اشتراک تعمیم‌یافته:
+\[y \in \bigcap_{\gamma \in \Gamma} f(A_\gamma)\]
+\textbf{نتیجه:} \(LHS \subseteq RHS\).
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. تعمیم
+\autoref{قضیه-۹---تصویر-و-تصویر-وارون-مجموعه}}{۱. تعمیم }}\label{ux62aux639ux645ux6ccux645-ux642ux636ux6ccux647-ux6f9---ux62aux635ux648ux6ccux631-ux648-ux62aux635ux648ux6ccux631-ux648ux627ux631ux648ux646-ux645ux62cux645ux648ux639ux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{گذر از متناهی به نامتناهی:} قضیه ۹ بیان می‌کرد که
+  \(f(A \cup B) = f(A) \cup f(B)\). قضیه ۱۰ نشان می‌دهد که این ویژگی جبری
+  حتی اگر تعداد مجموعه‌ها بی‌نهایت باشد (خانواده ایندکس‌دار) همچنان برقرار
+  است. این ویژگی در توپولوژی برای تعریف پیوستگی با مجموعه‌های باز بسیار
+  حیاتی است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۱---پخش‌پذیری-حاصلضرب-دکارتی} (ریشه منطقی عدم
+تساوی)}{۲. ارتباط با  (ریشه منطقی عدم تساوی)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1---ux67eux62eux634ux67eux630ux6ccux631ux6cc-ux62dux627ux635ux644ux636ux631ux628-ux62fux6a9ux627ux631ux62aux6cc-ux631ux6ccux634ux647-ux645ux646ux637ux642ux6cc-ux639ux62fux645-ux62aux633ux627ux648ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{چرا اشتراک مساوی نیست؟} در منطق گزاره‌ها، می‌دانیم که
+  \(\exists x (P(x) \wedge Q(x))\) لزوماً هم‌ارز با
+  \((\exists x P(x)) \wedge (\exists x Q(x))\) نیست.
+  \begin{itemize}
+  \tightlist
+  \item
+    مثال نقض کلاسیک: \(A_1 = \{1\}, A_2 = \{2\}\) و تابع ثابت
+    \(f(x) = c\).
+  \item
+    اشتراک دامنه‌ها تهی است (\(f(\emptyset) = \emptyset\)).
+  \item
+    اما اشتراک تصاویر \(\{c\} \cap \{c\} = \{c\}\) است.
+  \item
+    این شکاف منطقی تنها زمانی پر می‌شود که تابع \textbf{یک‌به‌یک} باشد (که
+    در قضایای بعدی بررسی می‌شود).
+  \end{itemize}
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۸---لم-چسباندن-(اجتماع-توابع)}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f8---ux644ux645-ux686ux633ux628ux627ux646ux62fux646-ux627ux62cux62aux645ux627ux639-ux62aux648ux627ux628ux639}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{سازگاری با چسباندن:} بخش (الف) این قضیه تضمین می‌کند که اگر
+  توابعی را روی دامنه‌های \(A_\gamma\) تعریف کنیم، تصویر نهایی اجتماعِ
+  دامنه‌ها، دقیقاً برابر با اجتماعِ بردهای جزئی است. این پایه منطقی برای
+  تحلیل توابع چندضابطه‌ای روی دامنه‌های پیچیده است.
+\end{itemize}

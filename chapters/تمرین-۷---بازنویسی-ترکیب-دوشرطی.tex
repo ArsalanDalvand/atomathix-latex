@@ -1,0 +1,47 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۷: تعریف باز شده‌ی ترکیب
+دوشرطی}\label{تمرین-۷---بازنویسی-ترکیب-دوشرطی}
+\begin{tldr}{خلاصه سریع}
+عبارت «اگر و تنها اگر» (\(p \leftrightarrow q\)) یعنی این دو گزاره
+سرنوشت یکسانی دارند: یا \textbf{هر دو راستگو} هستند (\(p \land q\))، یا
+\textbf{هر دو دروغگو} (\(\sim p \land \sim q\)).
+\[(p \leftrightarrow q) \equiv (p \land q) \lor (\sim p \land \sim q)\]
+\end{tldr}
+\subsection{۱. اثبات}\label{ux627ux62bux628ux627ux62a}
+\begin{info}{تحلیل حالت‌ها}
+گزاره \(p \leftrightarrow q\) زمانی ارزش \textbf{\lr{T}} (درست) دارد که
+ارزش \(p\) و \(q\) یکسان باشد. بیایید حالت‌ها را چک کنیم:
+\textbf{حالت اول: هر دو درست باشند \lr{(T, T)}}
+\begin{itemize}
+\tightlist
+\item
+  سمت چپ: \(T \leftrightarrow T\) (درست).
+\item
+  سمت راست: \((T \land T) \lor (F \land F) \equiv T \lor F \equiv T\)
+  (درست).
+\end{itemize}
+\textbf{حالت دوم: هر دو نادرست باشند \lr{(F, F)}}
+\begin{itemize}
+\tightlist
+\item
+  سمت چپ: \(F \leftrightarrow F\) (درست).
+\item
+  سمت راست: \((F \land F) \lor (T \land T) \equiv F \lor T \equiv T\)
+  (درست).
+\end{itemize}
+\textbf{حالت سوم: یکی درست و دیگری نادرست \lr{(T, F }یا \lr{F, T)}}
+\begin{itemize}
+\tightlist
+\item
+  سمت چپ: \(T \leftrightarrow F\) (نادرست).
+\item
+  سمت راست: \((T \land F) \lor (F \land T) \equiv F \lor F \equiv F\)
+  (نادرست).
+\end{itemize}
+چون در تمام حالات نتایج یکسان بود، هم‌ارزی برقرار است.
+\end{info}

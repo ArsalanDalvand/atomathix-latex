@@ -1,0 +1,135 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{مفاهیم بنیادین نظریه
+مجموعه‌ها}\label{پیشنیاز---مفاهیم-بنیادین-مجموعه‌ها}
+\begin{tldr}{خلاصه سریع}
+این بخش به تعریف دقیق مفاهیم پایه‌ای می‌پردازد که سنگ‌بنای تمام قضایای فصل
+۲ هستند: «زیرمجموعه» بر پایه استلزام منطقی، «مجموعه توانی» به عنوان فضای
+تمام زیرمجموعه‌ها، و «خانواده‌های ایندکس‌دار» که تعمیم عملیات جبری با
+استفاده از سورها هستند.
+\end{tldr}
+\subsection{۱. زیرمجموعه و مجموعه
+تهی}\label{ux632ux6ccux631ux645ux62cux645ux648ux639ux647-ux648-ux645ux62cux645ux648ux639ux647-ux62aux647ux6cc}
+درک دقیق این مفاهیم نیازمند گذر از تعاریف شهودی به تعاریف مبتنی بر منطق
+گزاره‌ها (فصل ۱) است.
+\subsubsection{الف) تعریف صوری
+زیرمجموعه}\label{ux627ux644ux641-ux62aux639ux631ux6ccux641-ux635ux648ux631ux6cc-ux632ux6ccux631ux645ux62cux645ux648ux639ux647}
+مجموعه \(A\) را زیرمجموعه \(B\) می‌نامیم (\(A \subseteq B\)) هرگاه شرط
+عضویت در \(A\)، عضویت در \(B\) را ایجاب کند. این تعریف با استفاده از
+گزاره شرطی و سور عمومی بیان می‌شود:
+\begin{tldr}{تعریف ۱: زیرمجموعه}
+\[A \subseteq B \iff \forall x (x \in A \rightarrow x \in B)\]
+\end{tldr}
+\textbf{تحلیل منطقی (ارتباط با جدول ارزش):}
+\begin{itemize}
+\tightlist
+\item
+  اگر \(A\) مجموعه تهی باشد (\(\emptyset\))، گزاره \(x \in A\) برای هر
+  \(x\) همواره \textbf{نادرست \lr{(F)}} است.
+\item
+  در منطق گزاره‌ها، استلزام \(F \rightarrow Q\) (انتفای مقدم) همواره
+  \textbf{راست \lr{(T)}} است.
+\item
+  بنابراین، شرط زیرمجموعه بودن برای \(\emptyset\) نسبت به هر مجموعه
+  دلبخواه \(B\) به صورت «تُهی‌مایه» \lr{(Vacuously) }برقرار است.
+\end{itemize}
+\subsubsection{ب) تعریف اصل موضوعی
+تهی}\label{ux628-ux62aux639ux631ux6ccux641-ux627ux635ux644-ux645ux648ux636ux648ux639ux6cc-ux62aux647ux6cc}
+مجموعه تهی (\(\emptyset\))، مجموعه‌ای است که فاقد عضو باشد. این تعریف را
+می‌توان با استفاده از اصل تصریح \lr{(Specification) }و یک گزاره همواره
+تناقض (مانند \(x \neq x\)) صورتمندی کرد:
+\begin{tldr}{تعریف ۲: تهی}
+\[\emptyset = \{ x \mid x \neq x \}\]
+\end{tldr}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۲. مجموعه توانی
+\lr{(Power Set)}}{۲. مجموعه توانی }}\label{ux645ux62cux645ux648ux639ux647-ux62aux648ux627ux646ux6cc-power-set}
+مجموعه توانی، گذر از «عنصر» به «مجموعه» است. این مجموعه، فضای حالت تمام
+زیرمجموعه‌های ممکن را می‌سازد.
+\subsubsection{تعریف
+ریاضی}\label{ux62aux639ux631ux6ccux641-ux631ux6ccux627ux636ux6cc}
+برای هر مجموعه \(A\)، مجموعه توانی آن که با \(\mathcal{P}(A)\) یا
+\(2^A\) نمایش داده می‌شود، عبارت است از مجموعه تمام زیرمجموعه‌های \(A\):
+\begin{tldr}{تعریف ۳: مجموعه توانی}
+\[\mathcal{P}(A) = \{ S \mid S \subseteq A \}\]
+\end{tldr}
+\textbf{نکته کاردینالیتی:} اگر \(|A| = n\) باشد، آنگاه
+\(|\mathcal{P}(A)| = 2^n\). این ویژگی با استفاده از بسط دوجمله‌ای
+\((1+1)^n\) و مجموع ضرایب ترکیب \(\sum C(n,r)\) قابل اثبات است.
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۳. خانواده‌های ایندکس‌دار
+\lr{(Indexed Families)}}{۳. خانواده‌های ایندکس‌دار }}\label{ux62eux627ux646ux648ux627ux62fux647ux647ux627ux6cc-ux627ux6ccux646ux62fux6a9ux633ux62fux627ux631-indexed-families}
+زمانی که با مجموعه‌های نامتناهی یا تعداد دلخواهی از مجموعه‌ها سر و کار
+داریم، عملیات اجتماع و اشتراک باینری (دوتایی) کافی نیستند. در اینجا از
+یک \textbf{مجموعه اندیس (\(\Gamma\))} استفاده می‌کنیم که به هر عضو آن
+(\(\gamma \in \Gamma\)) یک مجموعه \(A_\gamma\) اختصاص داده شده است.
+\subsubsection{تعمیم عملیات با
+سورها}\label{ux62aux639ux645ux6ccux645-ux639ux645ux644ux6ccux627ux62a-ux628ux627-ux633ux648ux631ux647ux627}
+تعاریف اجتماع و اشتراک تعمیم‌یافته، ترجمه مستقیم سورهای وجودی
+(\(\exists\)) و عمومی (\(\forall\)) در نظریه مجموعه‌ها هستند:
+\begin{tldr}{تعاریف ۴ و ۵: عملیات تعمیم‌یافته}
+\textbf{۱. اجتماع \lr{(Generalized Union):}} معادل سور وجودی
+\[x \in \bigcup_{\gamma \in \Gamma} A_\gamma \iff \exists \gamma \in \Gamma, (x \in A_\gamma)\]
+\emph{(ترجمه: \(x\) عضو اجتماع است اگر \textbf{حداقل یک} اندیس موجود
+باشد که \(x\) در مجموعه متناظر آن باشد).}
+\textbf{۲. اشتراک \lr{(Generalized Intersection):}} معادل سور عمومی
+\[x \in \bigcap_{\gamma \in \Gamma} A_\gamma \iff \forall \gamma \in \Gamma, (x \in A_\gamma)\]
+\emph{(ترجمه: \(x\) عضو اشتراک است اگر \textbf{به ازای تمام} اندیس‌های
+موجود، \(x\) در مجموعه‌های متناظر باشد).}
+\end{tldr}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۴. شبکه ارتباطی با قضایای فصل
+\lr{(Analytic Map)}}{۴. شبکه ارتباطی با قضایای فصل }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux642ux636ux627ux6ccux627ux6cc-ux641ux635ux644-analytic-map}
+این تعاریف، زیربنای اثبات قضایای اصلی فصل ۲ و ۳ هستند:
+\subsubsection{\texorpdfstring{۱. زیرمجموعه \(\leftarrow\)
+\autoref{قضیه-۱---شمول-تهی}}{۱. زیرمجموعه \textbackslash leftarrow }}\label{ux632ux6ccux631ux645ux62cux645ux648ux639ux647-leftarrow-ux642ux636ux6ccux647-ux6f1---ux634ux645ux648ux644-ux62aux647ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  اثبات اینکه «تهی زیرمجموعه هر مجموعه‌ای است»، مستقیماً از تحلیل جدول
+  ارزش گزاره شرطی در تعریف ۱ (انتفای مقدم) استخراج می‌شود.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. استلزام منطقی \(\leftarrow\)
+\autoref{قضیه-۲---تعدی-در-مجموعه-ها}}{۲. استلزام منطقی \textbackslash leftarrow }}\label{ux627ux633ux62aux644ux632ux627ux645-ux645ux646ux637ux642ux6cc-leftarrow-ux642ux636ux6ccux647-ux6f2---ux62aux639ux62fux6cc-ux62fux631-ux645ux62cux645ux648ux639ux647-ux647ux627}
+\begin{itemize}
+\tightlist
+\item
+  خاصیت تعدی زیرمجموعه‌ها
+  (\(A \subseteq B \wedge B \subseteq C \Rightarrow A \subseteq C\))،
+  بازتاب مستقیم قانون تعدی در منطق
+  (\(p \to q \wedge q \to r \Rightarrow p \to r\)) است که در تعریف
+  زیرمجموعه نهفته است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. مجموعه توانی \(\leftarrow\)
+\autoref{قضیه-۳---تعداد-اعضای-مجموعه-توانی}}{۳. مجموعه توانی \textbackslash leftarrow }}\label{ux645ux62cux645ux648ux639ux647-ux62aux648ux627ux646ux6cc-leftarrow-ux642ux636ux6ccux647-ux6f3---ux62aux639ux62fux627ux62f-ux627ux639ux636ux627ux6cc-ux645ux62cux645ux648ux639ux647-ux62aux648ux627ux646ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  قضیه ۳ که تعداد زیرمجموعه‌ها را شمارش می‌کند، بر پایه تعریف مجموعه توانی
+  و ارتباط آن با ضرایب دوجمله‌ای (فصل ۱) بنا شده است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۴. سورهای عمومی \(\leftarrow\)
+\autoref{قضیه-۷.---تعمیم-اشتراک-و-اجتماع}}{۴. سورهای عمومی \textbackslash leftarrow }}\label{ux633ux648ux631ux647ux627ux6cc-ux639ux645ux648ux645ux6cc-leftarrow-ux642ux636ux6ccux647-ux6f7.---ux62aux639ux645ux6ccux645-ux627ux634ux62aux631ux627ux6a9-ux648-ux627ux62cux62aux645ux627ux639}
+\begin{itemize}
+\tightlist
+\item
+  تعریف اشتراک با سور \(\forall\) گره خورده است.\_در قضیه ۷، وقتی
+  \(\Gamma = \emptyset\) باشد، شرط «به ازای هر \(\gamma \in \emptyset\)»
+  به دلیل دروغ بودن مقدم، برای تمام عناصر جهان (\(U\)) درست می‌شود. این
+  پدیده \lr{(Vacuous Truth) }باعث می‌شود اشتراک روی تهی برابر با مجموعه
+  مرجع گردد.
+\end{itemize}
+\subsubsection{\texorpdfstring{۵. سورها و نقیض \(\leftarrow\)
+\autoref{قضیه-۸---تعمیم-دمورگان}}{۵. سورها و نقیض \textbackslash leftarrow }}\label{ux633ux648ux631ux647ux627-ux648-ux646ux642ux6ccux636-leftarrow-ux642ux636ux6ccux647-ux6f8---ux62aux639ux645ux6ccux645-ux62fux645ux648ux631ux6afux627ux646}
+\begin{itemize}
+\tightlist
+\item
+  \_از آنجا که اجتماع با \(\exists\) و اشتراک با \(\forall\) تعریف
+  می‌شوند، قوانین دمورگان برای مجموعه‌ها (\((\cup A_i)' = \cap A_i'\)
+  دقیقاً همان قوانین \textbf{نقیض سورها} در منطق
+  (\(\sim \exists \equiv \forall \sim\)) هستند.
+\end{itemize}

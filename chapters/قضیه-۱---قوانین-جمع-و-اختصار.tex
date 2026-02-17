@@ -1,0 +1,176 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۱: قوانین جمع و اختصار (با تکیه بر گزاره‌های عطفی و
+فصلی)}\label{قضیه-۱---قوانین-جمع-و-اختصار}
+\begin{tldr}{خلاصه سریع}
+این قضیه مجوزهای ورود و خروج اطلاعات در منطق است:
+\begin{itemize}
+\tightlist
+\item
+  \textbf{جمع \lr{(Addition):}} اگر یک حقیقت (\(p\)) دارید، می‌توانید آن
+  را با هر چیز دیگری در یک «ترکیب فصلی» (یا) جمع کنید.
+\item
+  \textbf{اختصار \lr{(Simplification):}} اگر یک «ترکیب عطفی» (و) دارید،
+  می‌توانید اجزای آن را جدا کرده و به عنوان حقیقت استفاده کنید.
+\end{itemize}
+\end{tldr}
+\subsection{۱. تعاریف پایه: گزاره‌های عطفی و
+فصلی}\label{ux62aux639ux627ux631ux6ccux641-ux67eux627ux6ccux647-ux6afux632ux627ux631ux647ux647ux627ux6cc-ux639ux637ux641ux6cc-ux648-ux641ux635ux644ux6cc}
+برای درک این قضیه، ابتدا باید تعاریف دقیق عملگرهای \(\wedge\) و \(\vee\)
+را طبق جداول ارزش بدانیم.
+\subsubsection{\texorpdfstring{الف) ترکیب عطفی \lr{(Conjunction) }-
+عملگر
+\(\wedge\)}{الف) ترکیب عطفی - عملگر \textbackslash wedge}}\label{ux627ux644ux641-ux62aux631ux6a9ux6ccux628-ux639ux637ux641ux6cc-conjunction---ux639ux645ux644ux6afux631-wedge}
+رابط \(\wedge\) بین دو گزاره \(p\) و \(q\) قرار می‌گیرد و گزاره مرکب
+\(p \wedge q\) را می‌سازد. این ترکیب تنها زمانی \textbf{راست \lr{(T)}}
+است که \textbf{هر دو مؤلفه} راست باشند.
+{\def\LTcaptype{none}
+\begin{longtable}[]{@{}ccc@{}}
+\toprule\noalign{}
+\(p\) & \(q\) & \(p \wedge q\) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\lr{T} & \lr{T} & \textbf{\lr{T}} \\
+\lr{T} & \lr{F} & \lr{F} \\
+\lr{F} & \lr{T} & \lr{F} \\
+\lr{F} & \lr{F} & \lr{F} \\
+\emph{(جدول ۲ - ارزش‌های ترکیب عطفی)} & & \\
+\end{longtable}
+}
+\subsubsection{\texorpdfstring{ب) ترکیب فصلی \lr{(Disjunction) }- عملگر
+\(\vee\)}{ب) ترکیب فصلی - عملگر \textbackslash vee}}\label{ux628-ux62aux631ux6a9ux6ccux628-ux641ux635ux644ux6cc-disjunction---ux639ux645ux644ux6afux631-vee}
+رابط \(\vee\) برای تشکیل گزاره مرکب \(p \vee q\) به کار می‌رود. این رابط
+به معنای «یای شمول» است؛ یعنی اگر \textbf{حداقل یکی} از مؤلفه‌ها راست
+باشد، کل گزاره راست است (فقط وقتی دروغ است که هر دو دروغ باشند).
+{\def\LTcaptype{none}
+\begin{longtable}[]{@{}ccc@{}}
+\toprule\noalign{}
+\(p\) & \(q\) & \(p \vee q\) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\lr{T} & \lr{T} & \lr{T} \\
+\lr{T} & \lr{F} & \lr{T} \\
+\lr{F} & \lr{T} & \lr{T} \\
+\lr{F} & \lr{F} & \textbf{\lr{F}} \\
+\emph{(جدول ۴ - ارزش‌های ترکیب فصلی)} & & \\
+\end{longtable}
+}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{۲. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(p\) و \(q\) دو گزاره دلبخواه باشند.
+\begin{theorembox}{قضیه ۱}
+\textbf{الف) قانون جمع \lr{(Addition):}} \[p \Rightarrow (p \vee q)\]
+\textbf{ب) قانون اختصار \lr{(Simplification):}}
+\[(p \wedge q) \Rightarrow p\]
+\end{theorembox}
+\subsection{۳. تحلیل و اثبات با جدول
+ارزش}\label{ux62aux62dux644ux6ccux644-ux648-ux627ux62bux628ux627ux62a-ux628ux627-ux62cux62fux648ux644-ux627ux631ux632ux634}
+\subsubsection{\texorpdfstring{اثبات قانون اختصار
+(\((p \wedge q) \Rightarrow p\))}{اثبات قانون اختصار ((p \textbackslash wedge q) \textbackslash Rightarrow p)}}\label{ux627ux62bux628ux627ux62a-ux642ux627ux646ux648ux646-ux627ux62eux62aux635ux627ux631-p-wedge-q-rightarrow-p}
+به جدول ۲ (ترکیب عطفی) نگاه کنید.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  فرض می‌کنیم مقدم استدلال یعنی \((p \wedge q)\) درست باشد.
+\item
+  طبق \textbf{جدول ۲}، تنها حالتی که \(p \wedge q\) مقدار
+  \textbf{\lr{T}} دارد، ردیف اول است.
+\item
+  در ردیف اول، ارزش \(p\) نیز حتماً \textbf{\lr{T}} است.
+\item
+  بنابراین، راستیِ \((p \wedge q)\) لزوماً راستیِ \(p\) را تضمین می‌کند.
+\end{enumerate}
+\subsubsection{\texorpdfstring{اثبات قانون جمع
+(\(p \Rightarrow (p \vee q)\))}{اثبات قانون جمع (p \textbackslash Rightarrow (p \textbackslash vee q))}}\label{ux627ux62bux628ux627ux62a-ux642ux627ux646ux648ux646-ux62cux645ux639-p-rightarrow-p-vee-q}
+به جدول ۴ (ترکیب فصلی) نگاه کنید.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  فرض می‌کنیم \(p\) درست \lr{(T) }باشد.
+\item
+  در \textbf{جدول ۴}، ردیف‌هایی که \(p\) در آن‌ها \textbf{\lr{T}} است را
+  بررسی می‌کنیم (ردیف ۱ و ۲).
+\item
+  در هر دو ردیف، مقدار ستون \(p \vee q\) برابر با \textbf{\lr{T}} است
+  (چون در ترکیب فصلی، وجود یک راست کافی است).
+\item
+  پس اگر \(p\) راست باشد، ترکیب فصلی آن با هر گزاره دیگر (\(q\)) نیز
+  راست است.
+\end{enumerate}
+\subsection{\texorpdfstring{۴. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۴. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+قضیه ۱ (جمع و اختصار) زیربنای بسیاری از مفاهیم بعدی در منطق است. تحلیل
+ارتباطات آن با سایر بخش‌های کتاب به شرح زیر است:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۲---هم‌ارزی‌های-منطقی-پایه}
+(هم‌ارزی‌ها)}{۱. ارتباط با  (هم‌ارزی‌ها)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f2-ux647ux645ux627ux631ux632ux6ccux647ux627}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{جابجایی \lr{(Commutativity):}} در قضیه ۱ گفتیم
+  \((p \wedge q) \Rightarrow p\). طبق
+  \textbf{\autoref{قضیه-۲---هم‌ارزی‌های-منطقی-پایه}}، داریم
+  \(p \wedge q \equiv q \wedge p\). بنابراین قانون اختصار برای مؤلفه دوم
+  هم معتبر می‌شود: \((q \wedge p) \Rightarrow q\).
+\item
+  \textbf{عکس نقیض \lr{(Contrapositive):}} طبق
+  \textbf{\autoref{قضیه-۲---هم‌ارزی‌های-منطقی-پایه}}، هر شرطی با عکس نقیضش
+  هم‌ارز است. عکس نقیض قانون جمع (\(p \Rightarrow p \vee q\)) می‌شود:
+  \(\sim(p \vee q) \Rightarrow \sim p\). این پایه و اساس
+  \textbf{\autoref{قضیه-۳---قوانین-دمورگان}} است که می‌گوید نفیِ ترکیب
+  فصلی، مستلزم نفیِ تک‌تک اجزاست.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۴---قوانین-شرکت-پذیری-و-پخش-پذیری}\textbar قضیه ۴ (قانون
+تعدی)}{۲. ارتباط با \textbar قضیه ۴ (قانون تعدی)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f4---ux642ux648ux627ux646ux6ccux646-ux634ux631ux6a9ux62a-ux67eux630ux6ccux631ux6cc-ux648-ux67eux62eux634-ux67eux630ux6ccux631ux6ccux642ux636ux6ccux647-ux6f4-ux642ux627ux646ux648ux646-ux62aux639ux62fux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{زنجیره‌سازی استدلال:}
+  \textbf{\autoref{قضیه-۴---قوانین-شرکت-پذیری-و-پخش-پذیری}} قانون تعدی
+  را بیان می‌کند: \((p \to q) \wedge (q \to r) \Rightarrow (p \to r)\).
+  ما می‌توانیم با استفاده از قانون اختصار (قضیه ۱)، مقدمات یک استدلال
+  مرکب را جدا کرده و سپس با قانون تعدی به نتایج جدید برسیم.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۶---قواعد-استنتاج} (قیاس استثنایی و
+دفع)}{۳. ارتباط با  (قیاس استثنایی و دفع)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f6---ux642ux648ux627ux639ux62f-ux627ux633ux62aux646ux62aux627ux62c-ux642ux6ccux627ux633-ux627ux633ux62aux62bux646ux627ux6ccux6cc-ux648-ux62fux641ux639}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{موتور محرک استنتاج:} \textbf{قضیه ۶} روش‌های اصلی نتیجه‌گیری
+  (مثل اگر \(p \to q\) و \(p\) آنگاه \(q\)) را معرفی می‌کند. قضیه ۱
+  معمولاً \textbf{پیش‌نیاز} استفاده از قضیه ۶ است؛ به این صورت که ابتدا با
+  «قانون اختصار» داده‌های مسئله را استخراج می‌کنیم و سپس در قالب‌های قیاسی
+  قضیه ۶ قرار می‌دهیم.
+\end{itemize}
+\subsubsection{۴. ارتباط عمیق با سورها (تعمیم‌یافته‌ی قضیه
+۱)}\label{ux627ux631ux62aux628ux627ux637-ux639ux645ux6ccux642-ux628ux627-ux633ux648ux631ux647ux627-ux62aux639ux645ux6ccux645ux6ccux627ux641ux62aux647ux6cc-ux642ux636ux6ccux647-ux6f1}
+این قضیه ارتباط ساختاری مستقیمی با مبحث سورها دارد:
+\begin{itemize}
+\tightlist
+\item
+  \textbf{سور عمومی (\(\forall\)) و قانون اختصار:} متن کتاب بیان می‌کند
+  که \((\forall x) p(x)\) در یک دامنه محدود معادل
+  \(p(a_1) \wedge p(a_2) \wedge \dots\) است. بنابراین، \textbf{قانون
+  اختصار} در اینجا تعمیم می‌یابد به: «اگر حکمی برای \textbf{همه} درست
+  باشد، برای \textbf{تک‌تک} اعضا هم درست است»
+  (\((\forall x) p(x) \Rightarrow p(a_i)\)).
+\item
+  \textbf{سور وجودی (\(\exists\)) و قانون جمع:} متن کتاب بیان می‌کند که
+  \((\exists x) p(x)\) معادل \(p(a_1) \vee p(a_2) \vee \dots\) است.
+  بنابراین، \textbf{قانون جمع} تعمیم می‌یابد به: «اگر حکمی برای
+  \textbf{یک نفر} (\(a_i\)) درست باشد، پس برای \textbf{حداقل یک نفر}
+  (\(\exists\)) درست است» (\(p(a_i) \Rightarrow (\exists x) p(x)\)).
+\end{itemize}

@@ -1,0 +1,109 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۴: تولید افراز توسط رابطه
+هم‌ارزی}\label{قضیه-۴---افراز-ناشی-از-رابطه-هم‌ارزی}
+\begin{tldr}{خلاصه سریع}
+این قضیه بیان می‌کند که هر «رابطه هم‌ارزی» به طور طبیعی مجموعه را تکه‌تکه
+(افراز) می‌کند. به عبارت دیگر، کلاس‌های هم‌ارزی همان قطعات پازلی هستند که
+بدون هم‌پوشانی، کل مجموعه را می‌سازند.
+\end{tldr}
+\subsection{۱. تعاریف بنیادین
+(پیش‌نیاز)}\label{ux62aux639ux627ux631ux6ccux641-ux628ux646ux6ccux627ux62fux6ccux646-ux67eux6ccux634ux646ux6ccux627ux632}
+برای درک عمیق این قضیه، باید تعریف دقیق \textbf{افراز} را مرور کنیم.
+\subsubsection{\texorpdfstring{تعریف افراز
+\lr{(Partition)}}{تعریف افراز }}\label{ux62aux639ux631ux6ccux641-ux627ux641ux631ux627ux632-partition}
+فرض کنید \(X\) یک مجموعه ناتهی باشد. خانواده‌ای از زیرمجموعه‌های \(X\)
+مانند \(\mathcal{P} = \{A_\gamma\}_{\gamma \in \Gamma}\) را یک
+\textbf{افراز} برای \(X\) می‌نامیم اگر سه شرط زیر برقرار باشد:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{ناتهی بودن:} هیچ‌کدام از مجموعه‌ها خالی نباشند
+  (\(\forall A \in \mathcal{P}, A \neq \emptyset\)).
+\item
+  \textbf{مجزا بودن \lr{(Disjointness):}} هیچ دو مجموعه متمایزی اشتراک
+  نداشته باشند (\(A_i \neq A_j \implies A_i \cap A_j = \emptyset\)).
+\item
+  \textbf{پوشش کامل \lr{(Covering):}} اجتماع تمام مجموعه‌ها برابر با کل
+  \(X\) باشد (\(\bigcup A_\gamma = X\)).
+\end{enumerate}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{۲. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(\xi\) یک رابطه هم‌ارزی روی مجموعه ناتهی \(X\) باشد. مجموعه
+خارج‌قسمتی \(X/\xi\) (شامل تمام کلاس‌های هم‌ارزی) یک \textbf{افراز} برای
+\(X\) است.
+\begin{theorembox}{قضیه ۴}
+اگر \(\xi\) یک رابطه هم‌ارزی روی \(X\) باشد، آنگاه \(X/\xi\) یک افراز
+برای \(X\) است.
+\end{theorembox}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۳. اثبات صوری
+\lr{(Formal Proof)}}{۳. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+برای اثبات اینکه \(X/\xi\) یک افراز است، باید نشان دهیم سه شرط تعریف
+افراز (بخش ۱) را دارد. ما از
+\textbf{\autoref{قضیه-۳---ویژگی‌های-بنیادی-کلاس-هم‌ارزی}} به عنوان ابزار
+اصلی استفاده می‌کنیم.
+\begin{info}{برهان}
+\textbf{گام ۱: بررسی شرط ناتهی بودن} طبق
+\autoref{قضیه-۳---ویژگی‌های-بنیادی-کلاس-هم‌ارزی}، برای هر \(x \in X\)،
+کلاس \(x/\xi\) یک زیرمجموعه ناتهی از \(X\) است (حداقل شامل خود \(x\)
+است).
+\textbf{گام ۲: بررسی شرط مجزا بودن} باید ثابت کنیم:
+\(x/\xi \neq y/\xi \implies (x/\xi) \cap (y/\xi) = \emptyset\). از برهان
+خلف استفاده می‌کنیم (یا عکس نقیض قضیه ۳-ب): طبق
+\autoref{قضیه-۳---ویژگی‌های-بنیادی-کلاس-هم‌ارزی}، اگر اشتراک دو کلاس تهی
+نباشد (\(x/\xi \cap y/\xi \neq \emptyset\))، آنگاه \(x \xi y\). طبق
+\autoref{قضیه-۳---ویژگی‌های-بنیادی-کلاس-هم‌ارزی}، اگر \(x \xi y\)، آنگاه
+\(x/\xi = y/\xi\). بنابراین، اگر دو کلاس برابر نباشند، محال است اشتراک
+داشته باشند.
+\textbf{گام ۳: بررسی شرط پوشش} باید ثابت کنیم
+\(\bigcup_{x \in X} x/\xi = X\).
+\begin{itemize}
+\tightlist
+\item
+  (شمول \(\subseteq\)): واضح است که هر کلاس زیرمجموعه \(X\) است، پس
+  اجتماعشان هم زیرمجموعه \(X\) است.
+\item
+  (شمول \(\supseteq\)): هر عضو دلخواه \(y \in X\) را در نظر بگیرید.
+  می‌دانیم هر عضو متعلق به کلاس خودش است (\(y \in y/\xi\)). پس \(y\) در
+  اجتماع کلاس‌ها حضور دارد.
+\end{itemize}
+\textbf{نتیجه:} هر سه شرط برقرار است، پس \(X/\xi\) یک افراز است.
+\end{info}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۴. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۴. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. وابستگی به
+\autoref{قضیه-۳---ویژگی‌های-بنیادی-کلاس-هم‌ارزی}}{۱. وابستگی به }}\label{ux648ux627ux628ux633ux62aux6afux6cc-ux628ux647-ux642ux636ux6ccux647-ux6f3---ux648ux6ccux698ux6afux6ccux647ux627ux6cc-ux628ux646ux6ccux627ux62fux6cc-ux6a9ux644ux627ux633-ux647ux645ux627ux631ux632ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  این قضیه بدون قضیه ۳ قابل اثبات نیست. قضیه ۳ ``لم'' \lr{(Lemma) }یا
+  ابزار تکنیکی است که تضمین می‌کند کلاس‌ها یا ``یکی هستند'' یا ``کاملاً
+  جدا''. این خاصیت دوگانه \lr{(Dichotomy) }جوهره‌ی اصلی افراز است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. هم‌ارزی با
+\autoref{قضیه-۵---رابطه-هم‌ارزی-ناشی-از-افراز}}{۲. هم‌ارزی با }}\label{ux647ux645ux627ux631ux632ux6cc-ux628ux627-ux642ux636ux6ccux647-ux6f5---ux631ux627ux628ux637ux647-ux647ux645ux627ux631ux632ux6cc-ux646ux627ux634ux6cc-ux627ux632-ux627ux641ux631ux627ux632}
+\begin{itemize}
+\tightlist
+\item
+  قضیه ۴ مسیر ``رابطه \(\to\) افراز'' را طی می‌کند. قضیه ۵ مسیر عکس آن،
+  یعنی ``افراز \(\to\) رابطه'' را طی می‌کند. این دو قضیه با هم نشان
+  می‌دهند که مفاهیم ``رابطه هم‌ارزی'' و ``افراز'' از نظر منطقی
+  \textbf{هم‌ارز} \lr{(Equivalent) }هستند (دو روی یک سکه).
+\end{itemize}
+\subsubsection{۳. کاربرد در جبر (فصل‌های
+آینده)}\label{ux6a9ux627ux631ux628ux631ux62f-ux62fux631-ux62cux628ux631-ux641ux635ux644ux647ux627ux6cc-ux622ux6ccux646ux62fux647}
+\begin{itemize}
+\tightlist
+\item
+  در جبر مجرد، این قضیه زیربنای ساختن \(Z_n\) (اعداد صحیح به پیمانه
+  \(n\)) است. رابطه ``همنهشتی'' اعداد را افراز می‌کند و ما با این قطعات
+  افراز (کلاس‌ها) به عنوان اعداد جدید کار می‌کنیم.
+\end{itemize}

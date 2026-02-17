@@ -1,0 +1,52 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۶: افزودن شرط مشترک به
+استلزام}\label{تمرین-۶---اثبات-استلزام-شرطی}
+\begin{tldr}{خلاصه سریع}
+اگر بدانیم «اگر باران بیاید، زمین خیس می‌شود» (\(p \to q\))، می‌توانیم یک
+شرط دیگر مثل «هوا سرد است» (\(r\)) را به دو طرف اضافه کنیم. حکم: «اگر
+(باران بیاید و سرد باشد)، آنگاه (زمین خیس می‌شود و سرد است)».
+\end{tldr}
+\subsection{۱. صورت
+مسأله}\label{ux635ux648ux631ux62a-ux645ux633ux623ux644ux647}
+\begin{info}{سوال}
+ثابت کنید:
+\[(p \rightarrow q) \implies (p \land r \rightarrow q \land r)\]
+\end{info}
+\subsection{۲. اثبات
+مستقیم}\label{ux627ux62bux628ux627ux62a-ux645ux633ux62aux642ux6ccux645}
+\begin{info}{گام‌به‌گام}
+فرض می‌کنیم مقدمِ گزاره‌ی اصلی یعنی \((p \rightarrow q)\) \textbf{درست}
+باشد. می‌خواهیم نشان دهیم نتیجه هم درست است.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  فرض کنید سمت چپِ فلشِ دوم درست باشد: یعنی \((p \land r)\) درست است.
+\item
+  از درست بودن \((p \land r)\) نتیجه می‌گیریم که هم \(p\) درست است و هم
+  \(r\) درست است.
+\item
+  چون \(p\) درست است و طبق فرض اولیه داریم \(p \rightarrow q\)، پس نتیجه
+  می‌گیریم \(q\) هم باید درست باشد (قیاس استثنایی).
+\item
+  الان چی داریم؟
+  \begin{itemize}
+  \tightlist
+  \item
+    \(q\) درست است (از مرحله ۳).
+  \item
+    \(r\) درست است (از مرحله ۲).
+  \end{itemize}
+\item
+  پس ترکیب \((q \land r)\) حتماً درست است.
+\item
+  چون از درستیِ مقدم (\((p \land r)\)) به درستی تالی (\((q \land r)\))
+  رسیدیم، پس استلزام برقرار است.
+\end{enumerate}
+\(\blacksquare\)
+\end{info}

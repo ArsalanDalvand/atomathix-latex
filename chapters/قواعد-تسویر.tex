@@ -1,0 +1,105 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قواعد تسویر
+\lr{(Quantification Rules)}}{قواعد تسویر }}\label{قواعد-تسویر}
+\begin{tldr}{خلاصه سریع}
+این بخش زبان منطق را از «گزاره‌های ساده» به «مجموعه‌ها» گسترش می‌دهد.
+\begin{itemize}
+\tightlist
+\item
+  \textbf{سور عمومی (\(\forall\)):} یعنی «برای همه» (مثل عملگر «و» روی
+  تمام اعضا).
+\item
+  \textbf{سور وجودی (\(\exists\)):} یعنی «حداقل یکی هست» (مثل عملگر «یا»
+  روی تمام اعضا).
+\item
+  \textbf{نفی:} نفیِ «همه»، «بعضی» است و نفیِ «بعضی»، «همه» است (با تغییر
+  گزاره).
+\end{itemize}
+\end{tldr}
+\subsection{۱. تعاریف
+پایه}\label{ux62aux639ux627ux631ux6ccux641-ux67eux627ux6ccux647}
+در گزاره‌هایی که مربوط به یک مجموعه (عالم سخن - \lr{Universe) }هستند، از
+دو نماد اصلی استفاده می‌کنیم:
+\subsubsection{\texorpdfstring{الف) سور عمومی
+\lr{(Universal Quantifier)}}{الف) سور عمومی }}\label{ux627ux644ux641-ux633ux648ux631-ux639ux645ux648ux645ux6cc-universal-quantifier}
+عبارت «برای تمام \(x\)های در عالم» را با نماد \(\forall x\) نشان می‌دهیم.
+\begin{itemize}
+\tightlist
+\item
+  \textbf{نماد:} \((\forall x)(p(x))\)
+\item
+  \textbf{معنی:} گزاره \(p(x)\) برای تک‌تک اعضای مجموعه مرجع درست است.
+\end{itemize}
+\subsubsection{\texorpdfstring{ب) سور وجودی
+\lr{(Existential Quantifier)}}{ب) سور وجودی }}\label{ux628-ux633ux648ux631-ux648ux62cux648ux62fux6cc-existential-quantifier}
+عبارت «حداقل یک \(x\) وجود دارد که\ldots» را با نماد \(\exists x\) نشان
+می‌دهیم.
+\begin{itemize}
+\tightlist
+\item
+  \textbf{نماد:} \((\exists x)(p(x))\)
+\item
+  \textbf{معنی:} حداقل یک عضو در مجموعه پیدا می‌شود که \(p(x)\) برای آن
+  درست باشد (لازم نیست برای همه درست باشد).
+\end{itemize}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۲. قواعد نقیض سور
+\lr{(Quantifier Negation Laws)}}{۲. قواعد نقیض سور }}\label{ux642ux648ux627ux639ux62f-ux646ux642ux6ccux636-ux633ux648ux631-quantifier-negation-laws}
+چگونه جملات کلی را منفی کنیم؟ این قواعد بسیار شبیه به
+\textbf{\autoref{قضیه-۳---قوانین-دمورگان}} عمل می‌کنند.
+\begin{theorembox}{قاعده نقیض سور}
+\textbf{۱. نفی سور عمومی:}
+\[\sim [(\forall x)(p(x))] \equiv (\exists x)(\sim p(x))\] \emph{(ترجمه:
+اگر «همه خوب نیستند»، یعنی «حداقل یک نفر بد است»)}.
+\textbf{۲. نفی سور وجودی:}
+\[\sim [(\exists x)(p(x))] \equiv (\forall x)(\sim p(x))\] \emph{(ترجمه:
+اگر «چنین نیست که کسی آمده باشد»، یعنی «همه نیامده‌اند»)}.
+\end{theorembox}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این بخش نشان می‌دهد که سورها موجودات جدیدی نیستند، بلکه تعمیم‌یافته‌ی همان
+عملگرهای منطقی فصل ۱ هستند.
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۳---قوانین-دمورگان} (ریشه نفی
+سورها)}{۱. ارتباط با  (ریشه نفی سورها)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f3---ux642ux648ux627ux646ux6ccux646-ux62fux645ux648ux631ux6afux627ux646-ux631ux6ccux634ux647-ux646ux641ux6cc-ux633ux648ux631ux647ux627}
+اگر عالم سخن ما محدود باشد (مثلاً \(\{a_1, a_2, \dots, a_n\}\))، می‌توان
+سورها را باز کرد:
+\begin{itemize}
+\tightlist
+\item
+  \textbf{سور عمومی \(\equiv\) ترکیب عطفی:}
+  \[(\forall x)p(x) \equiv p(a_1) \wedge p(a_2) \wedge \dots \wedge p(a_n)\]
+\item
+  \textbf{سور وجودی \(\equiv\) ترکیب فصلی:}
+  \[(\exists x)p(x) \equiv p(a_1) \vee p(a_2) \vee \dots \vee p(a_n)\]
+\end{itemize}
+حال اگر از \textbf{\autoref{قضیه-۳---قوانین-دمورگان}} استفاده کنیم:
+\begin{itemize}
+\tightlist
+\item
+  نفیِ «ترکیب عطفی» (\(\sim(p \wedge q \dots)\)) تبدیل به «ترکیب فصلی
+  نقیض‌ها» (\(\sim p \vee \sim q \dots\)) می‌شود.
+\item
+  این دقیقاً همان قاعده تبدیل \(\sim \forall\) به \(\exists \sim\) است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۱---قوانین-جمع-و-اختصار} (ساختار
+استنتاج)}{۲. ارتباط با  (ساختار استنتاج)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1---ux642ux648ux627ux646ux6ccux646-ux62cux645ux639-ux648-ux627ux62eux62aux635ux627ux631-ux633ux627ux62eux62aux627ux631-ux627ux633ux62aux646ux62aux627ux62c}
+\begin{itemize}
+\item
+  \textbf{قانون اختصار تعمیم‌یافته:} چون \(\forall\) ماهیت «عطفی»
+  \lr{(AND) }دارد، قانون اختصار (\((p \wedge q) \to p\)) برای آن صادق
+  است. یعنی: \[(\forall x)p(x) \Rightarrow p(a_i)\] \emph{(اگر حکمی برای
+  همه درست باشد، برای تک‌تک افراد هم درست است).}
+\item
+  \textbf{قانون جمع تعمیم‌یافته:} چون \(\exists\) ماهیت «فصلی»
+  \lr{(OR) }دارد، قانون جمع (\(p \to p \vee q\)) برای آن صادق است. یعنی:
+  \[p(a_i) \Rightarrow (\exists x)p(x)\] *(اگر حکمی برای یک نفر درست
+  باشد، پس وجود دارد کسی
+\end{itemize}

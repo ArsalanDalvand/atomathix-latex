@@ -1,0 +1,35 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۵: رابطه زیرمجموعه و حاصلضرب
+دکارتی}\label{تمرین-۵---یکنوایی-حاصلضرب-دکارتی}
+\subsection{۱. صورت
+سوال}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644}
+ثابت کنید که اگر \(A, B, C\) مجموعه باشند و \(A \subseteq B\)، آنگاه
+\(A \times C \subseteq B \times C\).
+\subsection{۲. استراتژی و
+حل}\label{ux627ux633ux62aux631ux627ux62aux698ux6cc-ux648-ux62dux644}
+باید نشان دهیم هر عضوی که در سمت چپ است، در سمت راست هم هست.
+\begin{info}{اثبات}
+فرض کنیم \((x,y)\) یک عضو دلخواه از \(A \times C\) باشد.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \((x,y) \in A \times C \implies (x \in A) \wedge (y \in C)\)
+\item
+  طبق فرض مسئله، می‌دانیم \(A \subseteq B\).این یعنی
+  \((x \in A \implies x \in B)\).
+\item
+  پس می‌توانیم در گزاره مرحله ۱، به جای \(x \in A\) نتیجه آن یعنی
+  \(x \in B\) را در نظر بگیریم (قیاس استثنایی):
+  \[\implies (x \in B) \wedge (y \in C)\]
+\item
+  این تعریفِ \((x,y) \in B \times C\) است.
+\item
+  نتیجه: \(A \times C \subseteq B \times C\) .
+\end{enumerate}
+\end{info}

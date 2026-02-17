@@ -1,0 +1,82 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۱: پخش‌پذیری حاصلضرب دکارتی بر تقاطع و
+اجتماع}\label{قضیه-۱---پخش‌پذیری-حاصلضرب-دکارتی}
+\begin{tldr}{خلاصه سریع}
+این قضیه بیان می‌کند که عملگر حاصلضرب دکارتی (\(\times\)) نسبت به
+عملگرهای اشتراک (\(\cap\)) و اجتماع (\(\cup\)) خاصیت \textbf{پخش‌پذیری
+\lr{(Distributivity)}} دارد. این رفتار، شباهت ساختاری جبر مجموعه‌ها را با
+جبر اعداد (پخش ضرب روی جمع) تکمیل می‌کند.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(A\)، \(B\) و \(C\) سه مجموعه دلبخواه باشند. همواره روابط زیر
+برقرارند:
+\begin{theorembox}{قضیه ۱}
+\textbf{الف) پخش‌پذیری بر اشتراک:}
+\[A \times (B \cap C) = (A \times B) \cap (A \times C)\] \textbf{ب)
+پخش‌پذیری بر اجتماع:}
+\[A \times (B \cup C) = (A \times B) \cup (A \times C)\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+اثبات این قضیه بر پایه ترجمه تعاریف مجموعه‌ای به گزاره‌های منطقی و استفاده
+از قوانین هم‌ارزی فصل ۱ بنا شده است.
+\subsubsection{اثبات قسمت
+(الف)}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux627ux644ux641}
+برای اثبات برابری دو مجموعه، نشان می‌دهیم که گزاره‌نمای عضویت زوج مرتب
+\((a, x)\) در هر دو طرف یکسان است.
+\begin{info}{برهان}
+\[(a, x) \in A \times (B \cap C)\] ۱. طبق تعریف حاصلضرب دکارتی و اشتراک:
+\[\iff (a \in A) \wedge (x \in B \cap C)\]
+\[\iff (a \in A) \wedge [(x \in B) \wedge (x \in C)]\]
+۲. استفاده از \textbf{\autoref{قضیه-۲---هم‌ارزی‌های-منطقی-پایه}} برای
+گزاره \((a \in A)\): \emph{(می‌دانیم \(p \equiv p \wedge p\))}
+\[\iff [(a \in A) \wedge (a \in A)] \wedge (x \in B) \wedge (x \in C)\]
+۳. استفاده از \textbf{\autoref{قضیه-۴---قوانین-شرکت-پذیری-و-پخش-پذیری}}
+برای بازآرایی گزاره‌ها:
+\[\iff [(a \in A) \wedge (x \in B)] \wedge [(a \in A) \wedge (x \in C)]\]
+۴. طبق تعریف حاصلضرب دکارتی:
+\[\iff [(a, x) \in A \times B] \wedge [(a, x) \in A \times C]\]
+۵. طبق تعریف اشتراک: \[\iff (a, x) \in (A \times B) \cap (A \times C)\]
+\textbf{نتیجه:} دو مجموعه با هم برابرند.
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه پیوند عمیقی بین ساختار دکارتی و اصول منطق گزاره‌ها برقرار می‌کند:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۴---قوانین-شرکت-پذیری-و-پخش-پذیری}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f4---ux642ux648ux627ux646ux6ccux646-ux634ux631ux6a9ux62a-ux67eux630ux6ccux631ux6cc-ux648-ux67eux62eux634-ux67eux630ux6ccux631ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{مبانی منطقی:} اگرچه در اثبات بالا (بخش الف) عمدتاً از خاصیت
+  جابجایی و شرکت‌پذیری «و» استفاده شد، اما در اثبات بخش (ب) (پخش روی
+  اجتماع)، مستقیماً از قانون پخش‌پذیری منطق
+  (\(p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)\))
+  استفاده می‌شود. این نشان می‌دهد که پخش‌پذیری در مجموعه‌ها، تصویرِ پخش‌پذیری
+  در منطق است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۴---جبر-مجموعه-ها}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f4---ux62cux628ux631-ux645ux62cux645ux648ux639ux647-ux647ux627}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{توسعه ساختار جبری:} در فصل ۲، قوانین پخش‌پذیری را برای \(\cap\)
+  و \(\cup\) دیدیم (\(A \cap (B \cup C)\)). قضیه فعلی، عملگر سوم
+  (\(\times\)) را وارد این ساختار می‌کند و نشان می‌دهد که این عملگر جدید
+  نیز با عملگرهای قبلی سازگار \lr{(Compatible) }است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۲---پخش‌پذیری-حاصلضرب-دکارتی-بر-تفاضل}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f2---ux67eux62eux634ux67eux630ux6ccux631ux6cc-ux62dux627ux635ux644ux636ux631ux628-ux62fux6a9ux627ux631ux62aux6cc-ux628ux631-ux62aux641ux627ux636ux644}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تعمیم به تفاضل:} بلافاصله پس از این قضیه، خواهیم دید که
+  حاصلضرب دکارتی روی تفاضل مجموعه‌ها نیز پخش می‌شود
+  (\(A \times (B - C)\)). اثبات آن نیز از الگوی مشابهی پیروی می‌کند و
+  نشان‌دهنده رفتار یکنواخت \(\times\) نسبت به تمام عملیات بولی است.
+\end{itemize}

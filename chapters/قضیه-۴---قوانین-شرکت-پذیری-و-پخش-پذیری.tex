@@ -1,0 +1,138 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۴: قوانین شرکت‌پذیری، پخش‌پذیری و
+تعدی}\label{قضیه-۴---قوانین-شرکت-پذیری-و-پخش-پذیری}
+\begin{tldr}{خلاصه سریع}
+این قضیه معماریِ جملات مرکب را مدیریت می‌کند. «شرکت‌پذیری» به ما اجازه
+می‌دهد پرانتزها را در عملگرهای هم‌جنس نادیده بگیریم، «پخش‌پذیری» تعامل دو
+عملگر غیرهم‌جنس را نشان می‌دهد، و «تعدی» زنجیره‌ای از استدلال‌های شرطی را به
+یک نتیجه واحد متصل می‌کند.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(p\)، \(q\) و \(r\) سه گزاره دلبخواه باشند.
+\begin{theorembox}{قضیه ۴}
+\textbf{الف) قوانین شرکت‌پذیری \lr{(Associative Laws):}}
+\[(p \vee q) \vee r \equiv p \vee (q \vee r)\]
+\[(p \wedge q) \wedge r \equiv p \wedge (q \wedge r)\]
+\textbf{ب) قوانین پخش‌پذیری \lr{(Distributive Laws):}}
+\[p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)\]
+\[p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)\]
+\textbf{ج) قانون تعدی \lr{(Transitive Law):}}
+\[(p \rightarrow q) \wedge (q \rightarrow r) \Rightarrow (p \rightarrow r)\]
+\end{theorembox}
+\subsection{۲. اثبات و تحلیل (با جدول
+ارزش)}\label{ux627ux62bux628ux627ux62a-ux648-ux62aux62dux644ux6ccux644-ux628ux627-ux62cux62fux648ux644-ux627ux631ux632ux634}
+برای اثبات این قوانین، چون با ۳ متغیر گزاره‌ای سر و کار داریم، جدول ارزش
+باید شامل \(2^3=8\) سطر باشد. در اینجا اثبات \textbf{قانون تعدی} (قسمت
+ج) را با استفاده از جدول ارزش بررسی می‌کنیم. ما باید نشان دهیم که گزاره
+شرطی نهایی همیشه «راستگو» \lr{(Tautology) }است.
+{\def\LTcaptype{none}
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1000}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0750}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0750}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0750}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0750}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.0750}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1500}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1500}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.2250}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+ردیف
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(p\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(q\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(r\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\((p \to q)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\((q \to r)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+مقدم: \((p \to q) \wedge (q \to r)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+تالی: \((p \to r)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+کل گزاره \((\to)\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & \lr{T} & \lr{T} & \lr{T} & \lr{T} & \lr{T} & \textbf{\lr{T}} &
+\lr{T} & \textbf{\lr{T}} \\
+2 & \lr{T} & \lr{T} & \lr{F} & \lr{T} & \lr{F} & \lr{F} & \lr{F} &
+\textbf{\lr{T}} \\
+3 & \lr{T} & \lr{F} & \lr{T} & \lr{F} & \lr{T} & \lr{F} & \lr{T} &
+\textbf{\lr{T}} \\
+4 & \lr{T} & \lr{F} & \lr{F} & \lr{F} & \lr{T} & \lr{F} & \lr{F} &
+\textbf{\lr{T}} \\
+5 & \lr{F} & \lr{T} & \lr{T} & \lr{T} & \lr{T} & \textbf{\lr{T}} &
+\lr{T} & \textbf{\lr{T}} \\
+6 & \lr{F} & \lr{T} & \lr{F} & \lr{T} & \lr{F} & \lr{F} & \lr{T} &
+\textbf{\lr{T}} \\
+7 & \lr{F} & \lr{F} & \lr{T} & \lr{T} & \lr{T} & \textbf{\lr{T}} &
+\lr{T} & \textbf{\lr{T}} \\
+8 & \lr{F} & \lr{F} & \lr{F} & \lr{T} & \lr{T} & \textbf{\lr{T}} &
+\lr{T} & \textbf{\lr{T}} \\
+\emph{(جدول ۱۱ - اثبات قانون تعدی)} & & & & & & & & \\
+\end{longtable}
+}
+\begin{info}{تحلیل اثبات}
+۱. ستون‌های «مقدم» و «تالی» را محاسبه می‌کنیم. ۲. ستون آخر (کل گزاره)
+رابطه شرطی بین مقدم و تالی را بررسی می‌کند. ۳. مشاهده می‌شود که در تمام ۸
+حالت ممکن، ارزش نهایی \textbf{\lr{T}} است. این ثابت می‌کند که رابطه تعدی
+یک قانون معتبر منطقی است.
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه پل ارتباطی بین منطق گزاره‌ها و نظریه مجموعه‌هاست و ابزار اصلی
+برای ساختن برهان‌های چندمرحله‌ای می‌باشد.
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۲---هم‌ارزی‌های-منطقی-پایه}
+(جابجایی)}{۱. ارتباط با  (جابجایی)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f2---ux647ux645ux627ux631ux632ux6ccux647ux627ux6cc-ux645ux646ux637ux642ux6cc-ux67eux627ux6ccux647-ux62cux627ux628ux62cux627ux6ccux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تکمیل ساختار جبری:} قضیه ۲ (جابجایی) می‌گفت ترتیب \(p\) و \(q\)
+  مهم نیست (\(p \vee q \equiv q \vee p\)). قضیه ۴ (شرکت‌پذیری) مکمل آن
+  است و می‌گوید اولویت پرانتزها هم مهم نیست. ترکیب این دو ویژگی به ما
+  اجازه می‌دهد در زنجیره‌ای مثل \(p \vee q \vee r \vee s\)، گزاره‌ها را
+  آزادانه جابجا و دسته‌بندی کنیم.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۶---قواعد-استنتاج}(قیاس
+شرطی)}{۲. ارتباط با (قیاس شرطی)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f6---ux642ux648ux627ux639ux62f-ux627ux633ux62aux646ux62aux627ux62cux642ux6ccux627ux633-ux634ux631ux637ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{نام دیگر:} قانون تعدی در بسیاری از متون (و در قضیه ۶ همین
+  کتاب) تحت عنوان \textbf{قیاس شرطی \lr{(Hypothetical Syllogism)}}
+  شناخته می‌شود. قضیه ۴ زیربنای نظری آن را با جدول ارزش ثابت می‌کند، و
+  قضیه ۶ آن را به عنوان یک ابزار استنتاجی معرفی می‌کند.
+\end{itemize}
+\subsubsection{۴. ارتباط با نظریه مجموعه‌ها (فصل
+۲)}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux646ux638ux631ux6ccux647-ux645ux62cux645ux648ux639ux647ux647ux627-ux641ux635ux644-ux6f2}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ایزومورفیسم ساختاری:} قوانین پخش‌پذیری در منطق (\(\wedge\) روی
+  \(\vee\)) دقیقاً متناظر با قوانین پخش‌پذیری در مجموعه‌ها (\(\cap\) روی
+  \(\cup\)) هستند:
+  \begin{itemize}
+  \tightlist
+  \item
+    منطق: \(p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)\)
+  \item
+    مجموعه: \(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\) این شباهت
+    نشان می‌دهد که منطق و نظریه مجموعه‌ها از یک ساختار جبری واحد (جبر بول)
+    پیروی می‌کنند.
+  \end{itemize}
+\end{itemize}

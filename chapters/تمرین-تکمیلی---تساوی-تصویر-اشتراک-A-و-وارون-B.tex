@@ -1,0 +1,50 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه: تصویرِ اشتراک یک مجموعه با وارون یک مجموعه
+دیگر}\label{تمرین-تکمیلی---تساوی-تصویر-اشتراک-A-و-وارون-B}
+\begin{tldr}{خلاصه سریع}
+این فرمول نشان می‌دهد که عملگر تصویر \(f\) نسبت به اشتراک با یک «نگاره
+وارون» چگونه رفتار می‌کند. می‌توان \(B\) را از داخل پرانتزِ تصویر بیرون
+کشید. \[f(A \cap f^{-1}(B)) = f(A) \cap B\]
+\end{tldr}
+\subsection{۱. صورت
+ریاضی}\label{ux635ux648ux631ux62a-ux631ux6ccux627ux636ux6cc}
+\begin{theorembox}{قضیه}
+فرض کنید \(f:X \rightarrow Y\)، \(A \subseteq X\) و \(B \subseteq Y\).
+داریم: \[f(A \cap f^{-1}(B)) = f(A) \cap B\]
+\end{theorembox}
+\subsection{۲. اثبات
+دوطرفه}\label{ux627ux62bux628ux627ux62a-ux62fux648ux637ux631ux641ux647}
+\begin{info}{اثبات}
+از خواص منطقی سورها و تعاریف استفاده می‌کنیم تا تساوی را مستقیم نشان
+دهیم.
+\[y \in f(A \cap f^{-1}(B))\]
+\(\equiv\) طبق تعریف تصویر، یعنی \(x\)ای وجود دارد که در مجموعه
+\(A \cap f^{-1}(B)\) است و تصویرش \(y\) است:
+\[\exists x \left[ x \in (A \cap f^{-1}(B)) \land f(x) = y \right]\]
+\(\equiv\) تعریف اشتراک را باز می‌کنیم:
+\[\exists x \left[ (x \in A \land x \in f^{-1}(B)) \land f(x) = y \right]\]
+\(\equiv\) تعریف وارون (\(x \in f^{-1}(B) \iff f(x) \in B\)) را اعمال
+می‌کنیم:
+\[\exists x \left[ x \in A \land f(x) \in B \land f(x) = y \right]\]
+\(\equiv\) در اینجا نکته کلیدی این است که \(f(x)=y\). پس شرط
+\(f(x) \in B\) معادل است با \(y \in B\). چون \(y\) به \(x\) وابسته نیست
+(در این بخش از گزاره)، می‌توانیم آن را از زیر سور وجودی بیرون بیاوریم یا
+جدا کنیم:
+\[\left( \exists x [x \in A \land f(x)=y] \right) \land y \in B\]
+\(\equiv\) قسمت داخل پرانتز دقیقاً تعریف \(y \in f(A)\) است:
+\[y \in f(A) \land y \in B\]
+\(\equiv\) تعریف اشتراک: \[y \in f(A) \cap B\]
+\(\blacksquare\)
+\end{info}
+\subsection{۳. حالت خاص
+(نتیجه)}\label{ux62dux627ux644ux62a-ux62eux627ux635-ux646ux62aux6ccux62cux647}
+اگر در فرمول بالا به جای \(A\)، کل مجموعه مرجع \(X\) را قرار دهیم:
+\[f(X \cap f^{-1}(B)) = f(X) \cap B\] چون \(f^{-1}(B) \subseteq X\) است،
+پس اشتراکشان خودِ \(f^{-1}(B)\) می‌شود: \[f(f^{-1}(B)) = f(X) \cap B\]
+\emph{(این فرمول نشان می‌دهد تصویرِ وارونِ \lr{B }دقیقاً برابر است با اشتراکِ
+برد تابع با \lr{B).}}

@@ -1,0 +1,41 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۱۳ و ۱۴: بررسی توزیع‌پذیری‌های
+نادرست}\label{تمرین-۱۳-و-۱۴---توزیع‌پذیری-اشتباه}
+\begin{warning}{هشدار}
+اجتماع نسبت به حاصلضرب دکارتی به شکل جبری ساده توزیع نمی‌شود.
+\end{warning}
+\subsection{۱. تمرین ۱۳}\label{ux62aux645ux631ux6ccux646-ux6f1ux6f3}
+\textbf{سوال:} آیا
+\(A \cup (B \times C) = (A \cup B) \times (A \cup C)\) درست است؟
+\textbf{پاسخ:} \textbf{خیر}. \textbf{مثال نقض:}
+\(A=\{a\}, B=\{b\}, C=\{c\}\).
+\begin{itemize}
+\tightlist
+\item
+  سمت چپ: \(\{a, (b,c)\}\) (یک عضو ساده و یک زوج مرتب).
+\item
+  سمت راست: \(\{a,b\} \times \{a,c\} = \{(a,a), (a,c), (b,a), (b,c)\}\).
+\item
+  این دو برابر نیستند.
+\end{itemize}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{۲. تمرین ۱۴}\label{ux62aux645ux631ux6ccux646-ux6f1ux6f4}
+\textbf{سوال:} آیا
+\((A \times C) \cup (B \times D) = (A \cup B) \times (C \cup D)\) درست
+است؟ \textbf{پاسخ:} \textbf{خیر}. \textbf{مثال نقض:}
+\(A=\emptyset, B=\{b\}, C=\{c\}, D=\{d\}\).
+\begin{itemize}
+\tightlist
+\item
+  سمت چپ:
+  \((\emptyset \times \{c\}) \cup (\{b\} \times \{d\}) = \emptyset \cup \{(b,d)\} = \{(b,d)\}\).
+\item
+  سمت راست:
+  \((\emptyset \cup \{b\}) \times (\{c\} \cup \{d\}) = \{b\} \times \{c,d\} = \{(b,c), (b,d)\}\).
+  *سمت راست یک عضو اضافه \((b,c)\) دارد .
+\end{itemize}

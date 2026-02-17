@@ -1,0 +1,64 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۷: شرط تساوی دو
+تابع}\label{قضیه-۷---شرط-تساوی-توابع}
+\begin{tldr}{خلاصه سریع}
+دو تابع زمانی با هم «برابر» هستند که دقیقاً مجموعه زوج‌های مرتب یکسانی
+باشند. این قضیه نشان می‌دهد که این شرط مجموعه‌ای، معادل است با اینکه خروجی
+آن‌ها به ازای تک‌تک ورودی‌ها یکسان باشد.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(f\) و \(g\) دو تابع از مجموعه \(X\) به مجموعه \(Y\) باشند
+(\(f,g: X \to Y\)).
+\begin{theorembox}{قضیه ۷}
+دو تابع \(f\) و \(g\) برابرند (\(f=g\)) اگر و تنها اگر:
+\[\forall x \in X, \quad f(x) = g(x)\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+چون توابع در اصل «مجموعه» (از زوج‌های مرتب) هستند، اثبات برابری آن‌ها باید
+بر اساس اصول نظریه مجموعه‌ها
+(\(A=B \iff A \subseteq B \land B \subseteq A\)) باشد.
+\begin{info}{برهان}
+\textbf{جهت رفت (\(\Rightarrow\)):} فرض کنیم \(f = g\) (به عنوان دو
+مجموعه برابرند). پس هر زوج مرتبی که در \(f\) باشد، در \(g\) هم هست. اگر
+\((x, y) \in f\)، آنگاه \(y = f(x)\). چون \(f=g\)، پس \((x, y) \in g\) و
+در نتیجه \(y = g(x)\). بنابراین \(f(x) = g(x)\).
+\textbf{جهت برگشت (\(\Leftarrow\)):} فرض کنیم برای هر \(x \in X\) داشته
+باشیم \(f(x) = g(x)\). باید ثابت کنیم مجموعه \(f\) زیرمجموعه \(g\) است و
+برعکس.
+۱. فرض کنید \((x, y)\) یک عضو دلخواه از \(f\) باشد. ۲. طبق تعریف تابع،
+این یعنی \(y = f(x)\). ۳. طبق فرض خلف، می‌دانیم \(f(x) = g(x)\). ۴. پس
+\(y = g(x)\). ۵. طبق تعریف تابع \(g\)، این یعنی \((x, y) \in g\). ۶.
+نتیجه: \(f \subseteq g\).
+(به طریق کاملاً مشابه ثابت می‌شود \(g \subseteq f\)). چون دو مجموعه
+زیرمجموعه هم هستند، پس \(f = g\).
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۳---ویژگی‌های-بنیادی-کلاس-هم‌ارزی} (قیاس
+ساختاری)}{۱. ارتباط با  (قیاس ساختاری)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f3---ux648ux6ccux698ux6afux6ccux647ux627ux6cc-ux628ux646ux6ccux627ux62fux6cc-ux6a9ux644ux627ux633-ux647ux645ux627ux631ux632ux6cc-ux642ux6ccux627ux633-ux633ux627ux62eux62aux627ux631ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{یکتایی نمایش:} همان‌طور که در کلاس‌های هم‌ارزی دیدیم
+  \(x/\xi = y/\xi \iff x \xi y\)، اینجا هم می‌بینیم که تساوی دو شیء
+  ساختاری (تابع)، به تساوی مولفه‌های سازنده‌شان (مقادیر خروجی) تقلیل
+  می‌یابد.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. کاربرد در
+\autoref{تمرین-۱۵---تابع-بازتابی}}{۲. کاربرد در }}\label{ux6a9ux627ux631ux628ux631ux62f-ux62fux631-ux62aux645ux631ux6ccux646-ux6f1ux6f5---ux62aux627ux628ux639-ux628ux627ux632ux62aux627ux628ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ابزار حل:} در تمرین ۱۵، برای اثبات اینکه \(f\) همان تابع همانی
+  \(I_X\) است، دقیقاً از همین قضیه ۷ استفاده می‌کنیم. آنجا نشان می‌دهیم
+  \(\forall x, f(x) = I_X(x)\) و سپس طبق قضیه ۷ نتیجه می‌گیریم
+  \(f = I_X\). بدون قضیه ۷، استدلال در مورد برابری توابع ناقص می‌ماند.
+\end{itemize}

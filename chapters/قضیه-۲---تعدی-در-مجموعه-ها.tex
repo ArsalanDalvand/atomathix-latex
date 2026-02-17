@@ -1,0 +1,84 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۲: خاصیت تعدی در شمول
+مجموعه‌ها}\label{قضیه-۲---تعدی-در-مجموعه-ها}
+\begin{tldr}{خلاصه سریع}
+این قضیه بیانگر ویژگی «تعدی» \lr{(Transitivity) }در رابطه زیرمجموعه بودن
+(\(\subseteq\)) است. این ویژگی نشان می‌دهد که ساختار شمول مجموعه‌ها، یک
+ساختار سلسله‌مراتب منطقی است که مستقیماً از ویژگی تعدی در استلزام منطقی
+پیروی می‌کند.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+برای هر سه مجموعه دلبخواه \(A\)، \(B\) و \(C\):
+\begin{theorembox}{قضیه ۲}
+\[(A \subseteq B) \wedge (B \subseteq C) \Rightarrow (A \subseteq C)\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+اثبات این قضیه، ترجمه مستقیم \textbf{قانون تعدی در منطق گزاره‌ها} به زبان
+نظریه مجموعه‌هاست.
+\begin{info}{مراحل اثبات}
+۱. طبق \textbf{\autoref{پیشنیاز---مفاهیم-بنیادین-مجموعه‌ها}}، باید ثابت
+کنیم: \[\forall x (x \in A \rightarrow x \in C)\] ۲. فرض می‌کنیم مقدمات
+حکم برقرار باشند:
+\begin{itemize}
+\tightlist
+\item
+  فرض ۱: \(A \subseteq B \iff \forall x (x \in A \rightarrow x \in B)\)
+\item
+  فرض ۲: \(B \subseteq C \iff \forall x (x \in B \rightarrow x \in C)\)
+  ۳. گزاره‌های اتمیک زیر را در نظر می‌گیریم:
+\item
+  \(p: x \in A\)
+\item
+  \(q: x \in B\)
+\item
+  \(r: x \in C\) ۴. بنابراین ما دو گزاره شرطی داریم:
+  \((p \rightarrow q)\) و \((q \rightarrow r)\). ۵. طبق
+  \textbf{\autoref{قضیه-۴---قوانین-شرکت-پذیری-و-پخش-پذیری}} (قانون تعدی
+  یا قیاس شرطی):
+  \[(p \rightarrow q) \wedge (q \rightarrow r) \Rightarrow (p \rightarrow r)\]
+  ۶. نتیجه می‌شود که \((x \in A \rightarrow x \in C)\) برای هر \(x\)
+  برقرار است. ۷. پس طبق تعریف، \(A \subseteq C\).
+\end{itemize}
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه یک اصل ساختاری مهم است که در سراسر نظریه مجموعه‌ها تکرار می‌شود:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۴---قوانین-شرکت-پذیری-و-پخش-پذیری}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f4---ux642ux648ux627ux646ux6ccux646-ux634ux631ux6a9ux62a-ux67eux630ux6ccux631ux6cc-ux648-ux67eux62eux634-ux67eux630ux6ccux631ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ایزومورفیسم منطق و مجموعه:} همان‌طور که در اثبات دیدیم، خاصیت
+  تعدی زیرمجموعه‌ها (\(A \subseteq B \subseteq C\)) دقیقاً تصویر آینه‌ای
+  خاصیت تعدی استلزام (\(p \to q \to r\)) است. این نشان می‌دهد که رابطه
+  \(\subseteq\) در مجموعه‌ها، همان رفتار \(\rightarrow\) در منطق را دارد.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۱---شمول-تهی}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1---ux634ux645ux648ux644-ux62aux647ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{سازگاری در کران پایین:} طبق قضیه ۱، \(\emptyset \subseteq A\).
+  حال اگر \(A \subseteq B\) باشد، طبق قضیه تعدی باید
+  \(\emptyset \subseteq B\) باشد. این نتیجه با قضیه ۱ سازگار است و نشان
+  می‌دهد که سلسله‌مراتب مجموعه‌ها از «تهی» شروع شده و با خاصیت تعدی به بالا
+  گسترش می‌یابد.
+\end{itemize}
+\subsubsection{۳. پیش‌زمینه برای فصل ۳
+(رابطه‌ها)}\label{ux67eux6ccux634ux632ux645ux6ccux646ux647-ux628ux631ux627ux6cc-ux641ux635ux644-ux6f3-ux631ux627ux628ux637ux647ux647ux627}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{رابطه ترتیب جزئی \lr{(Partial Order):}} در فصل آینده خواهیم
+  دید که هر رابطه‌ای که سه ویژگی «بازتابی» (\(A \subseteq A\))،
+  «پادتقارنی» و «تعدی» (همین قضیه) را داشته باشد، یک ترتیب جزئی است.
+  بنابراین، رابطه شمول (\(\subseteq\)) یک ترتیب جزئی روی مجموعه توانی
+  است.
+\end{itemize}

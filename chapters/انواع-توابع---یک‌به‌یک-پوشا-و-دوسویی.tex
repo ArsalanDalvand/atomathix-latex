@@ -1,0 +1,113 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{انواع توابع: یک‌به‌یک، پوشا و
+دوسویی}\label{انواع-توابع---یک‌به‌یک-پوشا-و-دوسویی}
+\begin{tldr}{خلاصه سریع}
+توابع بر اساس رفتار «نگاشت» اعضای دامنه به هم‌دامنه به سه دسته اصلی تقسیم
+می‌شوند: ۱. \textbf{یک‌به‌یک \lr{(Injective):}} هیچ دو ورودی، خروجی یکسان
+ندارند (تلاقی ممنوع). ۲. \textbf{پوشا \lr{(Surjective):}} تمام اعضای
+مقصد، حداقل یک بار هدف قرار گرفته‌اند (هم‌دامنه = برد). ۳. \textbf{دوسویی
+\lr{(Bijective):}} ترکیبی از هر دو؛ یک تناظر کامل و بی‌نقص بین دو مجموعه.
+\end{tldr}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۱. تابع یک‌به‌یک \lr{(Injective }/
+\lr{One-to-One)}}{۱. تابع یک‌به‌یک / }}\label{ux62aux627ux628ux639-ux6ccux6a9ux628ux647ux6ccux6a9-injective-one-to-one}
+\subsubsection{الف) تعریف
+ریاضی}\label{ux627ux644ux641-ux62aux639ux631ux6ccux641-ux631ux6ccux627ux636ux6cc}
+تابع \(f: X \to Y\) را \textbf{یک‌به‌یک} گوییم هرگاه تصاویرِ عناصر متمایز،
+متمایز باشند.
+\begin{tldr}{تعریف ۱۰}
+\[f \text{ is injective} \iff \forall x_1, x_2 \in X, \quad f(x_1) = f(x_2) \implies x_1 = x_2\]
+\end{tldr}
+\subsubsection{ب) تحلیل
+منطقی}\label{ux628-ux62aux62dux644ux6ccux644-ux645ux646ux637ux642ux6cc}
+این تعریف بر اساس \textbf{قانون عکس نقیض} (فصل ۱) معادل گزاره زیر است:
+\[x_1 \neq x_2 \implies f(x_1) \neq f(x_2)\] یعنی تابع \(f\) هرگز دو عضو
+مختلف دامنه را به یک نقطه در هم‌دامنه «فشرده» نمی‌کند
+\lr{(Information Lossless).}
+\subsubsection{ج) مثال}\label{ux62c-ux645ux62bux627ux644}
+\begin{itemize}
+\tightlist
+\item
+  تابع \(f(x) = 2x\) روی اعداد حقیقی یک‌به‌یک است.
+\item
+  تابع \(f(x) = x^2\) روی اعداد حقیقی یک‌به‌یک \textbf{نیست} (چون
+  \(f(2) = f(-2) = 4\)).
+\end{itemize}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۲. تابع پوشا \lr{(Surjective }/
+\lr{Onto)}}{۲. تابع پوشا / }}\label{ux62aux627ux628ux639-ux67eux648ux634ux627-surjective-onto}
+\subsubsection{الف) تعریف
+ریاضی}\label{ux627ux644ux641-ux62aux639ux631ux6ccux641-ux631ux6ccux627ux636ux6cc-1}
+تابع \(f: X \to Y\) را \textbf{پوشا} گوییم هرگاه برد تابع (\(Im(f)\))
+دقیقاً برابر با هم‌دامنه (\(Y\)) باشد.
+\begin{tldr}{تعریف ۱۱}
+\[f \text{ is surjective} \iff \forall y \in Y, \exists x \in X : f(x) = y\]
+معادل مجموعه‌ای: \[f(X) = Y\]
+\end{tldr}
+\subsubsection{ب) تحلیل
+ساختاری}\label{ux628-ux62aux62dux644ux6ccux644-ux633ux627ux62eux62aux627ux631ux6cc}
+در تابع پوشا، هیچ عنصری در \(Y\) «بی‌نصیب» نمی‌ماند. اگر \(f\) را به عنوان
+یک تیراندازی از \(X\) به \(Y\) در نظر بگیریم، پوشا بودن یعنی تمام اهداف
+در \(Y\) تیر خورده‌اند.
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۳. تابع دوسویی
+\lr{(Bijective)}}{۳. تابع دوسویی }}\label{ux62aux627ux628ux639-ux62fux648ux633ux648ux6ccux6cc-bijective}
+\subsubsection{الف) تعریف
+ریاضی}\label{ux627ux644ux641-ux62aux639ux631ux6ccux641-ux631ux6ccux627ux636ux6cc-2}
+تابع \(f: X \to Y\) را \textbf{دوسویی} (یا تناظر یک‌به‌یک) گوییم اگر
+هم‌زمان یک‌به‌یک و پوشا باشد.
+\begin{tldr}{تعریف ۱۲}
+\[f \text{ is bijective} \iff (f \text{ is injective}) \wedge (f \text{ is surjective})\]
+\end{tldr}
+\subsubsection{ب) اهمیت
+(وارون‌پذیری)}\label{ux628-ux627ux647ux645ux6ccux62a-ux648ux627ux631ux648ux646ux67eux630ux6ccux631ux6cc}
+توابع دوسویی مهم‌ترین کلاس توابع در جبر هستند زیرا ساختار دو مجموعه را
+کاملاً به هم منتقل می‌کنند (ایزومورفیسم). تنها توابع دوسویی هستند که
+\textbf{وارون‌پذیر} می‌باشند.
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۴. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۴. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۹---تصویر-و-تصویر-وارون-مجموعه} (رفتار با
+برد)}{۱. ارتباط با  (رفتار با برد)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f9---ux62aux635ux648ux6ccux631-ux648-ux62aux635ux648ux6ccux631-ux648ux627ux631ux648ux646-ux645ux62cux645ux648ux639ux647-ux631ux641ux62aux627ux631-ux628ux627-ux628ux631ux62f}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{شرط پوشا بودن:} در قضیه ۹ دیدیم که \(f(X) \subseteq Y\) همواره
+  برقرار است. تعریف پوشا بودن (تعریف ۱۱) این شمول را به تساوی
+  \(f(X) = Y\) ارتقا می‌دهد.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۱۰---تعمیم-تصویر-اجتماع-و-اشتراک} (رفتار با
+اشتراک)}{۲. ارتباط با  (رفتار با اشتراک)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1ux6f0---ux62aux639ux645ux6ccux645-ux62aux635ux648ux6ccux631-ux627ux62cux62aux645ux627ux639-ux648-ux627ux634ux62aux631ux627ux6a9-ux631ux641ux62aux627ux631-ux628ux627-ux627ux634ux62aux631ux627ux6a9}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{یک‌به‌یک بودن و اشتراک:} در قضیه ۱۰ دیدیم که
+  \(f(A \cap B) \subseteq f(A) \cap f(B)\) و تساوی لزوماً برقرار نیست.
+  اما اگر تابع \textbf{یک‌به‌یک} باشد، تساوی برقرار می‌شود:
+  \[f \text{ is 1-1} \implies f(A \cap B) = f(A) \cap f(B)\] این نتیجه
+  در \textbf{\autoref{قضیه-۱۳---حفظ-اشتراک-در-توابع-یک‌به‌یک}} (که بعداً
+  بررسی می‌کنیم) اثبات می‌شود.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۱۶---وارون‌های-یک‌طرفه}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1ux6f6---ux648ux627ux631ux648ux646ux647ux627ux6cc-ux6ccux6a9ux637ux631ux641ux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{وارون پذیری:}
+  \begin{itemize}
+  \tightlist
+  \item
+    اگر \(g \circ f = I_X\) (وارون چپ)، آنگاه \(f\) \textbf{یک‌به‌یک} است.
+  \item
+    اگر \(f \circ h = I_Y\) (وارون راست)، آنگاه \(f\) \textbf{پوشا} است.
+  \item
+    اگر هر دو برقرار باشند، \(f\) \textbf{دوسویی} است.
+  \end{itemize}
+\end{itemize}

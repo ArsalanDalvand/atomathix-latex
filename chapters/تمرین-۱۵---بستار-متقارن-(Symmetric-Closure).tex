@@ -1,0 +1,31 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{تمرین ۱۵: بستار متقارن
+(\(\mathcal{R} \cup \mathcal{R}^{-1}\))}{تمرین ۱۵: بستار متقارن (\textbackslash mathcal\{R\} \textbackslash cup \textbackslash mathcal\{R\}\^{}\{-1\})}}\label{تمرین-۱۵---بستار-متقارن-(Symmetric-Closure)}
+\begin{tldr}{مفهوم}
+اگر یک رابطه متقارن نباشد، با اضافه کردن وارونش به خودش، آن را متقارن
+می‌کنیم. این «کوچکترین» رابطه متقارنی است که شامل رابطه اصلی است.
+\end{tldr}
+\subsection{۱. صورت
+سوال}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644}
+ثابت کنید \(\mathcal{T} = \mathcal{R} \cup \mathcal{R}^{-1}\): ۱. یک
+رابطه متقارن است. ۲. اگر \(\mathcal{S}\) هر رابطه متقارنی باشد که
+\(\mathcal{R} \subseteq \mathcal{S}\)، آنگاه
+\(\mathcal{T} \subseteq \mathcal{S}\) (یعنی \(\mathcal{T}\) کوچکترین
+است).
+\subsection{۲. اثبات}\label{ux627ux62bux628ux627ux62a}
+\textbf{۱. متقارن بودن:}
+\[(\mathcal{R} \cup \mathcal{R}^{-1})^{-1} = \mathcal{R}^{-1} \cup (\mathcal{R}^{-1})^{-1} = \mathcal{R}^{-1} \cup \mathcal{R} = \mathcal{R} \cup \mathcal{R}^{-1}\]
+چون وارونش با خودش برابر شد، پس متقارن است.
+\textbf{۲. کوچکترین بودن:} فرض کنیم \(\mathcal{S}\) متقارن باشد
+(\(\mathcal{S}=\mathcal{S}^{-1}\)) و
+\(\mathcal{R} \subseteq \mathcal{S}\). چون
+\(\mathcal{R} \subseteq \mathcal{S}\)، پس
+\(\mathcal{R}^{-1} \subseteq \mathcal{S}^{-1} = \mathcal{S}\). حالا چون
+هم \(\mathcal{R}\) و هم \(\mathcal{R}^{-1}\) زیرمجموعه \(\mathcal{S}\)
+هستند، اجتماعشان هم هست:
+\[\mathcal{R} \cup \mathcal{R}^{-1} \subseteq \mathcal{S}\]

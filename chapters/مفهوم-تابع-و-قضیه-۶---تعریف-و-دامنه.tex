@@ -1,0 +1,81 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{مفهوم تابع و توسعه هم‌دامنه (قضیه
+۶)}\label{مفهوم-تابع-و-قضیه-۶---تعریف-و-دامنه}
+\begin{tldr}{خلاصه سریع}
+تابع، نوع خاصی از «رابطه» است که رفتار قطعی دارد: هر ورودی دقیقاً یک
+خروجی تولید می‌کند. قضیه ۶ بیان می‌کند که بزرگ کردن مجموعه مقصد (هم‌دامنه)،
+آسیبی به ساختار تابع نمی‌زند.
+\end{tldr}
+\subsection{\texorpdfstring{۱. تعریف صوری تابع
+\lr{(Function Definition)}}{۱. تعریف صوری تابع }}\label{ux62aux639ux631ux6ccux641-ux635ux648ux631ux6cc-ux62aux627ux628ux639-function-definition}
+در نظریه مجموعه‌ها، تابع یک مفهوم اولیه نیست، بلکه بر اساس مفهوم «رابطه»
+و «زوج مرتب» تعریف می‌شود.
+فرض کنید \(X\) و \(Y\) دو مجموعه باشند. یک تابع \(f\) از \(X\) به \(Y\)
+(نماد: \(f: X \to Y\)) زیرمجموعه‌ای از حاصلضرب دکارتی \(X \times Y\) است
+که دو شرط زیر را ارضا کند:
+\begin{tldr}{تعریف تابع}
+۱. \textbf{دامنه کامل \lr{(Existence):}} به ازای هر عضو در دامنه، حداقل
+یک تصویر وجود داشته باشد.
+\[\forall x \in X, \exists y \in Y : (x,y) \in f\] ۲. \textbf{یکتایی
+\lr{(Uniqueness):}} هر عضو دامنه، حداکثر یک تصویر داشته باشد.
+\[(x, y) \in f \wedge (x, z) \in f \implies y = z\]
+\end{tldr}
+اگر \((x,y) \in f\) باشد، معمولاً می‌نویسیم \(y = f(x)\).
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۲. قضیه ۶: توسعه هم‌دامنه
+\lr{(Codomain Extension)}}{۲. قضیه ۶: توسعه هم‌دامنه }}\label{ux642ux636ux6ccux647-ux6f6-ux62aux648ux633ux639ux647-ux647ux645ux62fux627ux645ux646ux647-codomain-extension}
+این قضیه به ما اجازه می‌دهد که «ظرف مقصد» را بدون تغییر ضابطه تابع،
+بزرگ‌تر کنیم.
+\subsubsection{متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(f: X \to Y\) یک تابع باشد و \(Y \subseteq W\).
+\begin{theorembox}{قضیه ۶}
+اگر \(Y \subseteq W\) باشد، آنگاه \(f\) یک تابع از \(X\) به \(W\) نیز
+محسوب می‌شود (\(f: X \to W\)).
+\end{theorembox}
+\subsubsection{اثبات
+صوری}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc}
+برای اثبات اینکه \(f\) تابعی از \(X\) به \(W\) است، باید سه شرط را بررسی
+کنیم: زیرمجموعه بودن، دامنه کامل و یکتایی.
+\begin{info}{برهان}
+\textbf{۱. شرط زیرمجموعه بودن:} می‌دانیم \(f \subseteq X \times Y\). چون
+طبق فرض \(Y \subseteq W\)، طبق ویژگی‌های حاصلضرب دکارتی داریم
+\(X \times Y \subseteq X \times W\). بنابراین با استفاده از خاصیت تعدی
+زیرمجموعه‌ها (\autoref{قضیه-۲---تعدی-در-مجموعه-ها}):
+\[f \subseteq X \times W\]
+\textbf{۲. شرط دامنه کامل:} چون \(f: X \to Y\) تابع است، برای هر
+\(x \in X\)، یک \(y \in Y\) هست که \((x,y) \in f\). چون
+\(Y \subseteq W\)، پس این \(y\) در \(W\) هم هست (\(y \in W\)). پس شرط
+وجود تصویر در \(W\) برقرار است.
+\textbf{۳. شرط یکتایی:} ویژگی یکتایی تابع (\(y=z\)) وابسته به عناصر زوج
+مرتب است و به مجموعه هم‌دامنه بستگی ندارد. چون \(f\) ذاتاً تابع است، این
+ویژگی همچنان برقرار باقی می‌ماند.
+\textbf{نتیجه:} \(f: X \to W\) یک تابع است.
+\end{info}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{پیشنیاز---مفاهیم-پایه-رابطه-و-تابع}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux67eux6ccux634ux646ux6ccux627ux632---ux645ux641ux627ux647ux6ccux645-ux67eux627ux6ccux647-ux631ux627ux628ux637ux647-ux648-ux62aux627ux628ux639}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{رابطه والد-فرزندی:} تعریف تابع مستقیماً روی تعریف «رابطه»
+  (زیرمجموعه حاصلضرب دکارتی) بنا شده است. قضیه ۶ نشان می‌دهد که تابع
+  بودن، بیشتر به رفتار مولفه اول (دامنه) وابسته است تا محدودیت مولفه دوم
+  (هم‌دامنه).
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۱---پخش‌پذیری-حاصلضرب-دکارتی}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1---ux67eux62eux634ux67eux630ux6ccux631ux6cc-ux62dux627ux635ux644ux636ux631ux628-ux62fux6a9ux627ux631ux62aux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ابزار اثبات:} در گام اول اثبات قضیه ۶، از اصلی استفاده کردیم
+  که اگر \(B \subseteq C\) آنگاه \(A \times B \subseteq A \times C\).
+  این نتیجه مستقیم تعاریف فصل ۳ درباره حاصلضرب دکارتی است.
+\end{itemize}

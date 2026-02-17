@@ -1,0 +1,110 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قضیه ۵: قیاس‌های ذو‌الوجهین
+\lr{(Dilemmas)}}{قضیه ۵: قیاس‌های ذو‌الوجهین }}\label{قضیه-۵---قیاس-ها}
+\begin{tldr}{خلاصه سریع}
+این قضیه ابزار قدرتمندی برای استدلال در شرایط «چندراهی» است. اگر دو مسیر
+شرطی داشته باشیم و بدانیم که در ابتدای یکی از این دو مسیر هستیم (یا در
+انتهای آن‌ها نیستیم)، می‌توانیم نتیجه نهایی را پیش‌بینی کنیم. این قضیه
+تعمیم‌یافته‌ی قواعد استنتاج ساده (مانند \lr{Modus Ponens) }برای حالات
+ترکیبی است.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(p\)، \(q\)، \(r\) و \(s\) چهار گزاره دلبخواه باشند. احکام زیر
+برقرارند:
+\begin{theorembox}{قضیه ۵}
+\textbf{الف) قیاس ذو‌الوجهین موجب \lr{(Constructive Dilemma):}}
+\[(p \rightarrow q) \wedge (r \rightarrow s) \Rightarrow (p \vee r \rightarrow q \vee s)\]
+\textbf{ب) قیاس ذو‌الوجهین منفی \lr{(Destructive Dilemma):}}
+\[(p \rightarrow q) \wedge (r \rightarrow s) \Rightarrow (\sim q \vee \sim s \rightarrow \sim p \vee \sim r)\]
+\lr{[cite\_start][cite: }161, 162{]}
+\end{theorembox}
+\subsection{۲. اثبات و تحلیل
+ساختاری}\label{ux627ux62bux628ux627ux62a-ux648-ux62aux62dux644ux6ccux644-ux633ux627ux62eux62aux627ux631ux6cc}
+کتاب اثبات این قضیه را به خواننده واگذار کرده است، اما برای تسلط کامل،
+جدول زیر ساختار منطقی و نحوه عملکرد این قضیه را تحلیل می‌کند.
+{\def\LTcaptype{none}
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1356}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3898}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2542}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2203}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+نوع قیاس
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+داده‌های ورودی (مقدمات)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+مکانیزم استدلال
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+نتیجه (خروجی)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{موجب} & ۱. دو شرط (\(p \to q, r \to s\))۲. وقوع یکی از
+\textbf{مقدم‌ها} (\(p \vee r\)) & اگر مقدم‌ها رخ دهند، تالی‌ها به دنبالشان
+می‌آیند. & وقوع یکی از \textbf{تالی‌ها} (\(q \vee s\)) \\
+\textbf{منفی} & ۱. دو شرط (\(p \to q, r \to s\))۲. نفی یکی از
+\textbf{تالی‌ها} (\(\sim q \vee \sim s\)) & اگر تالی‌ها رخ ندهند، مقدم‌ها
+هم رخ نداده‌اند (عکس نقیض). & نفی یکی از \textbf{مقدم‌ها}
+(\(\sim p \vee \sim r\)) \\
+\emph{(جدول تحلیلی - ساختار قیاس‌های ذو‌الوجهین)} & & & \\
+\end{longtable}
+}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه یک نقطه اتصال مهم در شبکه مفاهیم فصل ۱ است و می‌توان آن را
+ترکیبی از قضایای قبلی دانست:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۶---قواعد-استنتاج} (تعمیم
+استنتاج)}{۱. ارتباط با  (تعمیم استنتاج)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f6---ux642ux648ux627ux639ux62f-ux627ux633ux62aux646ux62aux627ux62c-ux62aux639ux645ux6ccux645-ux627ux633ux62aux646ux62aux627ux62c}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{رابطه با قیاس استثنایی \lr{(Modus Ponens):}} قیاس ذو‌الوجهین
+  \textbf{موجب}، در واقع ترکیب دو «قیاس استثنایی» است که با عملگر «یا»
+  (\(\vee\)) به هم جوش خورده‌اند.
+  \begin{itemize}
+  \tightlist
+  \item
+    قیاس استثنایی: \((p \to q) \wedge p \Rightarrow q\)
+  \item
+    قیاس ذو‌الوجهین موجب:
+    \((p \to q) \wedge (r \to s) \wedge (p \vee r) \Rightarrow (q \vee s)\)
+  \end{itemize}
+\item
+  \textbf{رابطه با قیاس دفع \lr{(Modus Tollens):}} قیاس ذو‌الوجهین
+  \textbf{منفی}، ترکیب دو «قیاس دفع» است.
+  \begin{itemize}
+  \tightlist
+  \item
+    قیاس دفع: \((p \to q) \wedge \sim q \Rightarrow \sim p\)
+  \item
+    قیاس ذو‌الوجهین منفی:
+    \((p \to q) \wedge (r \to s) \wedge (\sim q \vee \sim s) \Rightarrow (\sim p \vee \sim r)\)
+  \end{itemize}
+\end{itemize}
+\subsubsection{۲. ارتباط با قضیه ۲(عکس
+نقیض)}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f2ux639ux6a9ux633-ux646ux642ux6ccux636}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تبدیل موجب به منفی:} با استفاده از \textbf{قانون عکس نقیض}
+  (\autoref{قضیه-۲---هم‌ارزی‌های-منطقی-پایه}) می‌توانیم قیاس موجب را به
+  منفی تبدیل کنیم.
+  \begin{itemize}
+  \tightlist
+  \item
+    اگر در فرمولِ موجب، جای \((p \to q)\) را با \((\sim q \to \sim p)\) و
+    جای \((r \to s)\) را با \((\sim s \to \sim r)\) عوض کنیم، دقیقاً به
+    فرمول قیاس ذو‌الوجهین منفی می‌رسیم. این نشان می‌دهد که این دو قیاس، دو
+    روی یک سکه هستند.
+  \end{itemize}
+\end{itemize}

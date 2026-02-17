@@ -1,0 +1,32 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{تمرین ۱۲: نگاره مجموعه تحت رابطه
+(\(\mathcal{R}(X)\))}{تمرین ۱۲: نگاره مجموعه تحت رابطه (\textbackslash mathcal\{R\}(X))}}\label{تمرین-۱۲---نگاره-یا-تصویر-مجموعه-R(X)}
+\begin{tldr}{مفهوم}
+\(\mathcal{R}(X)\) یعنی مجموعه‌ای از تمام \(y\)هایی که با حداقل یک \(x\)
+از \(X\) رابطه دارند. (شبیه تصویر \(f(X)\) در توابع).
+\end{tldr}
+\subsection{۱. صورت
+سوال}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644}
+تعریف می‌کنیم
+\(\mathcal{R}(X) = \{y \in B \mid \exists x \in X, (x,y) \in \mathcal{R}\}\).
+ثابت کنید: الف)
+\(\mathcal{R}(D \cup E) = \mathcal{R}(D) \cup \mathcal{R}(E)\) ب)
+\(\mathcal{R}(D \cap E) \subseteq \mathcal{R}(D) \cap \mathcal{R}(E)\)
+\subsection{۲. اثبات
+(الف)}\label{ux627ux62bux628ux627ux62a-ux627ux644ux641}
+\[y \in \mathcal{R}(D \cup E) \iff \exists x \in (D \cup E), (x,y) \in \mathcal{R}\]
+\[\iff \exists x, (x \in D \vee x \in E) \wedge (x,y) \in \mathcal{R}\]
+\[\iff (\exists x \in D, (x,y) \in \mathcal{R}) \vee (\exists x \in E, (x,y) \in \mathcal{R})\]
+(پخش وجودی روی فصل) \[\iff y \in \mathcal{R}(D) \cup \mathcal{R}(E)\]
+\subsection{۳. مثال نقض برای تساوی در
+(ب)}\label{ux645ux62bux627ux644-ux646ux642ux636-ux628ux631ux627ux6cc-ux62aux633ux627ux648ux6cc-ux62fux631-ux628}
+چرا در اشتراک تساوی نیست؟ فرض کنید \(\mathcal{R}=\{(x,y), (z,y)\}\).
+\(D=\{x\}, E=\{z\}\).
+\(D \cap E = \emptyset \Rightarrow \mathcal{R}(D \cap E) = \emptyset\).
+اما \(\mathcal{R}(D)=\{y\}\) و \(\mathcal{R}(E)=\{y\}\). اشتراکشان
+\(\{y\}\) است که تهی نیست.

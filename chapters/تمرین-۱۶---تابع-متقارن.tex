@@ -1,0 +1,59 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۱۶: تابع
+متقارن}\label{تمرین-۱۶---تابع-متقارن}
+\subsection{۱. صورت
+سوال}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644}
+\begin{info}{فرض کنید \(X\) بازه بسته واحد \([0, 1]\) باشد. یک تابع \(f: X \to X\) بیابید که یک \textbf{رابطه متقارن} روی \(X\) باشد.}
+\end{info}
+\subsection{۲. استراتژی
+حل}\label{ux627ux633ux62aux631ux627ux62aux698ux6cc-ux62dux644}
+بیایید تحلیل کنیم که «تابع متقارن» چه ویژگی ریاضی‌ای دارد:
+\begin{itemize}
+\tightlist
+\item
+  \textbf{رابطه:} \(f\) مجموعه‌ای از زوج‌های مرتب \((x, y)\) است که
+  \(y = f(x)\).
+\item
+  \textbf{متقارن بودن:} اگر \((x, y) \in f\) باشد، باید \((y, x) \in f\)
+  نیز باشد.
+  \begin{itemize}
+  \tightlist
+  \item
+    یعنی اگر \(y = f(x)\)، آنگاه باید \(x = f(y)\).
+  \item
+    با جایگذاری \(y\): \(x = f(f(x))\).
+  \end{itemize}
+\end{itemize}
+بنابراین ما دنبال تابعی هستیم که \textbf{وارون خودش} باشد
+(\(f = f^{-1}\)) یا به عبارتی \(f(f(x)) = x\). نمودار چنین تابعی باید
+نسبت به خط \(y=x\) متقارن باشد.
+\subsection{۳. حل
+تشریحی}\label{ux62dux644-ux62aux634ux631ux6ccux62dux6cc}
+ما باید تابعی \(f: [0,1] \to [0,1]\) مثال بزنیم که خاصیت \(f(f(x))=x\)
+را داشته باشد.
+\begin{note}{مثال ۱: تابع همانی}
+ساده‌ترین پاسخ، تابع همانی است: \[f(x) = x\] بررسی تقارن: اگر
+\((x, y) \in f \implies y = x \implies x = y \implies (y, x) \in f\).
+(این پاسخ صحیح است، اما معمولاً مثال‌های غیربدیهی مد نظر هستند).
+\end{note}
+\begin{note}{مثال ۲: تابع مکمل (پیشنهادی)}
+یک مثال غیربدیهی و هندسی: \[f(x) = 1 - x\]
+\textbf{بررسی شرایط:}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{دامنه و برد:} اگر \(x \in [0, 1]\)، آنگاه \(1-x\) نیز در
+  \([0, 1]\) است. پس \(f: X \to X\) برقرار است.
+\item
+  \textbf{تقارن:} فرض کنیم \((a, b) \in f\).
+  \[b = 1 - a \implies a = 1 - b \implies (b, a) \in f\]
+\end{enumerate}
+\textbf{نتیجه:} تابع \(f(x) = 1-x\) یک تابع متقارن روی بازه \([0, 1]\)
+است.
+\end{note}

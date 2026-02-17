@@ -1,0 +1,91 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۵: ویژگی‌های جبری متمم و رابطه آن با
+شمول}\label{قضیه-۵---متمم-و-زیرمجموعه}
+\begin{tldr}{خلاصه سریع}
+این قضیه رفتار عملگر «متمم» (\('\)) را در جبر مجموعه‌ها تبیین می‌کند.
+مهم‌ترین بخش آن، اثبات هم‌ارزی بین «شمول دو مجموعه» و «شمول متمم‌های آن‌ها
+به صورت معکوس» است که پایه‌ی بسیاری از استدلال‌های غیرمستقیم در توپولوژی و
+آنالیز می‌باشد.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(U\) مجموعه مرجع \lr{(Universal Set) }باشد و
+\(A, B \subseteq U\). احکام زیر برقرارند:
+\begin{theorembox}{قضیه ۵}
+\textbf{الف) قانون نفی مضاعف \lr{(Involution):}} \[(A')' = A\]
+\textbf{ب) متمم‌های کرانی:}
+\[\emptyset' = U \quad , \quad U' = \emptyset\] \textbf{ج) قوانین مکمل
+\lr{(Complement Laws):}}
+\[A \cup A' = U \quad , \quad A \cap A' = \emptyset\] \textbf{د) قانون
+عکس نقیض مجموعه‌ای \lr{(Contraposition):}}
+\[A \subseteq B \iff B' \subseteq A'\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+\subsubsection{اثبات قسمت (د): عکس
+نقیض}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux62f-ux639ux6a9ux633-ux646ux642ux6ccux636}
+این اثبات نشان می‌دهد که ساختار ترتیب شمول (\(\subseteq\)) تحت عملگر
+متمم، معکوس می‌شود.
+\begin{info}{اثبات}
+طبق تعریف زیرمجموعه، باید نشان دهیم گزاره سمت چپ منطقاً با سمت راست هم‌ارز
+است:
+۱. تعریف طرف چپ (\(A \subseteq B\)):
+\[\forall x (x \in A \rightarrow x \in B)\]
+۲. استفاده از \textbf{قانون عکس نقیض در منطق}
+(\autoref{قضیه-۲---هم‌ارزی‌های-منطقی-پایه}): می‌دانیم
+\((p \rightarrow q) \equiv (\sim q \rightarrow \sim p)\). با قرار دادن
+\(p: x \in A\) و \(q: x \in B\):
+\[\forall x (x \notin B \rightarrow x \notin A)\]
+۳. ترجمه به زبان متمم‌ها (\(x \notin S \iff x \in S'\)):
+\[\forall x (x \in B' \rightarrow x \in A')\]
+۴. تطبیق با تعریف زیرمجموعه برای طرف راست: این دقیقاً تعریف
+\(B' \subseteq A'\) است.
+\end{info}
+\subsubsection{اثبات قسمت (الف): نفی
+مضاعف}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux627ux644ux641-ux646ux641ux6cc-ux645ux636ux627ux639ux641}
+\begin{info}{اثبات}
+\[x \in (A')' \iff x \notin A' \iff \sim(x \notin A) \iff \sim(\sim(x \in A))\]
+طبق قانون نفی مضاعف در منطق (\(\sim \sim p \equiv p\)): \[\iff x \in A\]
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه، ترجمه‌ی دقیق اصول «منطق کلاسیک» به «جبر مجموعه‌ها» است:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۲---هم‌ارزی‌های-منطقی-پایه} (ریشه
+منطقی)}{۱. ارتباط با  (ریشه منطقی)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f2-ux641ux635ux644-ux6f1-ux631ux6ccux634ux647-ux645ux646ux637ux642ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تناظر یک‌به‌یک:} بند (الف) این قضیه دقیقاً معادل قانون
+  \(\sim(\sim p) \equiv p\) است. بند (د) دقیقاً معادل قانون
+  \((p \to q) \equiv (\sim q \to \sim p)\) است. این نشان می‌دهد که
+  متمم‌گیری در مجموعه‌ها، ایزومورف با نقیض‌گیری در منطق است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۷---قوانین-تناقض} (ثابت‌های
+منطقی)}{۲. ارتباط با  (ثابت‌های منطقی)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f7---ux642ux648ux627ux646ux6ccux646-ux62aux646ux627ux642ux636-ux62bux627ux628ux62aux647ux627ux6cc-ux645ux646ux637ux642ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{جبر بولی:} در بند (ج) دیدیم که \(A \cup A' = U\) و
+  \(A \cap A' = \emptyset\). این‌ها معادل قوانین منطقی «طرد شق ثالث»
+  (\(p \vee \sim p \equiv t\)) و «عدم تناقض»
+  (\(p \wedge \sim p \equiv c\)) هستند. در اینجا \(U\) نقش راستگو
+  (\(t\)) و \(\emptyset\) نقش تناقض (\(c\)) را ایفا می‌کند.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۱---شمول-تهی}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1---ux634ux645ux648ux644-ux62aux647ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{سازگاری در کران‌ها:} طبق قضیه ۱، \(\emptyset \subseteq A\). اگر
+  از قانون عکس نقیض (بند د همین قضیه) استفاده کنیم، نتیجه می‌شود
+  \(A' \subseteq \emptyset'\). طبق بند (ب)، \(\emptyset' = U\). پس
+  \(A' \subseteq U\). این نتیجه با تعریف مجموعه مرجع (که شامل همه
+  زیرمجموعه‌هاست) کاملاً سازگار است.
+\end{itemize}

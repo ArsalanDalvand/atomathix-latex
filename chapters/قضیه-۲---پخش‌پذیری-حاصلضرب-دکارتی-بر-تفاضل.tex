@@ -1,0 +1,94 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۲: پخش‌پذیری حاصلضرب دکارتی بر
+تفاضل}\label{قضیه-۲---پخش‌پذیری-حاصلضرب-دکارتی-بر-تفاضل}
+\begin{tldr}{خلاصه سریع}
+این قضیه نشان می‌دهد که عملگر حاصلضرب دکارتی (\(\times\)) نسبت به عملگر
+تفاضل (\(-\)) نیز خاصیت پخش‌پذیری دارد. این ویژگی، رفتار خطی و توزیع‌پذیر
+ضرب دکارتی را در تمامی عملیات اصلی جبر مجموعه‌ها (اشتراک، اجتماع و تفاضل)
+تکمیل می‌کند.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(A\)، \(B\) و \(C\) سه مجموعه دلبخواه باشند. همواره رابطه زیر
+برقرار است:
+\begin{theorembox}{قضیه ۲}
+\[A \times (B - C) = (A \times B) - (A \times C)\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+برای اثبات این تساوی، از روش تحلیل گزاره‌نمای عضویت و زنجیره هم‌ارزی‌های
+منطقی استفاده می‌کنیم. نکته کلیدی در این اثبات، استفاده از قوانین منطق
+گزاره‌ها برای مدیریت نقیض در مؤلفه دوم است.
+\begin{info}{برهان}
+باید نشان دهیم گزاره \((a, x) \in A \times (B - C)\) منطقاً هم‌ارز با
+\((a, x) \in (A \times B) - (A \times C)\) است.
+۱. \textbf{بسط تعریف سمت چپ:} \[(a, x) \in A \times (B - C)\] طبق تعریف
+حاصلضرب دکارتی: \[\iff (a \in A) \wedge (x \in B - C)\] طبق تعریف تفاضل
+مجموعه‌ها (\(x \in S - T \iff x \in S \wedge x \notin T\)):
+\[\iff (a \in A) \wedge [(x \in B) \wedge (x \notin C)]\]
+۲. \textbf{به‌کارگیری قانون خودتوانی \lr{(Idempotent Law):}} برای اینکه
+بتوانیم گزاره \(a \in A\) را با هر دو بخش دیگر ترکیب کنیم، از هم‌ارزی
+منطقی \(p \equiv p \wedge p\) استفاده می‌کنیم:
+\[\iff [(a \in A) \wedge (a \in A)] \wedge (x \in B) \wedge (x \notin C)\]
+۳. \textbf{استفاده از قوانین شرکت‌پذیری و جابجایی \lr{(Associativity }\&
+\lr{Commutativity):}} گزاره‌ها را برای ساختن فرم حاصلضرب دکارتی بازآرایی
+می‌کنیم:
+\[\iff [(a \in A) \wedge (x \in B)] \wedge [(a \in A) \wedge (x \notin C)]\]
+۴. \textbf{تحلیل منطقی بخش دوم (نکته ظریف):} بخش اول
+\([(a \in A) \wedge (x \in B)]\) دقیقاً معادل \((a, x) \in A \times B\)
+است. برای بخش دوم، باید نشان دهیم در حضور شرط اول (\(a \in A\))، گزاره
+\(x \notin C\) هم‌ارز با \((a, x) \notin A \times C\) است.
+\begin{itemize}
+\tightlist
+\item
+  می‌دانیم
+  \((a, x) \notin A \times C \iff \sim(a \in A \wedge x \in C) \iff a \notin A \vee x \notin C\).
+\item
+  چون در این زنجیره استدلال، \(a \in A\) مفروض است، پس گزاره
+  \(a \notin A\) کاذب (\(F\)) می‌باشد.
+\item
+  بنابراین \(F \vee (x \notin C)\) منطقاً هم‌ارز با \(x \notin C\) است.
+\end{itemize}
+پس می‌توانیم بنویسیم:
+\[\iff [(a, x) \in A \times B] \wedge [(a, x) \notin A \times C]\]
+۵. \textbf{نتیجه‌گیری نهایی:} طبق تعریف تفاضل مجموعه‌ها:
+\[\iff (a, x) \in (A \times B) - (A \times C)\]
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه پازل رفتار جبری حاصلضرب دکارتی را تکمیل می‌کند:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۱---پخش‌پذیری-حاصلضرب-دکارتی}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1---ux67eux62eux634ux67eux630ux6ccux631ux6cc-ux62dux627ux635ux644ux636ux631ux628-ux62fux6a9ux627ux631ux62aux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تکمیل توزیع‌پذیری:} در قضیه ۱، پخش‌پذیری \(\times\) بر \(\cap\)
+  و \(\cup\) اثبات شد. قضیه ۲ نشان می‌دهد که این رفتار برای تفاضل (\(-\))
+  نیز صادق است. این یعنی حاصلضرب دکارتی با تمام عملیات بولی استاندارد
+  سازگار است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۵---متمم-و-زیرمجموعه}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f5-ux641ux635ux644-ux6f2}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ریشه تعریف تفاضل:} اثبات این قضیه (گام ۱) کاملاً وابسته به
+  تعریف دقیق تفاضل است که در فصل ۲ بررسی شد (\(B - C = B \cap C'\)).
+  بدون درک منطقی نقیض عضویت (\(x \notin C\))، گام ۴ اثبات قابل درک
+  نخواهد بود.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۴---جبر-مجموعه-ها}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f4---ux62cux628ux631-ux645ux62cux645ux648ux639ux647-ux647ux627}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{مبانی استنتاج:} استفاده از قانون خودتوانی (\(p \wedge p\)) و
+  جابجایی در گام‌های ۲ و ۳، کاربرد مستقیم قوانین منطق گزاره‌ها در نظریه
+  مجموعه‌هاست. این قضیه نمونه‌ای عالی از تبدیل یک مسئله مجموعه‌ای به مسئله
+  منطقی و حل آن است.
+\end{itemize}

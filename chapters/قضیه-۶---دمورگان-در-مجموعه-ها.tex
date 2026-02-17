@@ -1,0 +1,93 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قضیه ۶: قوانین دمورگان در نظریه مجموعه‌ها
+\lr{(De Morgan’s Laws)}}{قضیه ۶: قوانین دمورگان در نظریه مجموعه‌ها }}\label{قضیه-۶---دمورگان-در-مجموعه-ها}
+\begin{tldr}{خلاصه سریع}
+این قضیه بیانگر اصل «دوگانگی» \lr{(Duality) }بین عملگرهای اجتماع و
+اشتراک تحت تأثیر عملگر متمم است. طبق این قوانین، متممِ اجتماع برابر با
+اشتراک متمم‌هاست و بالعکس. این روابط، ایزومورفیسم کامل بین جبر مجموعه‌ها و
+منطق گزاره‌ها را نشان می‌دهند.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(U\) مجموعه مرجع باشد و \(A, B \subseteq U\). هم‌ارزی‌های
+مجموعه‌ای زیر برقرارند:
+\begin{theorembox}{قضیه ۶}
+\textbf{الف) متمم اجتماع:} \[(A \cup B)' = A' \cap B'\] \textbf{ب) متمم
+اشتراک:} \[(A \cap B)' = A' \cup B'\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+اثبات این قضیه مبتنی بر ترجمه گزاره‌های عضویت به منطق صوری و استفاده از
+\textbf{قوانین دمورگان در منطق} است.
+\subsubsection{اثبات قسمت
+(الف)}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux627ux644ux641}
+نشان می‌دهیم تابع گزاره‌نمای عضویت برای دو طرف تساوی هم‌ارز است:
+\begin{info}{اثبات}
+\[x \in (A \cup B)'\] ۱. طبق تعریف متمم: \[\iff x \notin (A \cup B)\]
+\[\iff \sim (x \in A \cup B)\] ۲. طبق تعریف اجتماع:
+\[\iff \sim (x \in A \lor x \in B)\] ۳. طبق
+\textbf{\autoref{قضیه-۳---قوانین-دمورگان}} (دمورگان منطقی
+\(\sim(p \lor q) \equiv \sim p \land \sim q\)):
+\[\iff \sim(x \in A) \land \sim(x \in B)\] ۴. طبق تعریف متمم:
+\[\iff (x \in A') \land (x \in B')\] ۵. طبق تعریف اشتراک:
+\[\iff x \in (A' \cap B')\]
+نتیجه: \((A \cup B)' = A' \cap B'\).
+\end{info}
+\subsubsection{اثبات قسمت
+(ب)}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux628}
+روند مشابهی طی می‌شود با این تفاوت که از قانون منطقی
+\(\sim(p \land q) \equiv \sim p \lor \sim q\) استفاده می‌کنیم.
+\begin{info}{اثبات}
+\[x \in (A \cap B)' \iff \sim(x \in A \land x \in B)\]
+\[\iff \sim(x \in A) \lor \sim(x \in B)\]
+\[\iff x \in A' \lor x \in B'\] \[\iff x \in A' \cup B'\]
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه پل ارتباطی حیاتی برای انتقال ویژگی‌های منطق کلاسیک به ساختارهای
+جبری و توپولوژیک است:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۳---قوانین-دمورگان} (ریشه
+منطقی)}{۱. ارتباط با  (ریشه منطقی)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f3-ux641ux635ux644-ux6f1-ux631ux6ccux634ux647-ux645ux646ux637ux642ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ایزومورفیسم ساختاری:} قضیه ۶ تصویر دقیق قضیه ۳ در جبر
+  مجموعه‌هاست. تناظر زیر به طور کامل برقرار است:
+  \begin{itemize}
+  \tightlist
+  \item
+    اجتماع (\(\cup\)) \(\leftrightarrow\) فصل (\(\lor\))
+  \item
+    اشتراک (\(\cap\)) \(\leftrightarrow\) عطف (\(\land\))
+  \item
+    متمم (\('\)) \(\leftrightarrow\) نقیض (\(\sim\))
+  \end{itemize}
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۵---متمم-و-زیرمجموعه}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f5---ux645ux62aux645ux645-ux648-ux632ux6ccux631ux645ux62cux645ux648ux639ux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{پایه جبری:} اثبات قضیه ۶ به شدت به تعریف دقیق متمم و نقیض
+  گزاره‌ها که در قضیه ۵ بررسی شد، وابسته است. همچنین، ترکیب قضیه ۶ با
+  قضیه ۵ (قانون عکس نقیض \(A \subseteq B \iff B' \subseteq A'\))
+  ابزارهای قدرتمندی برای ساده‌سازی عبارات پیچیده مجموعه‌ای فراهم می‌کند.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۸---تعمیم-دمورگان}
+(تعمیم)}{۳. ارتباط با  (تعمیم)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f8---ux62aux639ux645ux6ccux645-ux62fux645ux648ux631ux6afux627ux646-ux62aux639ux645ux6ccux645}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{حالت خاص:} قضیه ۶ حالت محدود \lr{(Finite Case) }برای دو مجموعه
+  است. \textbf{\autoref{قضیه-۸---تعمیم-دمورگان}} این مفهوم را برای
+  خانواده‌های نامتناهی از مجموعه‌ها گسترش می‌دهد:
+  \((\bigcup A_i)' = \bigcap A_i'\). در آنجا، نقش عملگرهای \(\lor\) و
+  \(\land\) به سورهای \(\exists\) و \(\forall\) تبدیل می‌شود.
+\end{itemize}

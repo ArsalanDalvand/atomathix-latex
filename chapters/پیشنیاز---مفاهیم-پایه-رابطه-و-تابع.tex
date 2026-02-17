@@ -1,0 +1,97 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{مفاهیم پایه: حاصلضرب دکارتی، رابطه و
+تابع}\label{پیشنیاز---مفاهیم-پایه-رابطه-و-تابع}
+\begin{tldr}{خلاصه سریع}
+این یادداشت پیش‌نیازهای ضروری برای ورود به قضایای فصل ۳ (به‌ویژه قضایای ۱،
+۱۵ و ۱۶) را پوشش می‌دهد. مفاهیم کلیدی شامل ساختار زوج مرتب، حاصلضرب
+دکارتی، تعریف صوری تابع، ترکیب توابع و انواع خاص توابع (یک‌به‌یک و پوشا)
+هستند.
+\end{tldr}
+\subsection{\texorpdfstring{۱. حاصلضرب دکارتی
+\lr{(Cartesian Product)}}{۱. حاصلضرب دکارتی }}\label{ux62dux627ux635ux644ux636ux631ux628-ux62fux6a9ux627ux631ux62aux6cc-cartesian-product}
+سنگ‌بنای تعریف رابطه و تابع، مفهوم زوج مرتب و حاصلضرب دکارتی است.
+\subsubsection{الف) زوج
+مرتب}\label{ux627ux644ux641-ux632ux648ux62c-ux645ux631ux62aux628}
+برای هر دو شیء \(a\) و \(b\)، زوج مرتب \((a,b)\) شیئی است که در آن ترتیب
+مؤلفه‌ها اهمیت دارد.
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ویژگی اصلی:} \((a,b) = (c,d) \iff a=c \wedge b=d\).
+\end{itemize}
+\subsubsection{ب) تعریف حاصلضرب
+دکارتی}\label{ux628-ux62aux639ux631ux6ccux641-ux62dux627ux635ux644ux636ux631ux628-ux62fux6a9ux627ux631ux62aux6cc}
+برای دو مجموعه \(A\) و \(B\)، حاصلضرب دکارتی \(A \times B\) مجموعه‌ی تمام
+زوج‌های مرتبی است که مؤلفه اول از \(A\) و مؤلفه دوم از \(B\) باشد.
+\begin{tldr}{تعریف}
+\[A \times B = \{ (a,b) \mid a \in A \wedge b \in B \}\]
+\end{tldr}
+\subsection{\texorpdfstring{۲. رابطه و تابع
+\lr{(Relation and Function)}}{۲. رابطه و تابع }}\label{ux631ux627ux628ux637ux647-ux648-ux62aux627ux628ux639-relation-and-function}
+\subsubsection{الف)
+رابطه}\label{ux627ux644ux641-ux631ux627ux628ux637ux647}
+هر زیرمجموعه از حاصلضرب دکارتی \(A \times B\) یک «رابطه» از \(A\) به
+\(B\) نامیده می‌شود. اگر \(R \subseteq A \times B\)، گزاره
+\((a,b) \in R\) را اغلب به صورت \(aRb\) می‌نویسیم.
+\subsubsection{ب) تابع (به عنوان نوع خاصی از
+رابطه)}\label{ux628-ux62aux627ux628ux639-ux628ux647-ux639ux646ux648ux627ux646-ux646ux648ux639-ux62eux627ux635ux6cc-ux627ux632-ux631ux627ux628ux637ux647}
+تابع \(f: X \to Y\) رابطه‌ای است که در آن هر عضو دامنه (\(X\)) دقیقاً با
+یک عضو از هم‌دامنه (\(Y\)) در ارتباط است.
+\begin{tldr}{تعریف صوری}
+\[f \subseteq X \times Y \text{ is a function } \iff \forall x \in X, \exists! y \in Y, (x,y) \in f\]
+\end{tldr}
+\subsection{\texorpdfstring{۳. ترکیب توابع
+\lr{(Function Composition)}}{۳. ترکیب توابع }}\label{ux62aux631ux6a9ux6ccux628-ux62aux648ux627ux628ux639-function-composition}
+عملیات ترکیب، قلب تپنده جبر توابع است.
+\begin{tldr}{تعریف}
+فرض کنید \(f: X \to Y\) و \(g: Y \to Z\) باشند. ترکیب \(g\) و \(f\) که
+با \(g \circ f\) نشان داده می‌شود، تابعی است از \(X\) به \(Z\) که به صورت
+زیر تعریف می‌شود:
+\[(g \circ f)(x) = g(f(x)) \quad , \quad \forall x \in X\]
+\lr{[cite\_start][cite: }570{]}
+\end{tldr}
+\textbf{نکته مهم:} در نمادگذاری \(g \circ f\)، ابتدا تابع سمت راست
+(\(f\)) و سپس تابع سمت چپ (\(g\)) اثر می‌کند.
+\subsection{۴. انواع خاص توابع و تابع
+همانی}\label{ux627ux646ux648ux627ux639-ux62eux627ux635-ux62aux648ux627ux628ux639-ux648-ux62aux627ux628ux639-ux647ux645ux627ux646ux6cc}
+برای درک قضایای مربوط به وارون‌پذیری (قضیه ۱۶)، تعاریف زیر حیاتی هستند:
+\subsubsection{\texorpdfstring{الف) تابع همانی
+\lr{(Identity Function)}}{الف) تابع همانی }}\label{ux627ux644ux641-ux62aux627ux628ux639-ux647ux645ux627ux646ux6cc-identity-function}
+تابع \(I_X: X \to X\) که هر عضو را به خودش می‌نگارد.
+\[I_X(x) = x \quad , \quad \forall x \in X\] این تابع نقش «عنصر خنثی» را
+در عمل ترکیب ایفا می‌کند.
+\subsubsection{\texorpdfstring{ب) تابع یک‌به‌یک \lr{(Injective }/
+\lr{One-to-One)}}{ب) تابع یک‌به‌یک / }}\label{ux628-ux62aux627ux628ux639-ux6ccux6a9ux628ux647ux6ccux6a9-injective-one-to-one}
+تابعی که اعضای متمایز دامنه را به اعضای متمایز هم‌دامنه می‌برد.
+\[f(x_1) = f(x_2) \implies x_1 = x_2\]
+\subsubsection{\texorpdfstring{ج) تابع پوشا \lr{(Surjective }/
+\lr{Onto)}}{ج) تابع پوشا / }}\label{ux62c-ux62aux627ux628ux639-ux67eux648ux634ux627-surjective-onto}
+تابعی که برد آن برابر با هم‌دامنه باشد (هر عضو \(Y\) تصویر حداقل یک عضو
+\(X\) باشد). \[\forall y \in Y, \exists x \in X : f(x) = y\]
+\subsection{\texorpdfstring{۵. شبکه ارتباطی با قضایای فصل
+\lr{(Analytic Map)}}{۵. شبکه ارتباطی با قضایای فصل }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux642ux636ux627ux6ccux627ux6cc-ux641ux635ux644-analytic-map}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{حاصلضرب دکارتی \(\leftarrow\)
+  \autoref{قضیه-۱---پخش‌پذیری-حاصلضرب-دکارتی}:} درک تعریف \(A \times B\)
+  پیش‌شرط اثبات خاصیت پخش‌پذیری آن روی اشتراک و اجتماع است. بدون دانستن
+  اینکه شرط عضویت در \(A \times B\) عبارت است از
+  \((x \in A \wedge y \in B)\)، نمی‌توان اثبات‌های قضیه ۱ و ۲ را دنبال
+  کرد.
+\item
+  \textbf{ترکیب توابع \(\leftarrow\)
+  \autoref{قضیه-۱۵---شرکت‌پذیری-ترکیب-توابع}:} قضیه ۱۵ ثابت می‌کند که
+  \((h \circ g) \circ f = h \circ (g \circ f)\). این ویژگی مستقیماً از
+  تعریف جبری \(g(f(x))\) ناشی می‌شود.
+\item
+  \textbf{توابع خاص و همانی \(\leftarrow\)
+  \autoref{قضیه-۱۶---وارون‌های-یک‌طرفه}:} قضیه ۱۶ ارتباط عمیقی بین ترکیب
+  توابع و یک‌به‌یک/پوشا بودن برقرار می‌کند. مثلاً اگر \(g \circ f = I_X\)
+  باشد، \(f\) لزوماً یک‌به‌یک است. درک نقش \(I_X\) در اینجا کلیدی است.
+\end{itemize}

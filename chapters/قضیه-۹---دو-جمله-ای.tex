@@ -1,0 +1,55 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قضیه ۹: قضیه دوجمله‌ای
+\lr{(Binomial Theorem)}}{قضیه ۹: قضیه دوجمله‌ای }}\label{قضیه-۹---دو-جمله-ای}
+\begin{tldr}{خلاصه سریع}
+این قضیه الگوی باز کردن اتحاد \((x+y)^n\) را برای هر توان طبیعی \(n\)
+بیان می‌کند. ضرایب هر جمله، همان اعداد ترکیب (\(C(n,r)\)) هستند که در
+قضیه ۸ معرفی شدند.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+اگر \(x\) و \(y\) دو متغیر و \(n\) یک عدد طبیعی باشد، آنگاه:
+\begin{theorembox}{قضیه ۹}
+\[(x+y)^n = C(n,0)x^n + C(n,1)x^{n-1}y + \dots + C(n,r)x^{n-r}y^r + \dots + C(n,n)y^n\]
+یا به فرم سیگما (جمع): \[(x+y)^n = \sum_{r=0}^{n} C(n,r) x^{n-r} y^r\]
+\end{theorembox}
+\subsection{۲. اثبات (با استفاده از
+استقرا)}\label{ux627ux62bux628ux627ux62a-ux628ux627-ux627ux633ux62aux641ux627ux62fux647-ux627ux632-ux627ux633ux62aux642ux631ux627}
+از روش \textbf{\autoref{مفهوم-استقرا}} استفاده می‌کنیم:
+\begin{info}{مراحل اثبات}
+\textbf{۱. پایه استقرا (\(n=1\)):}
+\[(x+y)^1 = C(1,0)x + C(1,1)y = 1x + 1y = x+y\] (حکم برقرار است).
+\textbf{۲. فرض استقرا (\(n=k\)):} فرض می‌کنیم حکم برای \(k\) درست باشد:
+\[(x+y)^k = \sum_{r=0}^{k} C(k,r)x^{k-r}y^r\]
+\textbf{۳. گام استقرا (\(n=k+1\)):} طرفین فرض را در \((x+y)\) ضرب
+می‌کنیم: \[(x+y)^{k+1} = (x+y) [C(k,0)x^k + \dots + C(k,k)y^k]\] با ضرب
+کردن \(x\) در تمام جملات و سپس \(y\) در تمام جملات و فاکتورگیری از
+توان‌های مشابه \(x^{k+1-r}y^r\)، ضرایب به صورت مجموع دو جمله قبلی ظاهر
+می‌شوند: \[C(k+1, r) = C(k, r) + C(k, r-1)\] (این همان تعریف بازگشتی
+\textbf{\autoref{قضیه-۸---ترکیب}} است). بدین ترتیب فرمول برای \(k+1\)
+ساخته می‌شود.
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۸---ترکیب}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f8---ux62aux631ux6a9ux6ccux628}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تامین ضرایب:} قضیه دوجمله‌ای بدون قضیه ۸ معنا ندارد. قضیه ۸
+  ابزار محاسبه‌ی «وزن» هر جمله در بسط دوجمله‌ای است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{مفهوم-استقرا}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux645ux641ux647ux648ux645-ux627ux633ux62aux642ux631ux627}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{کاربرد عملی:} قضیه ۹ یکی از کلاسیک‌ترین و مهم‌ترین مثال‌های
+  کاربرد استقرای ریاضی در جبر است. این نشان می‌دهد که چگونه ابزار منطقی
+  (استقرا) برای اثبات حقایق جبری (اتحادها) به کار می‌رود.
+\end{itemize}

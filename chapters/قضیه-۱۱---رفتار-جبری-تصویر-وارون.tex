@@ -1,0 +1,84 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۱۱: رفتار جبری تصویر وارون (هم‌ریختی
+کامل)}\label{قضیه-۱۱---رفتار-جبری-تصویر-وارون}
+\begin{tldr}{خلاصه سریع}
+برخلاف «تصویر مستقیم» (\(f\)) که در برخورد با اشتراک دچار ضعف می‌شود،
+«تصویر وارون» (\(f^{-1}\)) یک عملگر ایده‌آل است. این عملگر ساختار جبری
+اجتماع و اشتراک را دقیقاً حفظ می‌کند و با هر دو عملگر جابجا می‌شود.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(f: X \to Y\) یک تابع باشد و
+\(\{B_\gamma\}_{\gamma \in \Gamma}\) خانواده‌ای از زیرمجموعه‌های هم‌دامنه
+\(Y\) باشد.
+\begin{theorembox}{قضیه ۱۱}
+\textbf{الف) پخش‌پذیری کامل بر اجتماع:}
+\[f^{-1}\left(\bigcup_{\gamma \in \Gamma} B_\gamma\right) = \bigcup_{\gamma \in \Gamma} f^{-1}(B_\gamma)\]
+\textbf{ب) پخش‌پذیری کامل بر اشتراک:}
+\[f^{-1}\left(\bigcap_{\gamma \in \Gamma} B_\gamma\right) = \bigcap_{\gamma \in \Gamma} f^{-1}(B_\gamma)\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+اثبات این قضیه بر پایه «تعریف تصویر وارون» و «قوانین منطق مرتبه اول»
+استوار است. زیبایی این اثبات در این است که تصویر وارون، گزاره‌های عضویت
+را بدون تغییر ساختار منطقی منتقل می‌کند.
+\subsubsection{اثبات قسمت (الف):
+اجتماع}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux627ux644ux641-ux627ux62cux62aux645ux627ux639}
+\begin{info}{برهان}
+\[x \in f^{-1}\left(\bigcup_{\gamma \in \Gamma} B_\gamma\right)\] ۱. طبق
+تعریف تصویر وارون (\(x \in f^{-1}(S) \iff f(x) \in S\)):
+\[\iff f(x) \in \bigcup_{\gamma \in \Gamma} B_\gamma\]
+۲. طبق تعریف اجتماع تعمیم‌یافته:
+\[\iff \exists \gamma \in \Gamma, (f(x) \in B_\gamma)\]
+۳. طبق تعریف تصویر وارون (بازگشت به دامنه):
+\[\iff \exists \gamma \in \Gamma, (x \in f^{-1}(B_\gamma))\]
+۴. طبق تعریف اجتماع تعمیم‌یافته:
+\[\iff x \in \bigcup_{\gamma \in \Gamma} f^{-1}(B_\gamma)\]
+\textbf{نتیجه:} تساوی برقرار است.
+\end{info}
+\subsubsection{اثبات قسمت (ب):
+اشتراک}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux628-ux627ux634ux62aux631ux627ux6a9}
+\begin{info}{برهان}
+\[x \in f^{-1}\left(\bigcap_{\gamma \in \Gamma} B_\gamma\right)\] ۱. طبق
+تعریف تصویر وارون:
+\[\iff f(x) \in \bigcap_{\gamma \in \Gamma} B_\gamma\]
+۲. طبق تعریف اشتراک تعمیم‌یافته:
+\[\iff \forall \gamma \in \Gamma, (f(x) \in B_\gamma)\]
+۳. طبق تعریف تصویر وارون:
+\[\iff \forall \gamma \in \Gamma, (x \in f^{-1}(B_\gamma))\]
+۴. طبق تعریف اشتراک تعمیم‌یافته:
+\[\iff x \in \bigcap_{\gamma \in \Gamma} f^{-1}(B_\gamma)\]
+\textbf{نتیجه:} تساوی برقرار است.
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. مقایسه با
+\autoref{قضیه-۱۰---تعمیم-تصویر-اجتماع-و-اشتراک}}{۱. مقایسه با }}\label{ux645ux642ux627ux6ccux633ux647-ux628ux627-ux642ux636ux6ccux647-ux6f1ux6f0---ux62aux639ux645ux6ccux645-ux62aux635ux648ux6ccux631-ux627ux62cux62aux645ux627ux639-ux648-ux627ux634ux62aux631ux627ux6a9}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تفاوت بنیادین:} در قضیه ۱۰ دیدیم که
+  \(f(\cap A_\gamma) \subseteq \cap f(A_\gamma)\) و تساوی لزوماً برقرار
+  نیست. اما قضیه ۱۱ نشان می‌دهد که \(f^{-1}\) هیچ‌گونه اطلاعاتی را در
+  فرایند اشتراک‌گیری از دست نمی‌دهد.
+\item
+  \textbf{علت منطقی:} دلیل این تفاوت در ساختار سورهاست. تعریف \(f(A)\)
+  شامل یک سور وجودی (\(\exists x\)) است که با سور عمومی (\(\forall\)) در
+  اشتراک سازگار نیست. اما تعریف \(f^{-1}(B)\) هیچ سور مخفی‌ای ندارد و
+  صرفاً یک ترجمه شرطی (\(P(f(x))\)) است، لذا با همه سورها جابجا می‌شود.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۹---تصویر-و-تصویر-وارون-مجموعه}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f9---ux62aux635ux648ux6ccux631-ux648-ux62aux635ux648ux6ccux631-ux648ux627ux631ux648ux646-ux645ux62cux645ux648ux639ux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تعمیم:} قضیه ۱۱ تعمیم مستقیم قضیه ۹ (اگر آن را برای وارون
+  بنویسیم) به حالت نامتناهی است. این نشان می‌دهد ویژگی‌های توپولوژیکی
+  وارون تابع (مانند پیوستگی که با باز بودن وارون مجموعه‌های باز تعریف
+  می‌شود) بسیار پایدارتر از تصویر مستقیم هستند.
+\end{itemize}

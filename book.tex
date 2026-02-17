@@ -1,0 +1,515 @@
+
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\documentclass[12pt,a4paper,twoside,openright]{book}
+\tracinglostchars=0
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[svgnames]{xcolor}
+\usepackage{calc}
+\usepackage{etoolbox}
+\usepackage{geometry}
+\geometry{
+    top=30mm, bottom=30mm, 
+    left=25mm, right=25mm,
+    headheight=40pt
+}
+\usepackage[
+    colorlinks=true,
+    linkcolor=NavyBlue,
+    urlcolor=DeepPink,
+    citecolor=DarkGreen,
+    pdfauthor={Reyhaneh Darvishi and Arsalan Dalvand},
+    pdftitle={مبانی ریاضی مقدماتی},
+    pdfsubject={جزوه اتمیک درسی ریاضی - Copyright (c) 2026 CC BY-NC-SA 4.0}, 
+    pdfkeywords={لاتک, ریاضی, دالوند, درویشی},
+    pdfcreator={Arsalan Dalvand and Reyhaneh Darvishi}
+]{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage[type={CC}, modifier={by-nc-sa}, version={4.0}]{doclicense}
+\usepackage{tikz}
+\usetikzlibrary{calc, positioning, shapes.geometric, backgrounds, shadows}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{qrcode}
+\newcounter{none} 
+\def\LTcaptype{table}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage[most]{tcolorbox}
+\tcbset{
+    enhanced, 
+    boxrule=0.5mm, 
+    arc=3mm, 
+    left=4mm, right=4mm, top=3mm, bottom=3mm,
+    fonttitle=\bfseries\large,
+    before skip=5mm, after skip=5mm
+}
+\newtcolorbox{tldr}[1]{
+    colback=Honeydew, colframe=ForestGreen, title={$\blacktriangleleft$ #1} 
+}
+\newtcolorbox{theorembox}[1]{
+    colback=AliceBlue, colframe=RoyalBlue, title={قضیه: #1}, attach boxed title to top right={yshift=-3mm, xshift=-3mm}
+}
+\newtcolorbox{warning}[1]{
+    colback=MistyRose, colframe=Crimson, title={هشدار: #1}
+}
+\newtcolorbox{note}[1]{
+    colback=LightYellow, colframe=Orange, title={نکته: #1}, coltitle=black
+}
+\newtcolorbox{tip}[1]{
+    colback=MintCream, colframe=Teal, title={#1}
+}
+\newtcolorbox{info}[1]{
+    colback=WhiteSmoke, colframe=DimGray, title={#1}
+}
+\newtcolorbox{quotebox}[1]{
+    colback=GhostWhite, colframe=LightGray, title={نقل قول}, coltitle=black
+}
+\usepackage{xepersian}
+\settextfont[Path=./fonts/, Extension=.ttf, UprightFont=Sahel, BoldFont=Sahel-Bold, ItalicFont=Sahel, BoldItalicFont=Sahel-Bold]{Sahel}
+\setlatintextfont[Path=./fonts/, Extension=.ttf, UprightFont=Sahel, BoldFont=Sahel-Bold]{Sahel}
+\setdigitfont[Path=./fonts/, Extension=.ttf]{Sahel}
+\linespread{1.5} 
+\setlength{\parindent}{0pt} 
+\setlength{\parskip}{0.8em} 
+\setcounter{secnumdepth}{1} 
+\setcounter{tocdepth}{1}
+\def\chaptername{فصل}
+\def\contentsname{فهرست مطالب}
+\titleformat{\section}
+  {\Large\bfseries\color{DarkGreen}}
+  {\thesection}{1em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries\thepage} 
+\fancyhead[LE]{\small \leftmark}
+\fancyhead[RO]{\small \rightmark}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{NavyBlue}\leaders\hrule height \headrulewidth\hfill}}
+\title{\textbf{\Huge مبانی ریاضی مقدماتی}}
+\author{\Large ارسلان دالوند \and \Large ریحانه درویشی}\date{\today}
+\begin{document}
+\begin{titlepage}
+    \newgeometry{top=1cm, bottom=1cm, left=1cm, right=1cm}
+
+
+    \begin{tikzpicture}[remember picture, overlay]
+        \fill[white] (current page.south west) rectangle (current page.north east);
+
+        \fill[NavyBlue] (current page.north east) rectangle ($(current page.south east) + (-2.5cm, 0)$);
+        \fill[Orange] ($(current page.north east) + (-2.5cm, 0)$) rectangle ($(current page.south east) + (-2.6cm, 0)$);
+
+
+        \begin{scope}[shift={(current page.north west)},opacity=0.4, color=NavyBlue]
+            
+            \tikzstyle{node_style}=[circle, fill=NavyBlue!10, draw=NavyBlue, thick, inner sep=2.5pt]
+            \tikzstyle{edge_style}=[draw=NavyBlue!25, line width=1.2pt]
+
+
+            
+
+            \node[node_style] (N1) at (2, -1.5) {$\pi$};
+            \node[node_style] (N2) at (6, -0.8) {};
+            \node[node_style] (N3) at (10, -1.2) {$\forall$};
+            \node[node_style] (N4) at (15, -0.5) {};
+            \node[node_style] (N5) at (18, -1.5) {$\in$};
+
+            \node[node_style] (N6) at (1, -4) {};
+            \node[node_style] (N7) at (4, -3) {$\Sigma$};
+            \node[node_style] (N8) at (8, -5) {$\infty$};
+            \node[node_style] (N9) at (13, -2.5) {};
+            \node[node_style] (N10) at (16, -4.5) {$\subset$};
+            \node[node_style] (N12) at (3, -6.5) {};
+            \node[node_style] (N13) at (7, -7) {$\emptyset$};
+            \node[node_style] (N14) at (10, -6.5) {};
+            \node[node_style] (N15) at (17, -7.5) {$\int$};
+
+            \draw[edge_style, opacity=0.4] (N1) -- (N7) -- (N6);
+            \draw[edge_style, opacity=0.4] (N1) -- (N2) -- (N3) -- (N4) -- (N5);
+            \draw[edge_style, opacity=0.4] (N2) -- (N7) -- (N3);
+            \draw[edge_style, opacity=0.4] (N3) -- (N8);
+            \draw[edge_style, opacity=0.4] (N9) -- (N3);
+            \draw[edge_style, opacity=0.4] (N9) -- (N4);
+            \draw[edge_style, opacity=0.4] (N9) -- (N10);
+            \draw[edge_style, opacity=0.4] (N4) -- (N10) -- (N5);
+            \draw[edge_style, opacity=0.4] (N10) -- (N5);
+            \draw[edge_style, opacity=0.4] (N6) -- (N12) -- (N7);
+            \draw[edge_style, opacity=0.4] (N8) -- (N13) -- (N7);
+            \draw[edge_style, opacity=0.4] (N8) -- (N14);
+            \draw[edge_style, opacity=0.4] (N10) -- (N15);
+
+            \draw[edge_style, opacity=0.4] (N1) -- (0, -0.5);
+            \draw[edge_style, opacity=0.4] (N12) -- (0, -8);
+            \draw[edge_style, opacity=0.4] (N3) -- (11, 0);
+            \draw[edge_style, opacity=0.4] (N2) -- (4, 0);
+            \draw[edge_style, opacity=0.4] (N4) -- (17, 0);
+
+
+            
+        \end{scope}
+    \end{tikzpicture}
+
+    \begin{center}
+        
+        \includegraphics[width=3cm]{IUST-University-Logo.pdf} 
+        
+        \vspace{2.5cm} 
+        
+        {\fontsize{35}{45}\selectfont \bfseries \color{NavyBlue} مبانی ریاضی مقدماتی} \\
+        \vspace{0.7cm}
+        {\Large \bfseries \color{DarkGreen} (مبانی منطق، مجموعه و نظریه اعداد)}
+        
+        \vspace{1.5cm}
+        
+        \textcolor{Orange}{\rule{11cm}{2pt}}
+        
+        \vspace{2cm}
+        
+        {\large \textbf{بر اساس درس‌گفتارهای:}} \\
+        \vspace{0.3cm}
+        {\Large استاد هنگامه تمیمی}
+        
+        \vspace{2cm}
+        
+        {\large \textbf{گردآوری و تألیف:}} \\
+        \vspace{0.5cm}
+        {\Large ریحانه درویشی \hspace{2cm} ارسلان دالوند}
+        
+        \vfill
+        
+        \begin{tcolorbox}[
+            enhanced,
+            colback=AliceBlue!95!white, 
+            colframe=NavyBlue, 
+            width=8.5cm, 
+            arc=3mm, 
+            boxrule=0.8mm,
+            halign=center,
+            drop shadow
+        ]
+            \textbf{\large اکوسیستم آموزشی Atomathix} \\
+            \vspace{0.3cm}
+            \qrcode[height=2.2cm]{https://atomathix.ir/set-theo/} \\
+            \vspace{0.2cm}
+            \href{https://atomathix.ir/set-theo/}{\lr{\Large \textbf{atomathix.ir/set-theo/}}}
+        \end{tcolorbox}
+        
+        \vspace{0.5cm}
+        {\small زمستان ۱۴۰۴}
+    \end{center}
+
+    \restoregeometry
+\end{titlepage}
+\frontmatter
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{tcolorbox}[colback=white, colframe=gray, title={حقوق و دسترسی}]
+    این اثر توسط \textbf{ریحانه درویشی و ارسلان دالوند} کدنویسی و تالیف شده است.
+    \vspace{0.2cm}
+    \begin{latin}
+        \doclicenseThis 
+    \end{latin}
+\end{tcolorbox}
+\vspace*{\fill}
+\clearpage
+\thispagestyle{empty}
+\vspace*{7cm}
+\begin{center}
+    \large 
+    \textbf{تقدیم به} \\
+    \vspace{0.8cm}
+    {\Large \textit{الماس‌های نایاب زندگی‌تان،}} \\
+    \vspace{0.5cm}
+    \textit{و آنان که تعالیِ خود را در یاری رساندن به دیگران می‌جویند.}
+\end{center}
+\clearpage
+\chapter*{پیشگفتار: تلفیق سنت و تکنولوژی}
+\addcontentsline{toc}{chapter}{پیشگفتار}
+این کتاب که پیش روی شماست، تلاشی است برای آشتی دادن «دقت و ساختار ریاضیات کلاسیک» با «شیوه تفکر مدرن و شبکه‌ای».
+محتوای این اثر بر اساس درس‌گفتارهای استاد \textbf{هنگامه تمیمی} در درس «مبانی ریاضی مقدماتی» تدوین شده است. ساختار علمی و آموزشی کتاب، مدیون تدریس ایشان است.
+\section*{معماری این کتاب}
+آنچه این اثر را متمایز می‌کند، روش تألیف آن است. این کتاب بر پایه متدولوژی \textbf{«یادداشت‌برداری اتمیک» \lr{(Atomic Notes)}} و سیستم \textbf{Zettelkasten} بنا شده است. ما بر این باوریم که دانش ریاضی، یک رشته خطی نیست، بلکه شبکه‌ای درهم‌تنیده از مفاهیم است.
+به همین منظور، نسخه کامل و پویای این اثر در وبسایت \href{https://atomathix.ir/set-theo/}{\textbf{\lr{Atomathix.ir/set-theo/}}} توسعه داده می‌شود. در حالی که نسخه چاپی (همین کتاب) برای مطالعه عمیق، تدریس در کلاس و مرور ساختارمند (خطی) طراحی شده است، نسخه وبسایت امکانات زیر را فراهم می‌کند:
+\begin{itemize}
+    \item \textbf{نقشه دانش \lr{(Graph View)}:} مشاهده ارتباطات پنهان بین قضایا و تعاریف به صورت بصری.
+    \item \textbf{لینک‌دهی دوجانبه:} امکان پرش سریع بین مفاهیم مرتبط و پیش‌نیازها.
+    \item \textbf{جستجوی معنایی:} یافتن سریع تمام قضایایی که به یک مفهوم خاص اشاره دارند.
+\end{itemize}
+لذا به دانشجویان عزیز پیشنهاد می‌شود برای درک عمیق‌تر ارتباطات بین‌مفهومی، از نقشه ذهنی موجود در وبسایت نیز بهره ببرند.
+\section*{سپاسگزاری}
+ضمن تشکر مجدد از استاد محترم که راهنمای ما بودند، امیدواریم این مجموعه (وبسایت و کتاب) بتواند گامی کوچک در جهت مدرن‌سازی منابع آموزشی ریاضی بردارد.
+\vspace{2cm}
+\hfill \textbf{ریحانه درویشی و ارسلان دالوند} \\
+\hfill زمستان ۱۴۰۴
+\tableofcontents
+\mainmatter
+\cleardoublepage
+\thispagestyle{empty}
+\begin{tcolorbox}[colback=AliceBlue, colframe=NavyBlue, title={راهنمای استفاده از اکوسیستم Atomathix}]
+    دانشجوی گرامی، این محتوا در دو قالب ارائه شده است:
+    \begin{enumerate}
+        \item \textbf{کتاب فیزیکی/PDF:   } 
+        زمانی که می‌خواهید درس را یاد بگیرید، اثبات‌ها را خط‌به‌خط دنبال کنید و برای امتحان آماده شوید، از این نسخه استفاده کنید. ترتیب فصول بر اساس منطق آموزشی چیده شده است.
+        \item \textbf{وبسایت Atomathix.ir  :}
+        زمانی که می‌خواهید بدانید «این قضیه کجا کاربرد دارد؟» یا «پیش‌نیاز این تعریف چیست؟»، به وبسایت مراجعه کنید. روی گراف مفاهیم زوم کنید و مسیر یادگیری شخصی خود را بسازید.
+    \end{enumerate}
+\end{tcolorbox}
+\clearpage
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries} 
+  {
+    \begin{tikzpicture}
+      \draw[NavyBlue, line width=3pt] (1.5, 0) -- (-13, 0);
+      \node[
+          circle, 
+          draw=Orange,
+          line width=2pt,
+          fill=NavyBlue, 
+          minimum size=2.8cm,
+          inner sep=0pt,
+          drop shadow
+      ] (chapnode) at (0,0) {
+          \color{white}\fontsize{50}{60}\selectfont\bfseries\thechapter
+      };
+      \node[
+          fill=white, 
+          text=NavyBlue, 
+          rounded corners=3pt, 
+          inner sep=3pt,
+          anchor=south
+      ] at (chapnode.north) {\small \bfseries فصل};
+      \fill[Orange] (-13, 0) circle (4pt);
+    \end{tikzpicture}
+  }
+  {10pt}
+  {
+    \vspace{-0.5cm} 
+    \raggedright 
+    \fontsize{40}{50}\selectfont 
+    \color{NavyBlue} 
+  }
+  [] 
+\chapter{منطق مقدماتی}
+\clearpage
+\input{chapters/قضیه-۱---قوانین-جمع-و-اختصار.tex}
+\clearpage
+\input{chapters/قضیه-۲---هم‌ارزی‌های-منطقی-پایه.tex}
+\clearpage
+\input{chapters/قضیه-۳---قوانین-دمورگان.tex}
+\clearpage
+\input{chapters/قضیه-۴---قوانین-شرکت-پذیری-و-پخش-پذیری.tex}
+\clearpage
+\input{chapters/قضیه-۵---قیاس-ها.tex}
+\clearpage
+\input{chapters/قضیه-۶---قواعد-استنتاج.tex}
+\clearpage
+\input{chapters/قضیه-۷---قوانین-تناقض.tex}
+\clearpage
+\input{chapters/قواعد-تسویر.tex}
+\clearpage
+\input{chapters/مفهوم-استقرا.tex}
+\clearpage
+\input{chapters/قضیه-۸---ترکیب.tex}
+\clearpage
+\input{chapters/قضیه-۹---دو-جمله-ای.tex}
+\clearpage
+\input{chapters/تمرین-۵---قانون-توزیع‌پذیری-در-منطق.tex}
+\clearpage
+\input{chapters/تمرین-۶---اثبات-استلزام-شرطی.tex}
+\clearpage
+\input{chapters/تمرین-۷---بازنویسی-ترکیب-دوشرطی.tex}
+\clearpage
+\input{chapters/تمرین-۱۷---فرمول-مجموع-مکعبات.tex}
+\clearpage
+\input{chapters/تمرین-۱۸---رابطه-مجموع-اعداد-و-مجموع-مکعبات.tex}
+\clearpage
+\chapter{مفهوم مجموعه}
+\clearpage
+\input{chapters/پیشنیاز---مفاهیم-بنیادین-مجموعه‌ها.tex}
+\clearpage
+\input{chapters/پیشنیاز---تعریف-مجموعه-توانی.tex}
+\clearpage
+\input{chapters/قضیه-۱---شمول-تهی.tex}
+\clearpage
+\input{chapters/قضیه-۲---تعدی-در-مجموعه-ها.tex}
+\clearpage
+\input{chapters/قضیه-۳---تعداد-اعضای-مجموعه-توانی.tex}
+\clearpage
+\input{chapters/قضیه-۴---جبر-مجموعه-ها.tex}
+\clearpage
+\input{chapters/قضیه-۵---متمم-و-زیرمجموعه.tex}
+\clearpage
+\input{chapters/قضیه-۶---دمورگان-در-مجموعه-ها.tex}
+\clearpage
+\input{chapters/قضیه-۷.---تعمیم-اشتراک-و-اجتماع.tex}
+\clearpage
+\input{chapters/قضیه-۸---تعمیم-دمورگان.tex}
+\clearpage
+\input{chapters/قضیه-۹---تعمیم-پخش-پذیری.tex}
+\clearpage
+\input{chapters/قضیه-۱۰---عدم-وجود-مجموعه-جهانی.tex}
+\clearpage
+\input{chapters/مفهوم-پارادوکس-راسل.tex}
+\clearpage
+\input{chapters/تمرین-۱۹---مجموعه-توانی-و-اعمال-روی-مجموعه‌ها.tex}
+\clearpage
+\input{chapters/تمرین-۲۰---اثبات-رابطه-متمم-و-تفاضل.tex}
+\clearpage
+\chapter{رابطه و تابع}
+\clearpage
+\input{chapters/پیشنیاز---مفاهیم-پایه-رابطه-و-تابع.tex}
+\clearpage
+\input{chapters/قضیه-۱---پخش‌پذیری-حاصلضرب-دکارتی.tex}
+\clearpage
+\input{chapters/قضیه-۲---پخش‌پذیری-حاصلضرب-دکارتی-بر-تفاضل.tex}
+\clearpage
+\input{chapters/تمرین-۱---نمایش-هندسی-حاصلضرب-دکارتی.tex}
+\clearpage
+\input{chapters/تمرین-۲---جابجایی-در-حاصلضرب-دکارتی.tex}
+\clearpage
+\input{chapters/تمرین-۳---پخش‌پذیری-روی-اجتماع.tex}
+\clearpage
+\input{chapters/تمرین-۴---شرط-تهی-بودن-حاصلضرب.tex}
+\clearpage
+\input{chapters/تمرین-۵---یکنوایی-حاصلضرب-دکارتی.tex}
+\clearpage
+\input{chapters/تمرین-۶-و-۷---تعداد-اعضا-و-بازیابی-مجموعه.tex}
+\clearpage
+\input{chapters/تمرین-۸---مثال‌های-نقض.tex}
+\clearpage
+\input{chapters/تمرین-۹-و-۱۵---اشتراک-حاصلضرب‌ها.tex}
+\clearpage
+\input{chapters/تمرین-۱۰---تعمیم-حاصلضرب-دکارتی.tex}
+\clearpage
+\input{chapters/تمرین-۱۱-و-۱۲-و-۱۶---قوانین-حذف-و-تساوی.tex}
+\clearpage
+\input{chapters/تمرین-۱۳-و-۱۴---توزیع‌پذیری-اشتباه.tex}
+\clearpage
+\input{chapters/تمرین-۱۷-و-۱۸-و-۱۹---جبر-تفاضل-در-حاصلضرب.tex}
+\clearpage
+\input{chapters/تمرین-۲۰---تعریف-زوج-مرتب-کوراتوسکی.tex}
+\clearpage
+\input{chapters/تمرین-۱---وارونِ-وارون-رابطه.tex}
+\clearpage
+\input{chapters/تمرین-۲---محاسبه-دامنه-و-برد.tex}
+\clearpage
+\input{chapters/تمرین-۳---رابطه-دامنه-و-برد-با-وارون.tex}
+\clearpage
+\input{chapters/تمرین-۴---بررسی-خواص-یک-رابطه.tex}
+\clearpage
+\input{chapters/تمرین-۵---مثال-بازتابی-و-متعدی-غیرمتقارن.tex}
+\clearpage
+\input{chapters/تمرین-۶---مثال-متقارن-و-متعدی-غیربازتابی.tex}
+\clearpage
+\input{chapters/تمرین-۷---ویژگی‌های-رابطه-با-وارون.tex}
+\clearpage
+\input{chapters/تمرین-۸-و-۹---شمارش-رابطه‌ها.tex}
+\clearpage
+\input{chapters/تمرین-۱۰---تحدید-رابطه-(Restriction).tex}
+\clearpage
+\input{chapters/تمرین-۱۱---تحدید-روی-اجتماع-و-اشتراک.tex}
+\clearpage
+\input{chapters/تمرین-۱۲---نگاره-یا-تصویر-مجموعه-R(X).tex}
+\clearpage
+\input{chapters/تمرین-۱۳---رابطه-دامنه-و-نگاره-با-وارون.tex}
+\clearpage
+\input{chapters/تمرین-۱۴---دامنه-و-برد-اجتماع-روابط.tex}
+\clearpage
+\input{chapters/تمرین-۱۵---بستار-متقارن-(Symmetric-Closure).tex}
+\clearpage
+\input{chapters/تمرین-۱۶---درون‌هسته-متقارن.tex}
+\clearpage
+\input{chapters/تمرین-۱۷---وارونِ-اجتماع-و-اشتراک.tex}
+\clearpage
+\input{chapters/تمرین-۱۸---ساخت-اعداد-گویا-(رابطه-هم‌ارزی).tex}
+\clearpage
+\input{chapters/قضیه-۳---ویژگی‌های-بنیادی-کلاس-هم‌ارزی.tex}
+\clearpage
+\input{chapters/قضیه-۴---افراز-ناشی-از-رابطه-هم‌ارزی.tex}
+\clearpage
+\input{chapters/قضیه-۵---رابطه-هم‌ارزی-ناشی-از-افراز.tex}
+\clearpage
+\input{chapters/تمرین-۱---بررسی-افراز-و-رابطه-نظیر.tex}
+\clearpage
+\input{chapters/تمرین-۲---استخراج-افراز-از-رابطه.tex}
+\clearpage
+\input{chapters/تمرین-۳---تناظر-یک‌به‌یک-افراز-و-رابطه.tex}
+\clearpage
+\input{chapters/تمرین-۴---افراز-سه-قسمتی.tex}
+\clearpage
+\input{chapters/تمرین-۵---هم‌نهشتی-اعداد-صحیح.tex}
+\clearpage
+\input{chapters/مفهوم-تابع-و-قضیه-۶---تعریف-و-دامنه.tex}
+\clearpage
+\input{chapters/قضیه-۷---شرط-تساوی-توابع.tex}
+\clearpage
+\input{chapters/قضیه-۸---لم-چسباندن-(اجتماع-توابع).tex}
+\clearpage
+\input{chapters/توابع-خاص---همانی-و-ثابت.tex}
+\clearpage
+\input{chapters/تمرین-۱۳---تحدید-تابع.tex}
+\clearpage
+\input{chapters/تمرین-۱۴---زیرمجموعه-تابع.tex}
+\clearpage
+\input{chapters/تمرین-۱۵---تابع-بازتابی.tex}
+\clearpage
+\input{chapters/تمرین-۱۶---تابع-متقارن.tex}
+\clearpage
+\input{chapters/قضیه-۹---تصویر-و-تصویر-وارون-مجموعه.tex}
+\clearpage
+\input{chapters/قضیه-۱۰---تعمیم-تصویر-اجتماع-و-اشتراک.tex}
+\clearpage
+\input{chapters/قضیه-۱۱---رفتار-جبری-تصویر-وارون.tex}
+\clearpage
+\input{chapters/قضیه-۱۲---پخش‌پذیری-تصویر-وارون-بر-تفاضل.tex}
+\clearpage
+\input{chapters/قضیه-۱۳---حفظ-اشتراک-در-توابع-یک‌به‌یک.tex}
+\clearpage
+\input{chapters/تمرین-۹-(الف)---زیرمجموعه-بودن-A-در-وارون-تصویر-A.tex}
+\clearpage
+\input{chapters/تمرین-۹-(ب)---زیرمجموعه-بودن-تصویر-وارون-B-در-B.tex}
+\clearpage
+\input{chapters/تمرین-۱۰---تساوی-وارون-متمم-B-با-متمم-وارون-B.tex}
+\clearpage
+\input{chapters/تمرین-۱۱---مثال-نقض-تصویر-تفاضل-مجموعه‌ها.tex}
+\clearpage
+\input{chapters/تمرین-تکمیلی---تساوی-تصویر-اشتراک-A-و-وارون-B.tex}
+\clearpage
+\input{chapters/تمرین-۱۲---شرط-تساوی-در-روابط-نگاره-و-وارون.tex}
+\clearpage
+\input{chapters/تمرین-۱۴---توزیع‌پذیری-تصویر-روی-تفاضل.tex}
+\clearpage
+\input{chapters/تمرین-۱۵---تعمیم-تصویر-تفاضل.tex}
+\clearpage
+\input{chapters/تمرین-۱۸---توابع-خود-وارون-و-تقارن.tex}
+\clearpage
+\input{chapters/انواع-توابع---یک‌به‌یک-پوشا-و-دوسویی.tex}
+\clearpage
+\input{chapters/مفهوم-ترکیب-توابع.tex}
+\clearpage
+\input{chapters/قضیه-۱۴---وجود-و-ویژگی‌های-تابع-وارون.tex}
+\clearpage
+\input{chapters/قضیه-۱۵---شرکت‌پذیری-ترکیب-توابع.tex}
+\clearpage
+\input{chapters/قضیه-۱۶---وارون‌های-یک‌طرفه.tex}
+\clearpage
+\input{chapters/تمرین-۱۹---خاصیت-شرکت‌پذیری-ترکیب-توابع.tex}
+\clearpage
+\input{chapters/تمرین-۲۰---نقش-عنصر-خنثی-در-ترکیب-توابع.tex}
+\clearpage
+\input{chapters/تمرین-۲۱---ترکیب-تابع-با-وارون-خود.tex}
+\clearpage
+\input{chapters/تمرین-۲۲---یگانگی-تابع-وارون.tex}
+\clearpage
+\input{chapters/تمرین-۲۳---حفظ-خواص-یک‌به‌یک-و-پوشا-در-ترکیب.tex}
+\end{document}

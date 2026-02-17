@@ -1,0 +1,27 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{تمرین ۱۰: فرمول تحدید رابطه
+(\(\mathcal{R}|D\))}{تمرین ۱۰: فرمول تحدید رابطه (\textbackslash mathcal\{R\}\textbar D)}}\label{تمرین-۱۰---تحدید-رابطه-(Restriction)}
+\begin{tldr}{خلاصه سریع}
+تحدید رابطه \(\mathcal{R}\) به زیرمجموعه \(D\) یعنی تمام فلش‌هایی از
+رابطه اصلی را نگه داریم که \textbf{شروعشان} از \(D\) باشد.
+\end{tldr}
+\subsection{۱. صورت
+سوال}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644}
+فرض کنید \(\mathcal{R}\) رابطه‌ای از \(A\) به \(B\) است و
+\(D \subseteq A\). تحدید رابطه را با
+\(\mathcal{R}|D = \{(x,y) \in \mathcal{R} \mid x \in D\}\) تعریف می‌کنیم.
+ثابت کنید:
+\[\mathcal{R}|D = \mathcal{R} \cap (D \times Im(\mathcal{R}))\]
+\subsection{۲. اثبات}\label{ux627ux62bux628ux627ux62a}
+\[(x,y) \in \mathcal{R} \cap (D \times Im(\mathcal{R}))\]
+\[\iff (x,y) \in \mathcal{R} \wedge (x,y) \in D \times Im(\mathcal{R})\]
+\[\iff (x,y) \in \mathcal{R} \wedge (x \in D \wedge y \in Im(\mathcal{R}))\]
+نکته: اگر \((x,y) \in \mathcal{R}\) باشد، شرط \(y \in Im(\mathcal{R})\)
+به خودی خود برقرار است (چون \(y\) یک تصویر است). پس می‌توان آن را حذف
+کرد. \[\iff (x,y) \in \mathcal{R} \wedge x \in D\] این دقیقاً تعریف
+\(\mathcal{R}|D\) است.

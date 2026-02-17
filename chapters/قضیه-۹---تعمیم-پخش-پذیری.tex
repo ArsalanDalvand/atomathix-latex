@@ -1,0 +1,94 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قضیه ۹: تعمیم قوانین پخش‌پذیری
+\lr{(Generalized Distributive Laws)}}{قضیه ۹: تعمیم قوانین پخش‌پذیری }}\label{قضیه-۹---تعمیم-پخش-پذیری}
+\begin{tldr}{خلاصه سریع}
+این قضیه نشان می‌دهد که قوانین پخش‌پذیری (توزیع‌پذیری) محدود به تعداد
+متناهی از مجموعه‌ها نیستند. عملگر اشتراک روی «اجتماعِ یک خانواده نامتناهی»
+پخش می‌شود و عملگر اجتماع روی «اشتراکِ یک خانواده نامتناهی» توزیع می‌گردد.
+این ویژگی اساس تعریف «جبر سیگما» در نظریه اندازه است.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(A\) یک مجموعه و \(\{B_\gamma\}_{\gamma \in \Gamma}\) یک
+خانواده دلبخواه از مجموعه‌ها باشد. در این صورت:
+\begin{theorembox}{قضیه ۹}
+\textbf{الف) پخش اشتراک بر اجتماع:}
+\[A \cap (\bigcup_{\gamma \in \Gamma} B_\gamma) = \bigcup_{\gamma \in \Gamma} (A \cap B_\gamma)\]
+\textbf{ب) پخش اجتماع بر اشتراک:}
+\[A \cup (\bigcap_{\gamma \in \Gamma} B_\gamma) = \bigcap_{\gamma \in \Gamma} (A \cup B_\gamma)\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+اثبات این قضیه بر پایه «قوانین پخش‌پذیری منطق گزاره‌ها» و تعامل آن با
+سورها بنا شده است. ما اثبات قسمت (الف) را بررسی می‌کنیم.
+\begin{info}{اثبات}
+باید نشان دهیم گزاره‌نمای عضویت (\(x \in S\)) برای طرفین تساوی هم‌ارز است:
+\[x \in A \cap (\bigcup_{\gamma \in \Gamma} B_\gamma)\] ۱. طبق تعریف
+اشتراک:
+\[\iff (x \in A) \wedge (x \in \bigcup_{\gamma \in \Gamma} B_\gamma)\]
+۲. طبق \textbf{\autoref{پیشنیاز---مفاهیم-بنیادین-مجموعه‌ها}} (سور وجودی):
+\[\iff (x \in A) \wedge (\exists \gamma \in \Gamma, x \in B_\gamma)\] ۳.
+نکته منطقی کلیدی: از آنجا که گزاره \((x \in A)\) مستقل از اندیس
+\(\gamma\) است، می‌توانیم آن را به داخل سور وجودی ببریم (قانون پخش‌پذیری
+منطق مسور):
+\[p \wedge (\exists \gamma, q_\gamma) \iff \exists \gamma, (p \wedge q_\gamma)\]
+\[\iff \exists \gamma \in \Gamma, (x \in A \wedge x \in B_\gamma)\] ۴.
+طبق تعریف اشتراک:
+\[\iff \exists \gamma \in \Gamma, (x \in A \cap B_\gamma)\] ۵. طبق تعریف
+اجتماع تعمیم‌یافته:
+\[\iff x \in \bigcup_{\gamma \in \Gamma} (A \cap B_\gamma)\]
+نتیجه: دو مجموعه برابرند. (اثبات قسمت ب مشابه است و از پخش‌پذیری \(\vee\)
+روی \(\forall\) استفاده می‌کند).
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه توسعه‌یافته‌ی مفاهیم جبری فصل ۱ و ۲ در ابعاد نامتناهی است:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۴---جبر-مجموعه-ها} (حالت
+متناهی)}{۱. ارتباط با  (حالت متناهی)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f4---ux62cux628ux631-ux645ux62cux645ux648ux639ux647-ux647ux627-ux62dux627ux644ux62a-ux645ux62aux646ux627ux647ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تعمیم:} قضیه ۴ (بخش ه) بیان می‌کرد که
+  \(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\). قضیه ۹ دقیقا همان
+  قانون است با این تفاوت که تعداد مجموعه‌های داخل پرانتز از ۲ تا به
+  بی‌نهایت (به تعداد اعضای \(\Gamma\)) افزایش یافته است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۴---قوانین-شرکت-پذیری-و-پخش-پذیری} (ریشه
+منطقی)}{۲. ارتباط با  (ریشه منطقی)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f4-ux641ux635ux644-ux6f1-ux631ux6ccux634ux647-ux645ux646ux637ux642ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{پایه استدلال:} اثبات قضیه ۹ تماماً متکی بر ساختار منطقی
+  \(p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)\) است. در
+  نظریه مجموعه‌ها، سور وجودی (\(\exists\)) نقش تعمیم‌یافته‌ی «یا»
+  (\(\vee\)) را بازی می‌کند؛ بنابراین پخش شدن \(\wedge\) روی \(\exists\)
+  در اثبات بالا، بازتاب مستقیم پخش شدن \(\wedge\) روی \(\vee\) در منطق
+  است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۸---تعمیم-دمورگان}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f8---ux62aux639ux645ux6ccux645-ux62fux645ux648ux631ux6afux627ux646}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{مکمل‌سازی:} اگر از طرفین تساوی‌های قضیه ۹ متمم بگیریم و از
+  \textbf{\autoref{قضیه-۸---تعمیم-دمورگان}} استفاده کنیم، به دوگانِ
+  \lr{(Dual) }یکدیگر تبدیل می‌شوند. یعنی متمم‌گیری از فرمول (الف) و
+  استفاده از دمورگان، ما را به فرمول (ب) می‌رساند (با جایگزینی \(A\) با
+  \(A'\) و \(B_\gamma\) با \(B_\gamma'\)).
+\end{itemize}
+\subsubsection{۴. کاربرد در توپولوژی (فصول
+پیشرفته)}\label{ux6a9ux627ux631ux628ux631ux62f-ux62fux631-ux62aux648ux67eux648ux644ux648ux698ux6cc-ux641ux635ux648ux644-ux67eux6ccux634ux631ux641ux62aux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{پیوستگی:} در توپولوژی، این قضیه نقش حیاتی دارد. مثلاً تعریف
+  تابع پیوسته (\(f^{-1}(\cup U_\alpha) = \cup f^{-1}(U_\alpha)\)) و خواص
+  تصویر معکوس توابع، دقیقاً از همین ساختار پخش‌پذیری پیروی می‌کنند.
+\end{itemize}

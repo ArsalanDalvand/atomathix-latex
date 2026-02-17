@@ -1,0 +1,52 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۴: بررسی بازتابی، تقارنی و تعدی (مثال
+خاص)}\label{تمرین-۴---بررسی-خواص-یک-رابطه}
+\subsection{۱. صورت
+سوال}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644}
+فرض کنید \(A=\{a,b,c\}\) و:
+\[\mathcal{R} = \{(a,a), (b,b), (c,c), (a,b), (b,a), (c,a), (a,c)\}\]
+ثابت کنید \(\mathcal{R}\) بازتابی و متقارن است، اما متعدی \textbf{نیست}.
+\subsection{۲. تحلیل و
+حل}\label{ux62aux62dux644ux6ccux644-ux648-ux62dux644}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{بازتابی \lr{(Reflexive):}} آیا هر کس با خودش رابطه دارد؟
+  \begin{itemize}
+  \tightlist
+  \item
+    بله، \((a,a), (b,b), (c,c)\) همگی در \(\mathcal{R}\) هستند.
+    \lr{[cite\_start]پس }\textbf{بازتابی است}.
+  \end{itemize}
+\item
+  \textbf{متقارن \lr{(Symmetric):}} آیا هر رفت، برگشت دارد؟
+  \begin{itemize}
+  \tightlist
+  \item
+    \((a,b) \in \mathcal{R} \to (b,a) \in \mathcal{R}\) (هست)
+  \item
+    \((c,a) \in \mathcal{R} \to (a,c) \in \mathcal{R}\) (هست)
+  \item
+    سایر اعضا روی قطر اصلی‌اند و متقارن.
+    \lr{[cite\_start]پس }\textbf{متقارن است}.
+  \end{itemize}
+\item
+  \textbf{تعدی \lr{(Transitive):}} آیا \(x \to y\) و \(y \to z\) نتیجه
+  می‌دهد \(x \to z\)؟
+  \begin{itemize}
+  \tightlist
+  \item
+    مشاهده می‌کنیم \((c,a) \in \mathcal{R}\) و \((a,b) \in \mathcal{R}\).
+  \item
+    برای تعدی باید \((c,b) \in \mathcal{R}\) باشد.
+  \item
+    اما \((c,b)\) در مجموعه \(\mathcal{R}\) \textbf{نیست}.
+  \item
+    پس \textbf{متعدی نیست}.
+  \end{itemize}
+\end{itemize}

@@ -1,0 +1,76 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۵: قانون توزیع‌پذیری (یا) روی
+(و)}\label{تمرین-۵---قانون-توزیع‌پذیری-در-منطق}
+\begin{tldr}{خلاصه سریع}
+این قانون شبیه ضرب اعداد در پرانتز است: \(a \times (b + c) = ab + ac\).
+در منطق هم عملگر \(\lor\) (یا) روی \(\land\) (و) پخش می‌شود.
+\[p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)\]
+\end{tldr}
+\subsection{۱. درک
+شهودی}\label{ux62fux631ux6a9-ux634ux647ux648ux62fux6cc}
+فرض کن برای استخدام شدن (\(p\)) یا باید «مدرک» (\(q\)) داشته باشی و
+«سابقه» (\(r\)). جمله: «یا پارتی دارم (\(p\))، یا (مدرک دارم و سابقه
+دارم)». این دقیقاً معادل است با: «(یا پارتی دارم یا مدرک) \textbf{و} (یا
+پارتی دارم یا سابقه)». اگر هر کدام از این دو شرطِ داخل پرانتزِ دوم برقرار
+نباشد، کل شرط باطل است.
+\subsection{۲. اثبات (با جدول
+ارزش)}\label{ux627ux62bux628ux627ux62a-ux628ux627-ux62cux62fux648ux644-ux627ux631ux632ux634}
+برای اثبات هم‌ارزی منطقی، کافیست نشان دهیم جدول ارزش دو طرف یکسان است.
+{\def\LTcaptype{none}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0208}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0208}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0208}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2917}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0833}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.3958}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\lr{p}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\lr{q}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\lr{r}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\lr{q }\(\land\) \lr{r}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{\lr{LHS: p }\(\lor\) \lr{(q }\(\land\) \lr{r)}}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\lr{p }\(\lor\) \lr{q}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\lr{p }\(\lor\) \lr{r}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{\lr{RHS: (p }\(\lor\) \lr{q) }\(\land\) \lr{(p }\(\lor\)
+\lr{r)}}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\lr{T} & \lr{T} & \lr{T} & \lr{T} & \textbf{\lr{T}} & \lr{T} & \lr{T} &
+\textbf{\lr{T}} \\
+\lr{T} & \lr{T} & \lr{F} & \lr{F} & \textbf{\lr{T}} & \lr{T} & \lr{T} &
+\textbf{\lr{T}} \\
+\lr{T} & \lr{F} & \lr{T} & \lr{F} & \textbf{\lr{T}} & \lr{T} & \lr{T} &
+\textbf{\lr{T}} \\
+\lr{T} & \lr{F} & \lr{F} & \lr{F} & \textbf{\lr{T}} & \lr{T} & \lr{T} &
+\textbf{\lr{T}} \\
+\lr{F} & \lr{T} & \lr{T} & \lr{T} & \textbf{\lr{T}} & \lr{T} & \lr{T} &
+\textbf{\lr{T}} \\
+\lr{F} & \lr{T} & \lr{F} & \lr{F} & \textbf{\lr{F}} & \lr{T} & \lr{F} &
+\textbf{\lr{F}} \\
+\lr{F} & \lr{F} & \lr{T} & \lr{F} & \textbf{\lr{F}} & \lr{F} & \lr{T} &
+\textbf{\lr{F}} \\
+\lr{F} & \lr{F} & \lr{F} & \lr{F} & \textbf{\lr{F}} & \lr{F} & \lr{F} &
+\textbf{\lr{F}} \\
+\end{longtable}
+}
+چون ستون \textbf{\lr{LHS}} و \textbf{\lr{RHS}} دقیقاً یکسان هستند، حکم
+ثابت شد. \(\blacksquare\)

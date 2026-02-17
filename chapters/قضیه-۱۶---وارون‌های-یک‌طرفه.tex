@@ -1,0 +1,104 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۱۶: وارون‌های یک‌طرفه (چپ و
+راست)}\label{قضیه-۱۶---وارون‌های-یک‌طرفه}
+\begin{tldr}{خلاصه سریع}
+این قضیه ارتباط عمیق بین «ساختار جبری» (ترکیب توابع) و «ویژگی‌های نگاشتی»
+(یک‌به‌یک و پوشا بودن) را نشان می‌دهد.
+\begin{itemize}
+\tightlist
+\item
+  اگر بتوان اثر تابع را از \textbf{چپ} خنثی کرد \(\implies\) تابع
+  \textbf{یک‌به‌یک} است.
+\item
+  اگر بتوان اثر تابع را از \textbf{راست} خنثی کرد \(\implies\) تابع
+  \textbf{پوشا} است.
+\end{itemize}
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(f: X \to Y\) یک تابع باشد.
+\begin{theorembox}{قضیه ۱۶}
+\textbf{الف) شرط یک‌به‌یک بودن (وارون چپ):} اگر تابعی مانند \(g: Y \to X\)
+وجود داشته باشد که \(g \circ f = I_X\)، آنگاه \(f\) \textbf{یک‌به‌یک}
+\lr{(Injective) }است.
+\textbf{ب) شرط پوشا بودن (وارون راست):} اگر تابعی مانند \(h: Y \to X\)
+وجود داشته باشد که \(f \circ h = I_Y\)، آنگاه \(f\) \textbf{پوشا}
+\lr{(Surjective) }است.
+\end{theorembox}
+\emph{(تذکر: \(I_X\) و \(I_Y\) توابع همانی روی دامنه‌های مربوطه هستند).}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+\subsubsection{\texorpdfstring{اثبات قسمت (الف): وارون چپ \(\implies\)
+یک‌به‌یک}{اثبات قسمت (الف): وارون چپ \textbackslash implies یک‌به‌یک}}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux627ux644ux641-ux648ux627ux631ux648ux646-ux686ux67e-implies-ux6ccux6a9ux628ux647ux6ccux6a9}
+برای اثبات یک‌به‌یک بودن، باید نشان دهیم
+\(f(x_1) = f(x_2) \implies x_1 = x_2\).
+\begin{info}{برهان}
+۱. فرض کنید \(x_1, x_2 \in X\) باشند و تصاویرشان برابر باشد:
+\[f(x_1) = f(x_2)\] ۲. روی طرفین تساوی، تابع \(g\) را اعمال می‌کنیم (چون
+\(g\) تابع است، خروجی‌های یکسان برای ورودی‌های یکسان دارد):
+\[g(f(x_1)) = g(f(x_2))\] ۳. طبق تعریف ترکیب توابع:
+\[(g \circ f)(x_1) = (g \circ f)(x_2)\] ۴. طبق فرض قضیه
+(\(g \circ f = I_X\)): \[I_X(x_1) = I_X(x_2)\] ۵. طبق تعریف تابع همانی
+(\(I_X(x) = x\)): \[x_1 = x_2\]
+\textbf{نتیجه:} تابع \(f\) یک‌به‌یک است.
+\end{info}
+\subsubsection{\texorpdfstring{اثبات قسمت (ب): وارون راست \(\implies\)
+پوشا}{اثبات قسمت (ب): وارون راست \textbackslash implies پوشا}}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux628-ux648ux627ux631ux648ux646-ux631ux627ux633ux62a-implies-ux67eux648ux634ux627}
+برای اثبات پوشا بودن، باید نشان دهیم برای هر \(y \in Y\)، پیش‌نگاره‌ای
+وجود دارد.
+\begin{info}{برهان}
+۱. فرض کنید \(y\) عضوی دلخواه از هم‌دامنه \(Y\) باشد (\(y \in Y\)). ۲. ما
+به دنبال یک \(x \in X\) هستیم که \(f(x) = y\). ۳. عنصر \(x\) را به صورت
+\(x = h(y)\) تعریف می‌کنیم. (چون \(h: Y \to X\) است، پس \(x \in X\)
+می‌باشد). ۴. حال مقدار تابع \(f\) را در این نقطه محاسبه می‌کنیم:
+\[f(x) = f(h(y))\] ۵. طبق تعریف ترکیب توابع: \[= (f \circ h)(y)\] ۶. طبق
+فرض قضیه (\(f \circ h = I_Y\)): \[= I_Y(y)\] ۷. طبق تعریف تابع همانی:
+\[= y\]
+\textbf{نتیجه:} برای هر \(y\)، یک \(x\) (همان \(h(y)\)) یافت شد که
+\(f(x)=y\). پس \(f\) پوشا است.
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. تکمیل
+\autoref{قضیه-۱۴---وجود-و-ویژگی‌های-تابع-وارون}}{۱. تکمیل }}\label{ux62aux6a9ux645ux6ccux644-ux642ux636ux6ccux647-ux6f1ux6f4---ux648ux62cux648ux62f-ux648-ux648ux6ccux698ux6afux6ccux647ux627ux6cc-ux62aux627ux628ux639-ux648ux627ux631ux648ux646}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تحلیل ساختاری:} قضیه ۱۴ بیان می‌کرد که اگر \(f\)
+  \textbf{دوسویی} باشد، وارون‌پذیر است. قضیه ۱۶ این شرط را تجزیه می‌کند:
+  \begin{itemize}
+  \tightlist
+  \item
+    بخش «یک‌به‌یک» بودن \(f\) ناشی از وجود وارون چپ است.
+  \item
+    بخش «پوشا» بودن \(f\) ناشی از وجود وارون راست است.
+  \item
+    اگر \(f\) هم وارون چپ داشته باشد و هم راست (و این دو برابر باشند)،
+    آنگاه وارون‌پذیر کامل (\(f^{-1}\)) است.
+  \end{itemize}
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{انواع-توابع---یک‌به‌یک-پوشا-و-دوسویی}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux627ux646ux648ux627ux639-ux62aux648ux627ux628ux639---ux6ccux6a9ux628ux647ux6ccux6a9-ux67eux648ux634ux627-ux648-ux62fux648ux633ux648ux6ccux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{آزمون جبری:} این قضیه یک روش ``عملیاتی'' برای تست یک‌به‌یک یا
+  پوشا بودن ارائه می‌دهد. به جای چک کردن تک‌تک اعضا (تعریف اصلی)، کافی است
+  سعی کنیم تابعی بسازیم که اثر \(f\) را خنثی کند. این روش در معادلات
+  دیفرانسیل و جبر خطی (معکوس ماتریس) بسیار کاربرد دارد.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{توابع-خاص---همانی-و-ثابت}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux62aux648ux627ux628ux639-ux62eux627ux635---ux647ux645ux627ux646ux6cc-ux648-ux62bux627ux628ux62a}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{نقش عنصر خنثی:} بدون تعریف دقیق تابع همانی (\(I_X\)) و درک نقش
+  آن به عنوان ``عنصر خنثی'' در ترکیب توابع، بیان این قضیه ممکن نیست.
+  تفاوت \(I_X\) و \(I_Y\) در صورت قضیه بسیار حیاتی است (چون دامنه‌ها
+  متفاوت‌اند).
+\end{itemize}

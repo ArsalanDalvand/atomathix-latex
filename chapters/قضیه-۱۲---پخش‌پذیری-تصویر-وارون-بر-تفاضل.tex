@@ -1,0 +1,79 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۱۲: پخش‌پذیری تصویر وارون بر
+تفاضل}\label{قضیه-۱۲---پخش‌پذیری-تصویر-وارون-بر-تفاضل}
+\begin{tldr}{خلاصه سریع}
+این قضیه پازل «خوش‌رفتاری» عملگر تصویر وارون (\(f^{-1}\)) را تکمیل می‌کند.
+همانطور که تصویر وارون با اجتماع و اشتراک جابجا می‌شد، با عملگر تفاضل
+(\(-\)) نیز جابجا می‌شود. این یعنی عملیات بولی در دامنه و هم‌دامنه تحت
+\(f^{-1}\) ایزومورف هستند.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(f: X \to Y\) یک تابع باشد و \(B, C\) دو زیرمجموعه از \(Y\)
+باشند.
+\begin{theorembox}{قضیه ۱۲}
+\[f^{-1}(B - C) = f^{-1}(B) - f^{-1}(C)\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+برای اثبات، از هم‌ارزی‌های منطقی استفاده می‌کنیم. نکته کلیدی، رفتار نقیض
+(\(x \notin A\)) در تعریف تصویر وارون است.
+\begin{info}{برهان}
+\[x \in f^{-1}(B - C)\] ۱. طبق تعریف تصویر وارون:
+\[\iff f(x) \in (B - C)\]
+۲. طبق تعریف تفاضل مجموعه‌ها: \[\iff f(x) \in B \wedge f(x) \notin C\]
+۳. تحلیل گزاره دوم (\(f(x) \notin C\)): این گزاره دقیقاً نقیض
+\(f(x) \in C\) است. \[f(x) \in C \iff x \in f^{-1}(C)\] پس طبق قانون عکس
+نقیض در عضویت: \[f(x) \notin C \iff x \notin f^{-1}(C)\]
+۴. جایگذاری در عبارت اصلی:
+\[\iff x \in f^{-1}(B) \wedge x \notin f^{-1}(C)\]
+۵. طبق تعریف تفاضل مجموعه‌ها: \[\iff x \in f^{-1}(B) - f^{-1}(C)\]
+\textbf{نتیجه:} دو مجموعه با هم برابرند.
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. تضاد با تصویر مستقیم
+\lr{(Direct Image)}}{۱. تضاد با تصویر مستقیم }}\label{ux62aux636ux627ux62f-ux628ux627-ux62aux635ux648ux6ccux631-ux645ux633ux62aux642ux6ccux645-direct-image}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{عدم برقراری برای \(f\):} برای تصویر مستقیم، رابطه
+  \(f(A - B) = f(A) - f(B)\) \textbf{غلط} است.
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{مثال نقض:} \(f\) یک تابع ثابت روی \(X=\{1,2\}\) باشد
+    (\(f(1)=f(2)=c\)). اگر \(A=\{1,2\}\) و \(B=\{2\}\)، آنگاه
+    \(A-B=\{1\}\) و \(f(A-B)=\{c\}\). اما \(f(A)=\{c\}\) و
+    \(f(B)=\{c\}\)، پس \(f(A)-f(B)=\emptyset\).
+  \item
+    قضیه ۱۲ نشان می‌دهد که \(f^{-1}\) از این مشکل مبراست.
+  \end{itemize}
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۲---پخش‌پذیری-حاصلضرب-دکارتی-بر-تفاضل}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f2---ux67eux62eux634ux67eux630ux6ccux631ux6cc-ux62dux627ux635ux644ux636ux631ux628-ux62fux6a9ux627ux631ux62aux6cc-ux628ux631-ux62aux641ux627ux636ux644}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تشابه ساختاری:} در فصل ۳ دیدیم که
+  \(A \times (B - C) = (A \times B) - (A \times C)\). قضیه ۱۲ نشان می‌دهد
+  که \(f^{-1}\) نیز مانند حاصلضرب دکارتی، خاصیت پخش‌پذیری بر تفاضل دارد.
+  این رفتار خطی نسبت به عملیات مجموعه‌ای، ویژگی عملگرهای «خوش‌تعریف» در
+  جبر مجموعه‌هاست.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۵---متمم-و-زیرمجموعه}
+(متمم‌گیری)}{۳. ارتباط با  (متمم‌گیری)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f5-ux641ux635ux644-ux6f2-ux645ux62aux645ux645ux6afux6ccux631ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{نتیجه فرعی:} اگر در قضیه ۱۲، مجموعه \(B\) را برابر با مجموعه
+  مرجع \(Y\) بگیریم (\(B=Y\))، به قانون متمم می‌رسیم:
+  \[f^{-1}(Y - C) = f^{-1}(Y) - f^{-1}(C) \implies f^{-1}(C') = (f^{-1}(C))'\]
+  این یعنی تصویر وارونِ متمم، برابر است با متممِ تصویر وارون.
+\end{itemize}

@@ -1,0 +1,104 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قضیه ۱۵: شرکت‌پذیری ترکیب توابع
+\lr{(Associativity of Composition)}}{قضیه ۱۵: شرکت‌پذیری ترکیب توابع }}\label{قضیه-۱۵---شرکت‌پذیری-ترکیب-توابع}
+\begin{tldr}{خلاصه سریع}
+این قضیه بیان می‌کند که در زنجیره‌ای از توابع متوالی، اولویت ترکیب (محل
+قرارگیری پرانتزها) اهمیتی ندارد. اگرچه ترکیب توابع خاصیت «جابجایی»
+ندارد، اما همواره از خاصیت «شرکت‌پذیری» برخوردار است. این ویژگی، مجموعه
+توابع را به یک «نیم‌گروه» \lr{(Semigroup) }تبدیل می‌کند.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید سه تابع با دامنه‌ها و هم‌دامنه‌های متوالی به صورت زیر تعریف شده
+باشند: \[f: X \to Y, \quad g: Y \to Z, \quad h: Z \to W\]
+\begin{theorembox}{قضیه ۱۵}
+ترکیب این توابع شرکت‌پذیر است، یعنی:
+\[(h \circ g) \circ f = h \circ (g \circ f)\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+برای اثبات تساوی دو تابع، طبق
+\textbf{\autoref{قضیه-۷---شرط-تساوی-توابع}}، باید نشان دهیم که:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  دامنه‌ها و هم‌دامنه‌های دو طرف یکسان هستند.
+\item
+  به ازای هر ورودی یکسان، خروجی‌های یکسانی تولید می‌کنند.
+\end{enumerate}
+\begin{info}{برهان}
+\textbf{گام ۱: بررسی خوش‌تعریفی و دامنه}
+\begin{itemize}
+\tightlist
+\item
+  تابع سمت چپ: ابتدا \(g \circ f\) تابعی از \(X\) به \(Z\) است. سپس
+  ترکیب آن با \(h\)، تابعی از \(X\) به \(W\) می‌سازد.
+\item
+  تابع سمت راست: ابتدا \(h \circ g\) تابعی از \(Y\) به \(W\) است. سپس
+  ترکیب آن با \(f\)، تابعی از \(X\) به \(W\) می‌سازد.
+\item
+  بنابراین هر دو تابع دارای دامنه \(X\) و هم‌دامنه \(W\) هستند.
+\end{itemize}
+\textbf{گام ۲: بررسی تساوی مقداری \lr{(Point-wise Equality)}} فرض کنیم
+\(x\) عنصری دلخواه از \(X\) باشد (\(x \in X\)).
+\begin{itemize}
+\item
+  \textbf{محاسبه سمت چپ:} \[((h \circ g) \circ f)(x)\] طبق تعریف ترکیب
+  (\((\alpha \circ \beta)(x) = \alpha(\beta(x))\))، تابع بیرونی
+  \((h \circ g)\) و درونی \(f\) است: \[= (h \circ g)(f(x))\] اکنون روی
+  ترکیب \((h \circ g)\) اعمال تعریف می‌کنیم (ورودی آن \(f(x)\) است):
+  \[= h(g(f(x)))\]
+\item
+  \textbf{محاسبه سمت راست:} \[(h \circ (g \circ f))(x)\] تابع بیرونی
+  \(h\) و درونی \((g \circ f)\) است: \[= h((g \circ f)(x))\] اکنون داخل
+  پرانتز را باز می‌کنیم: \[= h(g(f(x)))\]
+\end{itemize}
+\textbf{نتیجه:} چون برای هر \(x \in X\)، خروجی‌ها یکسان هستند
+(\(h(g(f(x)))\))، طبق قضیه ۷، دو تابع برابرند.
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. وابستگی به
+\autoref{قضیه-۷---شرط-تساوی-توابع}}{۱. وابستگی به }}\label{ux648ux627ux628ux633ux62aux6afux6cc-ux628ux647-ux642ux636ux6ccux647-ux6f7---ux634ux631ux637-ux62aux633ux627ux648ux6cc-ux62aux648ux627ux628ux639}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{اصل موضوعی:} اثبات قضیه ۱۵ تماماً بر پایه قضیه ۷ استوار است.
+  بدون قضیه ۷، رسیدن به \(h(g(f(x)))\) در هر دو طرف، لزوماً به معنای یکی
+  بودن ``اشیاء'' تابع نیست. قضیه ۷ پل عبور از ``تساوی مقادیر'' به
+  ``تساوی توابع'' است.
+\end{itemize}
+\subsubsection{۲. تضاد با خاصیت
+جابجایی}\label{ux62aux636ux627ux62f-ux628ux627-ux62eux627ux635ux6ccux62a-ux62cux627ux628ux62cux627ux6ccux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{هشدار جبری:} بسیار مهم است که شرکت‌پذیری را با جابجایی اشتباه
+  نگیریم.
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{شرکت‌پذیری (صحیح):}
+    \((h \circ g) \circ f = h \circ (g \circ f)\)
+  \item
+    \textbf{جابجایی (غلط):} \(g \circ f \neq f \circ g\) (مگر در حالات
+    خاص). این نشان می‌دهد که جبر توابع شبیه ضرب ماتریس‌هاست (شرکت‌پذیر اما
+    غیرجابجایی).
+  \end{itemize}
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{مفهوم-ترکیب-توابع}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux645ux641ux647ux648ux645-ux62aux631ux6a9ux6ccux628-ux62aux648ux627ux628ux639}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تعریف بازگشتی:} اثبات بالا نشان می‌دهد که نماد
+  \(h \circ g \circ f\) (بدون پرانتز) یک نماد خوش‌تعریف و بدون ابهام است.
+  این نتیجه مستقیم تعریف بازگشتی ترکیب است که در یادداشت ``مفهوم ترکیب
+  توابع'' معرفی شد.
+\end{itemize}

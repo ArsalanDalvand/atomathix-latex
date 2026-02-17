@@ -1,0 +1,54 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۸: بررسی گزاره‌ها با مثال
+نقض}\label{تمرین-۸---مثال‌های-نقض}
+\subsection{۱. صورت
+سوال}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644}
+\lr{[cite\_start]درستی }یا نادرستی حکم‌های زیر را با آوردن مثال نقض بررسی
+\lr{کنید[cite: }693{]}: الف)
+\(A \times B \subseteq C \times D \iff A \subseteq C \land B \subseteq D\)
+ب) \(\mathcal{P}(A \times B) = \mathcal{P}(A) \times \mathcal{P}(B)\)
+\subsection{۲. حل
+تشریحی}\label{ux62dux644-ux62aux634ux631ux6ccux62dux6cc}
+\subsubsection{الف) بررسی شرط زیرمجموعه
+بودن}\label{ux627ux644ux641-ux628ux631ux631ux633ux6cc-ux634ux631ux637-ux632ux6ccux631ux645ux62cux645ux648ux639ux647-ux628ux648ux62fux646}
+این حکم \textbf{نادرست} است.
+\begin{itemize}
+\tightlist
+\item
+  \textbf{دلیل:} اگر یکی از مجموعه‌ها (مثلاً \(B\)) تهی باشد، حاصلضرب
+  دکارتی تهی می‌شود و تهی زیرمجموعه هر چیزی است، حتی اگر شرط
+  \(A \subseteq C\) برقرار نباشد.
+\item
+  \textbf{مثال نقض:} فرض کنید \(A=\{1, 2\}, B=\emptyset\) و
+  \(C=\{1\}, D=\{a\}\). \[A \times B = \emptyset\]
+  \[\emptyset \subseteq C \times D\] (این درست است) اما
+  \(A \nsubseteq C\) (چون ۲ در \(A\) هست ولی در \(C\) نیست). پس شرط
+  برقرار نیست.
+\end{itemize}
+\subsubsection{ب) مجموعه توانی
+حاصلضرب}\label{ux628-ux645ux62cux645ux648ux639ux647-ux62aux648ux627ux646ux6cc-ux62dux627ux635ux644ux636ux631ux628}
+این حکم \textbf{نادرست} است.
+\begin{itemize}
+\tightlist
+\item
+  \textbf{دلیل:} جنس اعضای دو طرف فرق می‌کند. \(\mathcal{P}(A \times B)\)
+  شامل زیرمجموعه‌هایی از زوج‌مرتب‌هاست، اما
+  \(\mathcal{P}(A) \times \mathcal{P}(B)\) شامل زوج‌مرتب‌هایی از
+  مجموعه‌هاست. همچنین تعداد اعضایشان برابر نیست.
+\item
+  \textbf{تحلیل تعدادی:} اگر \(|A|=m, |B|=n\):
+  \begin{itemize}
+  \tightlist
+  \item
+    تعداد اعضای سمت راست: \(2^m \times 2^n = 2^{m+n}\)
+  \item
+    تعداد اعضای سمت چپ: \(2^{mn}\)
+  \item
+    معمولاً \(2^{mn} \neq 2^{m+n}\) (مثلاً \(m=n=2 \to 16 \neq 256\)) .
+  \end{itemize}
+\end{itemize}

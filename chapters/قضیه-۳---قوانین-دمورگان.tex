@@ -1,0 +1,125 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قضیه ۳: قوانین دمورگان
+\lr{(De Morgan’s Laws)}}{قضیه ۳: قوانین دمورگان }}\label{قضیه-۳---قوانین-دمورگان}
+\begin{tldr}{خلاصه سریع}
+این قوانین بیانگر رفتار «نفی» در مواجهه با پرانتزهای شامل ترکیب‌های عطفی
+و فصلی هستند. طبق این اصل، توزیع نفی بر روی یک پرانتز، عملگر منطقی درون
+آن را معکوس می‌کند (عطف به فصل و برعکس).
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+این قضیه که به نام \textbf{آگوستوس دمورگان} (۱۸۷۱-۱۸۰۶) نام‌گذاری شده
+است، برای هر دو گزاره دلبخواه \(p\) و \(q\) برقرار است:
+\begin{theorembox}{قضیه ۳}
+\textbf{الف) نفی ترکیب عطفی:}
+\[\sim(p \wedge q) \equiv (\sim p \vee \sim q)\] \textbf{ب) نفی ترکیب
+فصلی:} \[\sim(p \vee q) \equiv (\sim p \wedge \sim q)\]
+\end{theorembox}
+\subsection{۲. اثبات و تحلیل (با جدول
+ارزش)}\label{ux627ux62bux628ux627ux62a-ux648-ux62aux62dux644ux6ccux644-ux628ux627-ux62cux62fux648ux644-ux627ux631ux632ux634}
+برای اثبات قسمت (الف)، جدول ارزش اختصاری گزاره دو شرطی
+\(\sim(p \wedge q) \leftrightarrow (\sim p \vee \sim q)\) را تشکیل
+می‌دهیم. اگر ستون رابط اصلی (\(\leftrightarrow\)) تماماً راستگو
+\lr{(T) }باشد، هم‌ارزی ثابت می‌شود.
+{\def\LTcaptype{none}
+\begin{longtable}[]{@{}cccccccc@{}}
+\toprule\noalign{}
+\(\sim\) & \((p\) & \(\wedge\) & \(q)\) & \(\leftrightarrow\) &
+\((\sim p\) & \(\vee\) & \(\sim q)\) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\lr{F} & \lr{T} & \lr{T} & \lr{T} & \textbf{\lr{T}} & \lr{F} & \lr{F} &
+\lr{F} \\
+\lr{T} & \lr{T} & \lr{F} & \lr{F} & \textbf{\lr{T}} & \lr{F} & \lr{T} &
+\lr{T} \\
+\lr{T} & \lr{F} & \lr{F} & \lr{T} & \textbf{\lr{T}} & \lr{T} & \lr{T} &
+\lr{F} \\
+\lr{T} & \lr{F} & \lr{F} & \lr{F} & \textbf{\lr{T}} & \lr{T} & \lr{T} &
+\lr{T} \\
+\emph{(جدول ۱۰ - اثبات قانون اول دمورگان)} & & & & & & & \\
+\end{longtable}
+}
+\begin{info}{تحلیل مراحل جدول}
+۱. در سمت چپ (\(\leftrightarrow\))، ابتدا ارزش \(p \wedge q\) محاسبه شده
+و سپس نقیض (\(\sim\)) آن اعمال شده است. ۲. در سمت راست، ابتدا نقیض‌های
+\(\sim p\) و \(\sim q\) محاسبه شده و سپس بین آن‌ها ترکیب فصلی (\(\vee\))
+برقرار شده است. ۳. ستون وسط (\(\leftrightarrow\)) نشان می‌دهد که در هر ۴
+حالت ممکن، ارزش دو طرف یکسان است.
+\end{info}
+\begin{warning}{توجه!}
+نکته حیاتی در اعمال قانون دمورگان، تغییر عملگر است.
+\begin{itemize}
+\tightlist
+\item
+  اشتباه رایج: \(\sim (p \wedge q) \equiv \sim p \wedge \sim q\) (توزیع
+  نفی بدون تغییر عملگر).
+\item
+  \textbf{شکل صحیح:}
+  \(\sim (p \wedge q) \equiv \sim p \mathbf{\vee} \sim q\) (توزیع نفی
+  همراه با تغییر عملگر).
+\end{itemize}
+\end{warning}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+قوانین دمورگان نقش کلیدی در ساده‌سازی و تبدیل ساختارهای منطقی در سایر
+بخش‌های کتاب دارند:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۲---هم‌ارزی‌های-منطقی-پایه} (عکس
+نقیض)}{۱. ارتباط با  (عکس نقیض)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f2---ux647ux645ux627ux631ux632ux6ccux647ux627ux6cc-ux645ux646ux637ux642ux6cc-ux67eux627ux6ccux647-ux639ux6a9ux633-ux646ux642ux6ccux636}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تحلیل ساختاری:} در قضیه ۲(قانون عکس نقیض)، دیدیم که
+  \((p \to q) \equiv (\sim q \to \sim p)\). اگر گزاره‌های \(p\) یا \(q\)
+  خودشان مرکب باشند (مثلاً \(p = a \wedge b\))، برای محاسبه عکس نقیض
+  ناچاریم از قانون دمورگان استفاده کنیم تا نفی را به داخل پرانتز ببریم.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۱---قوانین-جمع-و-اختصار}(تعمیم
+یافته)}{۲. ارتباط با (تعمیم یافته)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1---ux642ux648ux627ux646ux6ccux646-ux62cux645ux639-ux648-ux627ux62eux62aux635ux627ux631ux62aux639ux645ux6ccux645-ux6ccux627ux641ux62aux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{دوگانگی \lr{(Duality):}} در قضیه ۱ با قوانین حاکم بر «و»
+  (اختصار) و «یا» (جمع) آشنا شدیم. دمورگان نشان می‌دهد که این دو عملگر،
+  دوگان یکدیگر تحت عملگر نفی هستند. یعنی جهانِ «و» با یک منفی‌سازی به جهان
+  «یا» تبدیل می‌شود.
+\end{itemize}
+\subsubsection{۳. ارتباط با نقیض سورها (تعمیم
+نهایی)}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux646ux642ux6ccux636-ux633ux648ux631ux647ux627-ux62aux639ux645ux6ccux645-ux646ux647ux627ux6ccux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{دمورگان در مجموعه‌ها:} قوانین دمورگان زیربنای اصلی قواعد نقیض
+  سورها هستند که در انتهای فصل ۱ مطرح می‌شوند:
+  \begin{itemize}
+  \tightlist
+  \item
+    نفی سور عمومی (کل):
+    \(\sim (\forall x) p(x) \equiv (\exists x) \sim p(x)\)
+    \begin{itemize}
+    \tightlist
+    \item
+      \emph{(این تعمیمِ قانون
+      \(\sim(p \wedge q \wedge \dots) \equiv \sim p \vee \sim q \vee \dots\)
+      است)}.
+    \end{itemize}
+  \item
+    نفی سور وجودی (بعضی):
+    \(\sim (\exists x) p(x) \equiv (\forall x) \sim p(x)\)
+    \begin{itemize}
+    \tightlist
+    \item
+      \emph{(این تعمیمِ قانون
+      \(\sim(p \vee q \vee \dots) \equiv \sim p \wedge \sim q \wedge \dots\)
+      است)}.
+    \end{itemize}
+  \end{itemize}
+\end{itemize}

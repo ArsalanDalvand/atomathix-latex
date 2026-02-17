@@ -1,0 +1,114 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۱۴: شرط وجود و ویژگی‌های تابع
+وارون}\label{قضیه-۱۴---وجود-و-ویژگی‌های-تابع-وارون}
+\begin{tldr}{خلاصه سریع}
+هر تابعی لزوماً وارون‌پذیر نیست. این قضیه شرط لازم و کافی برای اینکه
+«رابطه وارون»ِ یک تابع، خودش یک «تابع» باشد را بیان می‌کند: تابع اصلی باید
+\textbf{دوسویی} \lr{(Bijective) }باشد. علاوه بر این، وارون یک تابع
+دوسویی، خودش نیز دوسویی است.
+\end{tldr}
+\subsection{۱. پیش‌زمینه: تعریف رابطه
+وارون}\label{ux67eux6ccux634ux632ux645ux6ccux646ux647-ux62aux639ux631ux6ccux641-ux631ux627ux628ux637ux647-ux648ux627ux631ux648ux646}
+پیش از بیان قضیه، یادآوری می‌کنیم که برای هر تابع \(f: X \to Y\)، رابطه
+وارون \(f^{-1}\) به صورت زیر تعریف می‌شود:
+\[f^{-1} = \{ (y, x) \in Y \times X \mid (x, y) \in f \}\] این رابطه
+همواره وجود دارد، اما لزوماً «تابع» نیست.
+\subsection{۲. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(f: X \to Y\) یک تابع باشد.
+\begin{theorembox}{قضیه ۱۴}
+اگر \(f\) یک تابع \textbf{دوسویی} (یک‌به‌یک و پوشا) باشد، آنگاه
+\(f^{-1}: Y \to X\) نیز یک تابع \textbf{دوسویی} است.
+\end{theorembox}
+\subsection{\texorpdfstring{۳. اثبات صوری
+\lr{(Formal Proof)}}{۳. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+این اثبات سه بخش دارد: ۱. اثبات تابع بودن \(f^{-1}\)، ۲. اثبات یک‌به‌یک
+بودن \(f^{-1}\)، ۳. اثبات پوشا بودن \(f^{-1}\).
+\subsubsection{\texorpdfstring{گام اول: اثبات تابع بودن
+\(f^{-1}\)}{گام اول: اثبات تابع بودن f\^{}\{-1\}}}\label{ux6afux627ux645-ux627ux648ux644-ux627ux62bux628ux627ux62a-ux62aux627ux628ux639-ux628ux648ux62fux646-f-1}
+برای اینکه \(f^{-1}\) تابع باشد، باید دو شرط (دامنه کامل) و (یکتایی
+مقدار) را داشته باشد.
+\begin{info}{برهان}
+\textbf{۱. بررسی دامنه \lr{(Existence):}} چون \(f\) \textbf{پوشا}
+\lr{(Surjective) }است، برد آن برابر با هم‌دامنه‌اش است (\(Im(f) = Y\)).
+طبق ویژگی‌های رابطه وارون، \(Dom(f^{-1}) = Im(f)\). بنابراین
+\(Dom(f^{-1}) = Y\). پس \(f^{-1}\) روی تمام اعضای \(Y\) تعریف شده است.
+\textbf{۲. بررسی یکتایی \lr{(Uniqueness/Well-definedness):}} فرض کنید
+\(y \in Y\) به دو مقدار \(x_1\) و \(x_2\) نگاشته شود:
+\[(y, x_1) \in f^{-1} \quad \text{و} \quad (y, x_2) \in f^{-1}\] طبق
+تعریف رابطه وارون:
+\[(x_1, y) \in f \quad \text{و} \quad (x_2, y) \in f\] یعنی
+\(f(x_1) = y\) و \(f(x_2) = y\). چون \(f\) \textbf{یک‌به‌یک}
+\lr{(Injective) }است، از تساوی تصاویر نتیجه می‌شود که پیش‌نگاره‌ها برابرند:
+\[f(x_1) = f(x_2) \implies x_1 = x_2\]
+\textbf{نتیجه:} \(f^{-1}: Y \to X\) یک تابع است.
+\end{info}
+\subsubsection{\texorpdfstring{گام دوم: اثبات یک‌به‌یک بودن
+\(f^{-1}\)}{گام دوم: اثبات یک‌به‌یک بودن f\^{}\{-1\}}}\label{ux6afux627ux645-ux62fux648ux645-ux627ux62bux628ux627ux62a-ux6ccux6a9ux628ux647ux6ccux6a9-ux628ux648ux62fux646-f-1}
+\begin{info}{برهان}
+فرض کنید \(y_1, y_2 \in Y\) و \(f^{-1}(y_1) = f^{-1}(y_2)\). فرض کنیم
+مقدار این تصویر مشترک \(x\) باشد (\(x \in X\)).
+\[f^{-1}(y_1) = x \implies f(x) = y_1\]
+\[f^{-1}(y_2) = x \implies f(x) = y_2\] چون \(f\) تابع است (تک‌مقداری)،
+خروجی \(x\) یکتاست. \[\implies y_1 = y_2\] پس \(f^{-1}\) یک‌به‌یک است.
+\end{info}
+\subsubsection{\texorpdfstring{گام سوم: اثبات پوشا بودن
+\(f^{-1}\)}{گام سوم: اثبات پوشا بودن f\^{}\{-1\}}}\label{ux6afux627ux645-ux633ux648ux645-ux627ux62bux628ux627ux62a-ux67eux648ux634ux627-ux628ux648ux62fux646-f-1}
+\begin{info}{برهان}
+برد تابع وارون برابر است با دامنه تابع اصلی: \[Im(f^{-1}) = Dom(f) = X\]
+چون برد \(f^{-1}\) برابر با هم‌دامنه آن (\(X\)) است، پس \(f^{-1}\)
+پوشاست.
+\end{info}
+\subsection{\texorpdfstring{۴. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۴. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{انواع-توابع---یک‌به‌یک-پوشا-و-دوسویی}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux627ux646ux648ux627ux639-ux62aux648ux627ux628ux639---ux6ccux6a9ux628ux647ux6ccux6a9-ux67eux648ux634ux627-ux648-ux62fux648ux633ux648ux6ccux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{وابستگی مطلق:} اثبات قسمت اول (تابع بودن وارون) دقیقاً نشان
+  می‌دهد که چرا تعاریف «یک‌به‌یک» و «پوشا» مهم هستند.
+  \begin{itemize}
+  \tightlist
+  \item
+    اگر \(f\) پوشا نباشد \(\implies\) دامنه \(f^{-1}\) ناقص می‌شود (تابع
+    نیست).
+  \item
+    اگر \(f\) یک‌به‌یک نباشد \(\implies\) خروجی \(f^{-1}\) چندمقداری می‌شود
+    (تابع نیست).
+  \end{itemize}
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۱۶---وارون‌های-یک‌طرفه}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1ux6f6---ux648ux627ux631ux648ux646ux647ux627ux6cc-ux6ccux6a9ux637ux631ux641ux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تعمیم:} قضیه ۱۴ حالت خاص و کامل‌تری از قضیه ۱۶ است.
+  \begin{itemize}
+  \tightlist
+  \item
+    در قضیه ۱۶ خواهیم دید که اگر \(g \circ f = I_X\)، آنگاه \(f\) فقط
+    یک‌به‌یک است (وارون چپ).
+  \item
+    در قضیه ۱۶ خواهیم دید که اگر \(f \circ h = I_Y\)، آنگاه \(f\) فقط
+    پوشا است (وارون راست).
+  \item
+    قضیه ۱۴ می‌گوید اگر \(f\) دوسویی باشد، \(f^{-1}\) هم وارون چپ است و
+    هم وارون راست.
+  \end{itemize}
+\end{itemize}
+\subsubsection{۳. تقارن هندسی
+(بازتاب)}\label{ux62aux642ux627ux631ux646-ux647ux646ux62fux633ux6cc-ux628ux627ux632ux62aux627ux628}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{نمودار:} اگر نمودار \(f\) را داشته باشیم، نمودار \(f^{-1}\)
+  قرینه آن نسبت به نیمساز ربع اول و سوم (\(y=x\)) است. این تقارن هندسی
+  نتیجه مستقیم تبدیل زوج \((x,y)\) به \((y,x)\) است که در تعریف رابطه
+  وارون آمد.
+\end{itemize}

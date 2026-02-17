@@ -1,0 +1,54 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۱۴: تصویرِ تفاضل در توابع
+یک‌به‌یک}\label{تمرین-۱۴---توزیع‌پذیری-تصویر-روی-تفاضل}
+\begin{tldr}{خلاصه سریع}
+در تمرین ۱۱ (فایل قبلی) دیدیم که \(f(A-B) \neq f(A)-f(B)\) در حالت کلی.
+اما اگر تابع \textbf{یک‌به‌یک} باشد، این تساوی برقرار می‌شود. یک‌به‌یک بودن
+مانع از آن می‌شود که عناصر خارج از \(B\)، روی تصاویر عناصرِ داخل \(B\)
+بیفتند.
+\end{tldr}
+\subsection{۱. صورت
+تمرین}\label{ux635ux648ux631ux62a-ux62aux645ux631ux6ccux646}
+\begin{info}{سوال}
+فرض کنید \(f:X \rightarrow Y\) یک‌به‌یک باشد و \(B \subseteq X\). ثابت
+کنید: \[f(X - B) = f(X) - f(B)\]
+\end{info}
+\subsection{۲. اثبات}\label{ux627ux62bux628ux627ux62a}
+\begin{info}{اثبات}
+باید نشان دهیم \(y\) عضو سمت چپ است اگر و تنها اگر عضو سمت راست باشد.
+\textbf{مسیر رفت (\(\subseteq\)):} همیشه برقرار است (حتی اگر یک‌به‌یک
+نباشد). اگر \(y \in f(X-B)\)، یعنی \(y=f(x)\) که \(x \notin B\). اگر
+\(y \in f(B)\) باشد، یعنی \(y=f(x')\) که \(x' \in B\). چون \(f\) یک‌به‌یک
+است، \(x=x'\) که تناقض است. پس \(y \notin f(B)\).
+\textbf{مسیر برگشت (\(\supseteq\)):}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  فرض کنید \(y \in f(X) - f(B)\).
+\item
+  یعنی \(y \in f(X)\) \textbf{و} \(y \notin f(B)\).
+\item
+  از \(y \in f(X)\) نتیجه می‌شود \(\exists x \in X\) که \(y = f(x)\).
+\item
+  آیا ممکن است این \(x\) در \(B\) باشد؟
+  \begin{itemize}
+  \tightlist
+  \item
+    اگر \(x \in B\) باشد
+    \(\Rightarrow f(x) \in f(B) \Rightarrow y \in f(B)\).
+  \item
+    این با فرض (۲) در تناقض است.
+  \end{itemize}
+\item
+  پس قطعاً \(x \notin B\) است. یعنی \(x \in X - B\).
+\item
+  بنابراین \(y = f(x) \in f(X - B)\).
+\end{enumerate}
+\(\blacksquare\)
+\end{info}

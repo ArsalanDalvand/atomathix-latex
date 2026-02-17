@@ -1,0 +1,89 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{توابع خاص: تابع همانی و تابع
+ثابت}\label{توابع-خاص---همانی-و-ثابت}
+\begin{tldr}{خلاصه سریع}
+در دنیای توابع، دو بازیگر بسیار مهم وجود دارند: ۱. \textbf{تابع همانی
+(\(I_X\)):} آینه‌ای که هر کس را به خودش نشان می‌دهد. ۲. \textbf{تابع ثابت
+(\(C_c\)):} سیاه‌چاله‌ای که همه ورودی‌ها را به یک نقطه واحد می‌فرستد.
+\end{tldr}
+\subsection{\texorpdfstring{۱. تابع همانی
+\lr{(Identity Function)}}{۱. تابع همانی }}\label{ux62aux627ux628ux639-ux647ux645ux627ux646ux6cc-identity-function}
+\subsubsection{الف) درک
+شهودی}\label{ux627ux644ux641-ux62fux631ux6a9-ux634ux647ux648ux62fux6cc}
+این «بی‌اثرترین» تابع ممکن است. مثل ضرب در عدد ۱ یا جمع با عدد ۰. هر چه
+به آن بدهید، همان را پس می‌گیرید.
+\subsubsection{ب) تعریف
+ریاضی}\label{ux628-ux62aux639ux631ux6ccux641-ux631ux6ccux627ux636ux6cc}
+فرض کنید \(X\) یک مجموعه باشد. تابع همانی روی \(X\) را با \(I_X\) (یا
+\(1_X\)) نمایش می‌دهیم.
+\begin{tldr}{تعریف}
+تابع \(I_X: X \to X\) به صورت زیر تعریف می‌شود:
+\[\forall x \in X, \quad I_X(x) = x\] یا به زبان زوج مرتب:
+\[I_X = \{ (x, x) \mid x \in X \}\] (دقت کنید که این همان \textbf{رابطه
+قطری} \(\Delta_X\) است).
+\end{tldr}
+\subsubsection{ج) ویژگی مهم (عنصر
+خنثی)}\label{ux62c-ux648ux6ccux698ux6afux6cc-ux645ux647ux645-ux639ux646ux635ux631-ux62eux646ux62bux6cc}
+تابع همانی نقش «عنصر خنثی» در عمل ترکیب توابع را دارد. برای هر تابع
+\(f: X \to Y\): \[f \circ I_X = f \quad \text{و} \quad I_Y \circ f = f\]
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۲. تابع ثابت
+\lr{(Constant Function)}}{۲. تابع ثابت }}\label{ux62aux627ux628ux639-ux62bux627ux628ux62a-constant-function}
+\subsubsection{الف) درک
+شهودی}\label{ux627ux644ux641-ux62fux631ux6a9-ux634ux647ux648ux62fux6cc-1}
+این تابع تمام تنوع ورودی‌ها را نادیده می‌گیرد و همه را مجبور می‌کند به یک
+خروجی خاص تبدیل شوند. برد \lr{(Range) }این تابع همیشه تک‌عضوی است.
+\lr{[Image of constant function graph horizontal line]}
+\subsubsection{ب) تعریف
+ریاضی}\label{ux628-ux62aux639ux631ux6ccux641-ux631ux6ccux627ux636ux6cc-1}
+فرض کنید \(f: X \to Y\) یک تابع باشد. \(f\) را تابع ثابت می‌نامیم اگر
+عنصری مانند \(c \in Y\) وجود داشته باشد که:
+\begin{tldr}{تعریف}
+\[\exists c \in Y, \forall x \in X, \quad f(x) = c\]
+\end{tldr}
+\subsubsection{ج) مثال}\label{ux62c-ux645ux62bux627ux644}
+اگر \(X = \mathbb{R}\) و \(f(x) = 5\)، این یک تابع ثابت است. نمودار آن
+خطی موازی محور افقی است.
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{تمرین-۱۵---تابع-بازتابی}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux62aux645ux631ux6ccux646-ux6f1ux6f5---ux62aux627ux628ux639-ux628ux627ux632ux62aux627ux628ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تابع همانی:} در تمرین ۱۵ ثابت کردیم که اگر تابعی خاصیت بازتابی
+  داشته باشد (یعنی \((x,x) \in f\))، آن تابع لزوماً همان \textbf{تابع
+  همانی} (\(I_X\)) است. \(I_X\) تنها تابعی است که تماماً روی قطر اصلی
+  قرار دارد.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۱۶---وارون‌های-یک‌طرفه}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1ux6f6---ux648ux627ux631ux648ux646ux647ux627ux6cc-ux6ccux6a9ux637ux631ux641ux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{نقش کلیدی \(I_X\):} در قضایای مربوط به وارون‌پذیری (که در ادامه
+  می‌خوانیم)، شرط اینکه \(g\) وارون چپ \(f\) باشد، این است که ترکیب آن‌ها
+  تابع همانی شود (\(g \circ f = I_X\)). \lr{[cite\_start]بدون }تعریف
+  دقیق \(I_X\)، تعریف وارون تابع ممکن \lr{نیست[cite: }93{]}.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{مفهوم-تابع-و-قضیه-۶---تعریف-و-دامنه}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux645ux641ux647ux648ux645-ux62aux627ux628ux639-ux648-ux642ux636ux6ccux647-ux6f6---ux62aux639ux631ux6ccux641-ux648-ux62fux627ux645ux646ux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تفاوت در برد:}
+  \begin{itemize}
+  \tightlist
+  \item
+    در تابع همانی، برد دقیقاً برابر با دامنه است (\(R_f = D_f = X\)).
+  \item
+    در تابع ثابت، برد کوچک‌ترین اندازه ممکن را دارد (تک‌عضوی)، در حالی که
+    دامنه می‌تواند بسیار بزرگ (حتی نامتناهی) باشد.
+  \end{itemize}
+\end{itemize}

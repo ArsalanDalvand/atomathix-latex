@@ -1,0 +1,96 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۷: رفتار حدی اجتماع و اشتراک (خانواده
+تهی)}\label{قضیه-۷.---تعمیم-اشتراک-و-اجتماع}
+\begin{tldr}{خلاصه سریع}
+این قضیه نتایج عملیات تعمیم‌یافته مجموعه‌ای را در «شرایط مرزی» بررسی
+می‌کند. زمانی که مجموعه اندیس تهی باشد (\(\Gamma = \emptyset\))، اجتماع
+برابر با عنصر خنثیِ جمع (تهی) و اشتراک برابر با عنصر خنثیِ ضرب (مجموعه
+مرجع) می‌شود. این نتایج بر پایه مفهوم منطقی «صدق تُهی‌مایه»
+\lr{(Vacuous Truth) }استوار هستند.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(\{A_\gamma\}_{\gamma \in \Gamma}\) یک خانواده از زیرمجموعه‌های
+مجموعه مرجع \(U\) باشد. اگر مجموعه اندیس تهی باشد
+(\(\Gamma = \emptyset\))، آنگاه:
+\begin{theorembox}{قضیه ۷}
+\textbf{الف) اجتماع روی تهی:}
+\[\bigcup_{\gamma \in \emptyset} A_\gamma = \emptyset\] \textbf{ب)
+اشتراک روی تهی:} \[\bigcap_{\gamma \in \emptyset} A_\gamma = U\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+اثبات این قضیه نیازمند تحلیل دقیق تعاریف سورهای وجودی و عمومی در دامنه
+تهی است.
+\subsubsection{اثبات قسمت
+(الف)}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux627ux644ux641}
+\begin{info}{اثبات}
+طبق \textbf{\autoref{پیشنیاز---مفاهیم-بنیادین-مجموعه‌ها}}:
+\[x \in \bigcup_{\gamma \in \emptyset} A_\gamma \iff \exists \gamma \in \emptyset, (x \in A_\gamma)\]
+گزاره «\(\exists \gamma \in \emptyset\)» همواره \textbf{نادرست} (تناقض)
+است، زیرا هیچ عضوی در \(\emptyset\) وجود ندارد که بخواهد در شرطی صدق
+کند. بنابراین، هیچ \(x\) در جهان وجود ندارد که در این مجموعه باشد.
+\[\forall x, x \notin \bigcup_{\gamma \in \emptyset} A_\gamma \implies \bigcup_{\gamma \in \emptyset} A_\gamma = \emptyset\]
+\end{info}
+\subsubsection{اثبات قسمت
+(ب)}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux628}
+\begin{info}{اثبات}
+طبق \textbf{\autoref{پیشنیاز---مفاهیم-بنیادین-مجموعه‌ها}}:
+\[x \in \bigcap_{\gamma \in \emptyset} A_\gamma \iff \forall \gamma (\gamma \in \emptyset \rightarrow x \in A_\gamma)\]
+در گزاره شرطیِ داخل پرانتز، مقدم (\(\gamma \in \emptyset\)) همواره
+\textbf{نادرست} است. طبق اصول منطق ریاضی (انتفای مقدم)، هر گزاره شرطی با
+مقدم نادرست، دارای ارزش \textbf{راست \lr{(True)}} است (مستقل از ارزش
+تالی). بنابراین شرط عضویت برای \textbf{تمام} \(x\)های موجود در مجموعه
+مرجع \(U\) صادق است (صدق تهی‌مایه).
+\[\forall x \in U, x \in \bigcap_{\gamma \in \emptyset} A_\gamma \implies \bigcap_{\gamma \in \emptyset} A_\gamma = U\]
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه یکی از زیباترین نمونه‌های تعامل منطق و نظریه مجموعه‌هاست:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۷---قوانین-تناقض} (منطق
+گزاره‌ها)}{۱. ارتباط با  (منطق گزاره‌ها)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f7---ux642ux648ux627ux646ux6ccux646-ux62aux646ux627ux642ux636-ux645ux646ux637ux642-ux6afux632ux627ux631ux647ux647ux627}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{انتفای مقدم:} اثبات بخش (ب) تماماً متکی بر قانون منطقی
+  \(c \rightarrow p \equiv t\) است که در فصل ۱ بررسی شد. در اینجا
+  \(\gamma \in \emptyset\) نقش تناقض (\(c\)) را بازی می‌کند و باعث می‌شود
+  کل گزاره راستگو (\(t\)) شود.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{پیشنیاز---مفاهیم-بنیادین-مجموعه‌ها}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux67eux6ccux634ux646ux6ccux627ux632---ux645ux641ux627ux647ux6ccux645-ux628ux646ux6ccux627ux62fux6ccux646-ux645ux62cux645ux648ux639ux647ux647ux627}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{وابستگی تعریفی:} این قضیه بدون استفاده از تعاریف دقیق اجتماع و
+  اشتراک مبتنی بر سورها (که در فایل پیشنیاز آمده است) قابل اثبات نیست.
+  تعاریف شهودی در این نقطه کور \lr{(Empty Index) }کارایی ندارند.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۱---شمول-تهی}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1---ux634ux645ux648ux644-ux62aux647ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{وحدت رویه:} همان منطقی که در قضیه ۱ باعث می‌شود
+  \(\emptyset \subseteq A\) باشد (چون شرط عضویت در تهی دروغ است)، در
+  اینجا باعث می‌شود اشتراک روی تهی برابر \(U\) شود. هر دو قضیه از
+  ویژگی‌های دامنه تهی در گزاره‌های شرطی بهره می‌برند.
+\end{itemize}
+\subsubsection{\texorpdfstring{۴. ارتباط با
+\autoref{قضیه-۵---متمم-و-زیرمجموعه}}{۴. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f5---ux645ux62aux645ux645-ux648-ux632ux6ccux631ux645ux62cux645ux648ux639ux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تناظر جبری:} در قضیه ۵ دیدیم که \(U' = \emptyset\) و
+  \(\emptyset' = U\). اگر قوانین دمورگان تعمیم‌یافته
+  (\autoref{قضیه-۸---تعمیم-دمورگان}) را روی این قضیه اعمال کنیم، به
+  نتیجه سازگاری می‌رسیم:
+  \[(\bigcup_{\emptyset} A_\gamma)' = \bigcap_{\emptyset} A_\gamma' \implies (\emptyset)' = U\]
+  که تاییدی بر صحت قضیه ۷ است.
+\end{itemize}

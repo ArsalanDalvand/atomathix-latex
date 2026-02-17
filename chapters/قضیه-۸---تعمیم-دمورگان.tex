@@ -1,0 +1,108 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قضیه ۸: تعمیم قوانین دمورگان
+\lr{(Generalized De Morgan’s Laws)}}{قضیه ۸: تعمیم قوانین دمورگان }}\label{قضیه-۸---تعمیم-دمورگان}
+\begin{tldr}{خلاصه سریع}
+این قضیه قوانین دمورگان را از حالت متناهی (دو مجموعه) به حالت نامتناهی
+(خانواده‌های ایندکس‌دار) گسترش می‌دهد. این اصل بیانگر «دوگانگی»
+\lr{(Duality) }میان سورهای وجودی و عمومی در ساختار مجموعه‌هاست: متممِ
+اجتماع (وجود) به اشتراک (عمومیت) تبدیل می‌شود و بالعکس.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(\{A_\gamma\}_{\gamma \in \Gamma}\) یک خانواده دلبخواه از
+زیرمجموعه‌های مجموعه مرجع \(U\) باشد (که \(\Gamma\) مجموعه اندیس است). در
+این صورت:
+\begin{theorembox}{قضیه ۸}
+\textbf{الف) متمم اجتماع تعمیم‌یافته:}
+\[(\bigcup_{\gamma \in \Gamma} A_\gamma)' = \bigcap_{\gamma \in \Gamma} A_\gamma'\]
+\textbf{ب) متمم اشتراک تعمیم‌یافته:}
+\[(\bigcap_{\gamma \in \Gamma} A_\gamma)' = \bigcup_{\gamma \in \Gamma} A_\gamma'\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+اثبات این قضیه مبتنی بر ترجمه تعاریف مجموعه‌ای به \textbf{منطق سورها} و
+استفاده از قوانین نقیض سور \lr{(Quantifier Negation) }است.
+\subsubsection{اثبات قسمت
+(الف)}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux627ux644ux641}
+نشان می‌دهیم که گزاره‌نمای عضویت برای دو طرف تساوی، منطقاً هم‌ارز است:
+\begin{info}{اثبات}
+\[x \in (\bigcup_{\gamma \in \Gamma} A_\gamma)'\] ۱. طبق تعریف متمم:
+\[\iff \sim (x \in \bigcup_{\gamma \in \Gamma} A_\gamma)\] ۲. طبق
+\textbf{\autoref{پیشنیاز---مفاهیم-بنیادین-مجموعه‌ها}} (معادل سور وجودی):
+\[\iff \sim (\exists \gamma \in \Gamma, x \in A_\gamma)\] ۳. طبق
+\textbf{\autoref{قواعد-تسویر}} در فصل ۱
+(\(\sim \exists x P(x) \equiv \forall x \sim P(x)\)):
+\[\iff \forall \gamma \in \Gamma, \sim(x \in A_\gamma)\] ۴. طبق تعریف
+متمم (\(x \notin A \iff x \in A'\)):
+\[\iff \forall \gamma \in \Gamma, (x \in A_\gamma')\] ۵. طبق
+\textbf{\autoref{پیشنیاز---مفاهیم-بنیادین-مجموعه‌ها}} (معادل سور عمومی):
+\[\iff x \in \bigcap_{\gamma \in \Gamma} A_\gamma'\]
+نتیجه: دو مجموعه با هم برابرند.
+\end{info}
+\emph{(اثبات قسمت ب مشابه است، با این تفاوت که از نقیض سور عمومی استفاده
+می‌شود: \(\sim \forall \equiv \exists \sim\))}.
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه نقطه اوج همگرایی بین منطق و نظریه مجموعه‌ها در این فصل است:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۶---دمورگان-در-مجموعه-ها} (حالت
+خاص)}{۱. ارتباط با  (حالت خاص)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f6---ux62fux645ux648ux631ux6afux627ux646-ux62fux631-ux645ux62cux645ux648ux639ux647-ux647ux627-ux62dux627ux644ux62a-ux62eux627ux635}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{توسعه دامنه:} قضیه ۶ بیان می‌کرد \((A \cup B)' = A' \cap B'\).
+  قضیه ۸ نشان می‌دهد که این قانون محدود به دو مجموعه نیست و برای هر تعداد
+  مجموعه (حتی ناشمارا) برقرار است. در واقع قضیه ۶، حالتی است که مجموعه
+  اندیس \(\Gamma = \{1, 2\}\) باشد.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قواعد-تسویر}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux648ux627ux639ux62f-ux646ux642ux6ccux636-ux633ux648ux631-ux641ux635ux644-ux6f1}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ایزومورفیسم بنیادی:} اثبات قضیه ۸ نشان می‌دهد که عملیات
+  مجموعه‌ای زیر دقیقاً تصاویر عملیات منطقی هستند:
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\bigcup\) (اجتماع) \(\longleftrightarrow\) \(\exists\) (سور وجودی)
+  \item
+    \(\bigcap\) (اشتراک) \(\longleftrightarrow\) \(\forall\) (سور عمومی)
+  \item
+    \$' \$ (متمم) \(\longleftrightarrow\) \(\sim\) (نقیض) بنابراین قانون
+    \((\cup A)' = \cap A'\) دقیقاً ترجمه مجموعه ایِ قانون منطقی
+    \(\sim (\exists x) \equiv (\forall x) \sim\) است.
+  \end{itemize}
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۵---متمم-و-زیرمجموعه}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f5---ux645ux62aux645ux645-ux648-ux632ux6ccux631ux645ux62cux645ux648ux639ux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ابزار اثبات:} در گام چهارم اثبات، از هم‌ارزی
+  \(x \notin A_\gamma \iff x \in A_\gamma'\) استفاده کردیم که نتیجه
+  مستقیم تعریف متمم در قضیه ۵ است.
+\end{itemize}
+\subsubsection{\texorpdfstring{۴. ارتباط با
+\autoref{قضیه-۷---قوانین-تناقض}}{۴. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f7---ux642ux648ux627ux646ux6ccux646-ux62aux646ux627ux642ux636}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{سازگاری در مرزها:} اگر \(\Gamma = \emptyset\) باشد:
+  \begin{itemize}
+  \tightlist
+  \item
+    سمت چپ تساوی (الف): \((\bigcup_\emptyset)' = (\emptyset)' = U\) (طبق
+    قضیه ۵-ب).
+  \item
+    سمت راست تساوی (الف): \(\bigcap_\emptyset (A') = U\) (طبق قضیه ۷-ب).
+  \item
+    این نشان می‌دهد که قضیه ۸ حتی برای خانواده‌های تهی نیز سازگار و معتبر
+    است.
+  \end{itemize}
+\end{itemize}

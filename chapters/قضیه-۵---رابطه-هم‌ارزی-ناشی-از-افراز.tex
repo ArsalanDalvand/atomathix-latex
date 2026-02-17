@@ -1,0 +1,101 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۵: تولید رابطه هم‌ارزی توسط
+افراز}\label{قضیه-۵---رابطه-هم‌ارزی-ناشی-از-افراز}
+\begin{tldr}{خلاصه سریع}
+این قضیه عکس قضیه ۴ است: اگر شما مجموعه‌ای را تکه‌تکه (افراز) کنید، به طور
+خودکار یک رابطه هم‌ارزی ساخته‌اید. تعریف رابطه این است: «دو نفر با هم
+رابطه دارند، اگر و تنها اگر در یک تکه باشند».
+\end{tldr}
+\subsection{۱. تعریف رابطه ناشی از
+افراز}\label{ux62aux639ux631ux6ccux641-ux631ux627ux628ux637ux647-ux646ux627ux634ux6cc-ux627ux632-ux627ux641ux631ux627ux632}
+فرض کنید \(\mathcal{P}\) یک افراز برای مجموعه \(X\) باشد. رابطه هم‌ارزی
+متناظر با آن (که با \(X/\mathcal{P}\) نشان داده می‌شود) چنین تعریف می‌شود:
+\[x (X/\mathcal{P}) y \iff \exists A \in \mathcal{P} : (x \in A \wedge y \in A)\]
+\emph{(ترجمه: \(x\) و \(y\) با هم رابطه دارند اگر هم‌گروهی باشند).}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{۲. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+\begin{theorembox}{قضیه ۵}
+اگر \(\mathcal{P}\) یک افراز برای مجموعه ناتهی \(X\) باشد، آنگاه:
+\textbf{الف)} رابطه \(X/\mathcal{P}\) یک \textbf{رابطه هم‌ارزی} روی \(X\)
+است. \textbf{ب)} کلاس‌های هم‌ارزی حاصل از این رابطه، دقیقاً همان مجموعه‌های
+افراز هستند (\(X/(X/\mathcal{P}) = \mathcal{P}\)).
+\end{theorembox}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۳. اثبات صوری
+\lr{(Formal Proof)}}{۳. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+\subsubsection{اثبات قسمت (الف): هم‌ارزی
+بودن}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux627ux644ux641-ux647ux645ux627ux631ux632ux6cc-ux628ux648ux62fux646}
+باید سه ویژگی بازتابی، تقارنی و تعدی را برای رابطه تعریف شده چک کنیم.
+\begin{info}{برهان}
+\textbf{۱. بازتابی \lr{(Reflexive):}} هر \(x \in X\)، طبق تعریف افراز
+(پوشش کامل)، حتماً متعلق به یکی از مجموعه‌های افراز (مثلاً \(A\)) است. پس
+\(x, x \in A\) و در نتیجه \(x \sim x\).
+\textbf{۲. تقارنی \lr{(Symmetric):}} اگر \(x \sim y\)، یعنی مجموعه‌ای مثل
+\(A\) هست که \(x, y \in A\). واضح است که \(y, x \in A\) نیز برقرار است.
+پس \(y \sim x\).
+\textbf{۳. تعدی \lr{(Transitive):}} فرض کنیم \(x \sim y\) و
+\(y \sim z\).
+\begin{itemize}
+\tightlist
+\item
+  \(x \sim y \implies \exists A \in \mathcal{P}, (x, y \in A)\)
+\item
+  \(y \sim z \implies \exists B \in \mathcal{P}, (y, z \in B)\)
+\item
+  اکنون \(y\) هم در \(A\) است و هم در \(B\). پس \(y \in A \cap B\).
+\item
+  یعنی اشتراک \(A\) و \(B\) تهی نیست (\(A \cap B \neq \emptyset\)).
+\item
+  طبق تعریف افراز (شرط مجزا بودن)، اگر دو مجموعه اشتراک داشته باشند،
+  باید \textbf{یکی} باشند. پس \(A = B\).
+\item
+  نتیجه: \(x, z\) هر دو در \(A\) هستند، پس \(x \sim z\).
+\end{itemize}
+\end{info}
+\subsubsection{اثبات قسمت (ب): بازگشت به افراز
+اولیه}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux628-ux628ux627ux632ux6afux634ux62a-ux628ux647-ux627ux641ux631ux627ux632-ux627ux648ux644ux6ccux647}
+\begin{info}{برهان}
+می‌خواهیم نشان دهیم کلاس‌های هم‌ارزی تولید شده، همان مجموعه‌های
+\(A \in \mathcal{P}\) هستند. فرض کنیم \(x \in X\) باشد و \(A\) آن
+مجموعه‌ای از افراز باشد که شامل \(x\) است (\(x \in A\)). طبق تعریف رابطه،
+تمام هم‌گروهی‌های \(x\) (یعنی اعضای کلاس \([x]\)) دقیقاً همان اعضای \(A\)
+هستند. پس \([x] = A\). بنابراین مجموعه تمام کلاس‌ها، همان مجموعه
+\(\mathcal{P}\) است.
+\end{info}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۴. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۴. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. چرخه کامل با
+\autoref{قضیه-۴---افراز-ناشی-از-رابطه-هم‌ارزی}}{۱. چرخه کامل با }}\label{ux686ux631ux62eux647-ux6a9ux627ux645ux644-ux628ux627-ux642ux636ux6ccux647-ux6f4---ux627ux641ux631ux627ux632-ux646ux627ux634ux6cc-ux627ux632-ux631ux627ux628ux637ux647-ux647ux645ux627ux631ux632ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  ترکیب قضیه ۴ و ۵ یک چرخه بسته \lr{(Bijection) }بین ``مجموعه تمام
+  رابطه‌های هم‌ارزی روی \(X\)'' و ``مجموعه تمام افرازهای \(X\)'' ایجاد
+  می‌کند.
+  \begin{itemize}
+  \tightlist
+  \item
+    از رابطه به افراز: \(\xi \to X/\xi\)
+  \item
+    از افراز به رابطه: \(\mathcal{P} \to X/\mathcal{P}\)
+  \item
+    قضیه ۵-ب تضمین می‌کند که اگر یک دور کامل بزنیم، به جای اول برمی‌گردیم:
+    \(X/(X/\mathcal{P}) = \mathcal{P}\).
+  \end{itemize}
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. مثال کاربردی:
+\autoref{تمرین-۵---هم‌نهشتی-اعداد-صحیح}}{۲. مثال کاربردی: }}\label{ux645ux62bux627ux644-ux6a9ux627ux631ux628ux631ux62fux6cc-ux62aux645ux631ux6ccux646-ux6f5---ux647ux645ux646ux647ux634ux62aux6cc-ux627ux639ux62fux627ux62f-ux635ux62dux6ccux62d}
+\begin{itemize}
+\tightlist
+\item
+  در تمرین ۵ فصل ۳، دیدیم که رابطه همنهشتی به پیمانه \(n\)، مجموعه اعداد
+  صحیح را به \(n\) کلاس افراز می‌کند. این مثال عملی دقیقاً مصداق همین دو
+  قضیه است. دسته‌بندی اعداد (افراز) \(\iff\) رابطه همنهشتی.
+\end{itemize}

@@ -1,0 +1,66 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۱۹: رفتار مجموعه توانی با اشتراک و
+اجتماع}\label{تمرین-۱۹---مجموعه-توانی-و-اعمال-روی-مجموعه‌ها}
+\begin{tldr}{خلاصه سریع}
+مجموعه توانی (\(\mathcal{P}\)) با \textbf{اشتراک} دوست است (تساوی دارد)،
+اما با \textbf{اجتماع} سر ناسازگاری دارد (تساوی ندارد).
+\begin{itemize}
+\tightlist
+\item
+  الف) \(\mathcal{P}(A) \cap \mathcal{P}(B) = \mathcal{P}(A \cap B)\) ✅
+\item
+  ب) \(\mathcal{P}(A) \cup \mathcal{P}(B) \neq \mathcal{P}(A \cup B)\)
+  ❌
+\end{itemize}
+\end{tldr}
+\subsection{۱. حل قسمت (الف) -
+اشتراک}\label{ux62dux644-ux642ux633ux645ux62a-ux627ux644ux641---ux627ux634ux62aux631ux627ux6a9}
+\begin{info}{اثبات تساوی}
+باید نشان دهیم \(X\) عضو سمت چپ است اگر و تنها اگر عضو سمت راست باشد.
+\[X \in \mathcal{P}(A) \cap \mathcal{P}(B)\]
+\(\equiv X \in \mathcal{P}(A) \land X \in \mathcal{P}(B)\) (تعریف
+اشتراک) \(\equiv X \subseteq A \land X \subseteq B\) (تعریف مجموعه
+توانی) \(\equiv X \subseteq (A \cap B)\) (اگر مجموعه‌ای زیرمجموعه دو
+مجموعه باشد، زیرمجموعه اشتراک آن‌هاست)
+\(\equiv X \in \mathcal{P}(A \cap B)\) (تعریف مجموعه توانی)
+پس حکم \textbf{درست} است.
+\end{info}
+\subsection{۲. حل قسمت (ب) -
+اجتماع}\label{ux62dux644-ux642ux633ux645ux62a-ux628---ux627ux62cux62aux645ux627ux639}
+\begin{note}{مثال نقض (اثبات نادرستی)}
+فرض کنید:
+\begin{itemize}
+\tightlist
+\item
+  \(A = \{1\}\)
+\item
+  \(B = \{2\}\)
+\end{itemize}
+\textbf{سمت چپ:}
+\begin{itemize}
+\tightlist
+\item
+  \(\mathcal{P}(A) = \{\emptyset, \{1\}\}\)
+\item
+  \(\mathcal{P}(B) = \{\emptyset, \{2\}\}\)
+\item
+  اجتماع آن‌ها: \(\{\emptyset, \{1\}, \{2\}\}\)
+\end{itemize}
+\textbf{سمت راست:}
+\begin{itemize}
+\tightlist
+\item
+  \(A \cup B = \{1, 2\}\)
+\item
+  \(\mathcal{P}(A \cup B) = \{\emptyset, \{1\}, \{2\}, \{1, 2\}\}\)
+\end{itemize}
+\textbf{نتیجه:} مجموعه \(\{1, 2\}\) در سمت راست هست اما در سمت چپ نیست.
+پس حکم \textbf{نادرست} است.
+\[\mathcal{P}(A) \cup \mathcal{P}(B) \subseteq \mathcal{P}(A \cup B)\]
+(رابطه فقط به صورت زیرمجموعه برقرار است، نه تساوی).
+\end{note}

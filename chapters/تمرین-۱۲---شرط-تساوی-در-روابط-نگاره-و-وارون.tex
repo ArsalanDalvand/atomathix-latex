@@ -1,0 +1,74 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۱۲: چه زمانی زیرمجموعه‌ها تبدیل به تساوی
+می‌شوند؟}\label{تمرین-۱۲---شرط-تساوی-در-روابط-نگاره-و-وارون}
+\begin{tldr}{خلاصه سریع}
+در حالت کلی \(A \subseteq f^{-1}(f(A))\) و \(f(f^{-1}(B)) \subseteq B\)
+است.
+\begin{itemize}
+\tightlist
+\item
+  اگر تابع \textbf{یک‌به‌یک} باشد \(\iff\) رابطه اول تبدیل به تساوی می‌شود.
+\item
+  اگر تابع \textbf{پوشا} باشد \(\iff\) رابطه دوم تبدیل به تساوی می‌شود.
+\end{itemize}
+\end{tldr}
+\subsection{۱. صورت
+تمرین}\label{ux635ux648ux631ux62a-ux62aux645ux631ux6ccux646}
+\begin{info}{سوال}
+فرض کنید \(f:X \rightarrow Y\). ثابت کنید: الف) اگر \(f\) یک‌به‌یک باشد،
+آنگاه \(f^{-1}(f(A)) = A\). ب) اگر \(f\) پوشا باشد، آنگاه
+\(f(f^{-1}(B)) = B\).
+\end{info}
+\subsection{۲. اثبات قسمت (الف) - شرط
+یک‌به‌یک}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux627ux644ux641---ux634ux631ux637-ux6ccux6a9ux628ux647ux6ccux6a9}
+\begin{info}{اثبات}
+می‌دانیم همواره \(A \subseteq f^{-1}(f(A))\) برقرار است (تمرین ۹). پس فقط
+باید ثابت کنیم \(f^{-1}(f(A)) \subseteq A\).
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  فرض کنید \(x \in f^{-1}(f(A))\).
+\item
+  طبق تعریف وارون، یعنی \(f(x) \in f(A)\).
+\item
+  این یعنی عنصری مانند \(x' \in A\) وجود دارد که \(f(x) = f(x')\).
+\item
+  \textbf{نکته کلیدی:} چون \(f\) \textbf{یک‌به‌یک} است، از
+  \(f(x) = f(x')\) نتیجه می‌گیریم \(x = x'\).
+\item
+  چون \(x' \in A\) بود، پس \(x \in A\).
+\item
+  نتیجه: \(f^{-1}(f(A)) \subseteq A\).
+\end{enumerate}
+\(\therefore A = f^{-1}(f(A))\)
+\end{info}
+\subsection{۳. اثبات قسمت (ب) - شرط
+پوشا}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux628---ux634ux631ux637-ux67eux648ux634ux627}
+\begin{info}{اثبات}
+می‌دانیم همواره \(f(f^{-1}(B)) \subseteq B\) برقرار است (تمرین ۹). پس فقط
+باید ثابت کنیم \(B \subseteq f(f^{-1}(B))\).
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  فرض کنید \(y \in B\).
+\item
+  \textbf{نکته کلیدی:} چون \(f\) \textbf{پوشا} است (\(f(X)=Y\)) و
+  \(B \subseteq Y\)، پس حتماً یک \(x \in X\) وجود دارد که \(y = f(x)\).
+\item
+  چون \(f(x) = y\) و \(y \in B\)، پس \(f(x) \in B\).
+\item
+  طبق تعریف وارون، این یعنی \(x \in f^{-1}(B)\).
+\item
+  حالا تصویر این \(x\) را می‌گیریم: \(f(x) \in f(f^{-1}(B))\).
+\item
+  چون \(f(x) = y\)، پس \(y \in f(f^{-1}(B))\).
+\end{enumerate}
+\(\therefore f(f^{-1}(B)) = B\)
+\end{info}

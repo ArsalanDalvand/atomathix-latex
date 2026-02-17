@@ -1,0 +1,38 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۹ و ۱۵: ویژگی اشتراک در حاصلضرب
+دکارتی}\label{تمرین-۹-و-۱۵---اشتراک-حاصلضرب‌ها}
+\subsection{۱. صورت سوال (تمرین
+۹)}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644-ux62aux645ux631ux6ccux646-ux6f9}
+اگر \(A, B, C, D\) چهار مجموعه باشند، ثابت کنید:
+\[(A \times C) \cap (B \times D) = (A \cap B) \times (C \cap D)\]
+\subsection{۲. اثبات تمرین
+۹}\label{ux627ux62bux628ux627ux62a-ux62aux645ux631ux6ccux646-ux6f9}
+نشان می‌دهیم زوج \((x,y)\) اگر در یکی باشد، در دیگری هم هست.
+\begin{info}{اثبات}
+\[(x,y) \in (A \times C) \cap (B \times D)\]
+\[\equiv [(x,y) \in A \times C] \wedge [(x,y) \in B \times D]\]
+\[\equiv (x \in A \wedge y \in C) \wedge (x \in B \wedge y \in D)\] با
+جابجایی پرانتزها (شرکت‌پذیری و جابجایی \(\wedge\)):
+\[\equiv (x \in A \wedge x \in B) \wedge (y \in C \wedge y \in D)\]
+\[\equiv (x \in A \cap B) \wedge (y \in C \cap D)\]
+\[\equiv (x,y) \in (A \cap B) \times (C \cap D)\]
+\end{info}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{۳. صورت سوال (تمرین
+۱۵)}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644-ux62aux645ux631ux6ccux646-ux6f1ux6f5}
+ثابت کنید اگر \(A \cap B = \emptyset\)، آنگاه برای هر مجموعه \(C\) و
+\(D\): \[(A \times C) \cap (B \times D) = \emptyset\]
+\subsection{۴. حل تمرین
+۱۵}\label{ux62dux644-ux62aux645ux631ux6ccux646-ux6f1ux6f5}
+از نتیجه تمرین ۹ استفاده می‌کنیم.
+\begin{info}{حل}
+طبق تمرین ۹ داریم:
+\[(A \times C) \cap (B \times D) = (A \cap B) \times (C \cap D)\] چون
+فرض شده \(A \cap B = \emptyset\): \[= \emptyset \times (C \cap D)\]
+حاصلضرب دکارتی هر مجموعه در تهی، برابر \textbf{تهی} است. \[= \emptyset\]
+\end{info}

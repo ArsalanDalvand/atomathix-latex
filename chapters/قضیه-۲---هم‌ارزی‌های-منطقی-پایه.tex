@@ -1,0 +1,124 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۲: هم‌ارزی‌های منطقی
+پایه}\label{قضیه-۲---هم‌ارزی‌های-منطقی-پایه}
+\begin{tldr}{خلاصه سریع}
+این قضیه مجموعه ابزارهای جبری برای تغییر شکل گزاره‌ها بدون تغییر ارزش
+راستی آن‌هاست. مهم‌ترین بخش آن «قانون عکس نقیض» است که پایه بسیاری از
+اثبات‌های ریاضی (برهان غیرمستقیم) را تشکیل می‌دهد.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(p\) و \(q\) دو گزاره دلبخواه باشند.قوانین زیر همواره
+برقرارند:
+\begin{theorembox}{قضیه ۲}
+\textbf{الف) قانون نفی مضاعف \lr{(Double Negation):}}
+\[\sim(\sim p) \equiv p\] \textbf{ب) قانون جابجایی
+\lr{(Commutative Laws):}} \[p \vee q \equiv q \vee p\]
+\[p \wedge q \equiv q \wedge p\] \textbf{ج) قانون خودتوانی
+\lr{(Idempotent Laws):}} \[p \vee p \equiv p\] \[p \wedge p \equiv p\]
+\textbf{د) قانون عکس نقیض \lr{(Contrapositive Law):}}
+\[(p \rightarrow q) \equiv (\sim q \rightarrow \sim p)\]
+\end{theorembox}
+\subsection{۲. اثبات و تحلیل (با جدول
+ارزش)}\label{ux627ux62bux628ux627ux62a-ux648-ux62aux62dux644ux6ccux644-ux628ux627-ux62cux62fux648ux644-ux627ux631ux632ux634}
+برهان قسمت‌های الف، ب و ج بدیهی است. اما قسمت (د) یعنی قانون عکس نقیض،
+نیاز به اثبات دقیق با جدول ارزش دارد. ما ارزش گزاره دو شرطی
+\((p \to q) \leftrightarrow (\sim q \to \sim p)\) را بررسی می‌کنیم. اگر
+این گزاره در تمام حالات «راست» باشد، دو طرف با هم هم‌ارز هستند.
+{\def\LTcaptype{none}
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+\(p\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(q\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\((p \to q)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(\leftrightarrow\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\((\sim q \to \sim p)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(\sim q\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(\sim p\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\lr{T} & \lr{T} & \lr{T} & \textbf{\lr{T}} & \lr{T} & \lr{F} & \lr{F} \\
+\lr{T} & \lr{F} & \lr{F} & \textbf{\lr{T}} & \lr{F} & \lr{T} & \lr{F} \\
+\lr{F} & \lr{T} & \lr{T} & \textbf{\lr{T}} & \lr{T} & \lr{F} & \lr{T} \\
+\lr{F} & \lr{F} & \lr{T} & \textbf{\lr{T}} & \lr{T} & \lr{T} & \lr{T} \\
+\emph{جدول ۹ - اثبات قانون عکس نقیض} & & & & & & \\
+\end{longtable}
+}
+\begin{info}{تحلیل اثبات}
+۱. ستون سوم نشان‌دهنده ارزش گزاره شرطی اصلی (\(p \to q\)) است. ۲. ستون
+پنجم نشان‌دهنده ارزش عکس نقیض (\(\sim q \to \sim p\)) است که با توجه به
+ستون‌های \(\sim q\) و \(\sim p\) محاسبه شده است. ۳. با مقایسه ستون ۳ و ۵،
+می‌بینیم که در هر ۴ حالت منطقی، ارزش‌ها دقیقاً یکسان هستند. ۴. نتیجه: ستون
+چهارم (\(\leftrightarrow\)) تماماً \textbf{\lr{T }(راستگو)} است، که اثبات
+می‌کند این دو عبارت منطقاً هم‌ارز هستند
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه نقش حیاتی در دستکاری ساختاری گزاره‌ها در سایر قضایا ایفا می‌کند:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۱---قوانین-جمع-و-اختصار} (قوانین جمع و
+اختصار)}{۱. ارتباط با  (قوانین جمع و اختصار)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1---ux642ux648ux627ux646ux6ccux646-ux62cux645ux639-ux648-ux627ux62eux62aux635ux627ux631-ux642ux648ux627ux646ux6ccux646-ux62cux645ux639-ux648-ux627ux62eux62aux635ux627ux631}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تعمیم قانون اختصار:} در قضیه ۱ داشتیم
+  \((p \wedge q) \Rightarrow p\). با استفاده از \textbf{قانون جابجایی}
+  این قضیه (\(p \wedge q \equiv q \wedge p\))، می‌توانیم ثابت کنیم که
+  اختصار برای مؤلفه دوم هم معتبر است: \((q \wedge p) \Rightarrow q\).
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۳---قوانین-دمورگان}
+(دمورگان)}{۲. ارتباط با  (دمورگان)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux64aux647-ux62fux645ux648ux631ux6afux627ux646}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ساختار نفی:} قانون عکس نقیض نوعی «جابجایی همراه با نفی» در
+  گزاره‌های شرطی است. این مفهوم در قضیه ۳ توسعه می‌یابد، جایی که نفی وارد
+  پرانتز شده و عملگرها را تغییر می‌دهد (نفی ترکیب عطفی/فصلی).
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۵---قیاس-ها}(قیاس‌های
+ذو‌الوجهین)}{۳. ارتباط با (قیاس‌های ذو‌الوجهین)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f5---ux642ux6ccux627ux633-ux647ux627ux642ux6ccux627ux633ux647ux627ux6cc-ux630ux648ux627ux644ux648ux62cux647ux6ccux646}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{قیاس منفی:} قضیه ۵ (ب) (قیاس ذوالوجهین منفی) مستقیماً بر اساس
+  \textbf{قانون عکس نقیض} بنا شده است. در آنجا از نفیِ تالی‌ها
+  (\(\sim q \vee \sim s\)) به نفیِ مقدم‌ها (\(\sim p \vee \sim r\))
+  می‌رسیم، دقیقاً همان منطقی که \(p \to q\) را به \(\sim q \to \sim p\)
+  تبدیل می‌کند.
+\end{itemize}
+\subsubsection{\texorpdfstring{۴. ارتباط با
+\autoref{قضیه-۶---قواعد-استنتاج} (قیاس دفع -
+\lr{Modus Tollens)}}{۴. ارتباط با  (قیاس دفع - }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f6---ux642ux648ux627ux639ux62f-ux627ux633ux62aux646ux62aux627ux62c-ux642ux6ccux627ux633-ux62fux641ux639---modus-tollens}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{پایه نظری:} قاعده قیاس دفع
+  (\([(p \to q) \wedge \sim q] \Rightarrow \sim p\)) در واقع کاربرد
+  مستقیم قانون عکس نقیض در یک استدلال است. ما \(p \to q\) را با هم‌ارز آن
+  \(\sim q \to \sim p\) جایگزین می‌کنیم و سپس از قاعده قیاس استثنایی
+  \lr{(Modus Ponens) }استفاده می‌کنیم.
+\end{itemize}

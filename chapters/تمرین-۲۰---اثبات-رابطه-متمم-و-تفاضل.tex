@@ -1,0 +1,46 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۲۰: بازنویسی مجموعه بر اساس
+تفاضل}\label{تمرین-۲۰---اثبات-رابطه-متمم-و-تفاضل}
+\begin{tldr}{خلاصه سریع}
+اگر مجموعه‌ی بزرگ \(C\) به دو تکه جداگانه \(A\) و \(B\) تقسیم شده باشد
+(افراز شده باشد)، آنگاه \(A\) دقیقاً همان «کل منهای \lr{B» }است. شرط‌ها:
+\(A \cup B = C\) و \(A \cap B = \emptyset\).
+\end{tldr}
+\subsection{۱. صورت
+مسأله}\label{ux635ux648ux631ux62a-ux645ux633ux623ux644ux647}
+\begin{info}{سوال}
+ثابت کنید اگر \(A \subseteq C\) و \(B \subseteq C\) و داشته باشیم
+\(A \cup B = C\) و \(A \cap B = \emptyset\)، آنگاه: \[A = C - B\]
+\end{info}
+\subsection{۲. اثبات دو
+طرفه}\label{ux627ux62bux628ux627ux62a-ux62fux648-ux637ux631ux641ux647}
+\begin{info}{اثبات}
+\textbf{مسیر رفت (\(A \subseteq C - B\)):}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  فرض کنید \(x \in A\).
+\item
+  چون \(A \subseteq C\)، پس \(x \in C\).
+\item
+  چون \(A \cap B = \emptyset\) (اشتراک ندارند)، و \(x\) در \(A\) است، پس
+  قطعاً \(x \notin B\).
+\item
+  از (۲) و (۳) داریم: \(x \in C\) و \(x \notin B\).
+\item
+  طبق تعریف تفاضل: \(x \in C - B\).
+\end{enumerate}
+\textbf{مسیر برگشت (\(C - B \subseteq A\)):} 6. فرض کنید
+\(x \in C - B\). 7. یعنی \(x \in C\) و \(x \notin B\). 8. طبق فرض مسأله
+\(C = A \cup B\). پس چون \(x \in C\)، باید یا در \(A\) باشد یا در \(B\).
+9. اما می‌دانیم \(x \notin B\) (از مرحله ۲). 10. پس تنها گزینه باقی‌مانده
+این است که \(x \in A\).
+\textbf{نتیجه:} چون هر دو طرف زیرمجموعه هم شدند، پس \(A = C - B\).
+\(\blacksquare\)
+\end{info}

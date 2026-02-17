@@ -1,0 +1,65 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{تمرین ۱۹: خاصیت شرکت‌پذیری
+\lr{(Associativity)}}{تمرین ۱۹: خاصیت شرکت‌پذیری }}\label{تمرین-۱۹---خاصیت-شرکت‌پذیری-ترکیب-توابع}
+\begin{tldr}{خلاصه سریع}
+در ترکیب توابع، ترتیب پرانتزگذاری مهم نیست (به شرطی که ترتیب توابع
+\(f, g, h\) عوض نشود). \[(h \circ g) \circ f = h \circ (g \circ f)\]
+\end{tldr}
+\subsection{۱. صورت
+تمرین}\label{ux635ux648ux631ux62a-ux62aux645ux631ux6ccux646}
+\begin{info}{سوال}
+با فرض توابع زیر:
+\begin{itemize}
+\tightlist
+\item
+  \(f(x) = 2x^2 + 5\)
+\item
+  \(g(x) = \cos x\)
+\item
+  \(h(x) = x^2 - 1\)
+\end{itemize}
+موارد زیر را محاسبه کنید و نشان دهید نتیجه نهایی یکی است: الف)
+\((h \circ g) \circ f\) ب) \(h \circ (g \circ f)\)
+\end{info}
+\subsection{۲. حل
+تشریحی}\label{ux62dux644-ux62aux634ux631ux6ccux62dux6cc}
+\begin{note}{الف) محاسبه \((h \circ g) \circ f\)}
+ابتدا ترکیب داخلی \((h \circ g)\) را حساب می‌کنیم، سپس \(f\) را وارد
+می‌کنیم:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{مرحله اول (\(h \circ g\)):}
+  \[(h \circ g)(x) = h(g(x)) = h(\cos x) = (\cos x)^2 - 1 = \cos^2 x - 1\]
+\item
+  \textbf{مرحله دوم (ترکیب با \(f\)):}
+  \[[(h \circ g) \circ f](x) = (h \circ g)(f(x))\] به جای \(x\) در رابطه
+  بالا، عبارت \(f(x)\) یعنی \((2x^2+5)\) را می‌گذاریم:
+  \[= \cos^2(2x^2+5) - 1\]
+\end{enumerate}
+\end{note}
+\begin{note}{ب) محاسبه \(h \circ (g \circ f)\)}
+ابتدا \((g \circ f)\) را حساب می‌کنیم، سپس آن را درون \(h\) می‌اندازیم:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{مرحله اول (\(g \circ f\)):}
+  \[(g \circ f)(x) = g(f(x)) = g(2x^2+5) = \cos(2x^2+5)\]
+\item
+  \textbf{مرحله دوم (ترکیب با \(h\)):}
+  \[[h \circ (g \circ f)](x) = h((g \circ f)(x))\] خروجی مرحله قبل را
+  درون \(h(x)=x^2-1\) می‌گذاریم:
+  \[= (\cos(2x^2+5))^2 - 1 = \cos^2(2x^2+5) - 1\]
+\end{enumerate}
+\end{note}
+\subsection{۳.
+نتیجه‌گیری}\label{ux646ux62aux6ccux62cux647ux6afux6ccux631ux6cc}
+همانطور که می‌بینید، خروجی هر دو حالت یکسان شد. این یک قانون کلی در
+ریاضیات است: \textbf{عمل ترکیب توابع، خاصیت شرکت‌پذیری دارد.}

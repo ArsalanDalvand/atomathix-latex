@@ -1,0 +1,44 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۱۵: تعمیم قانون
+تفاضل}\label{تمرین-۱۵---تعمیم-تصویر-تفاضل}
+\begin{tldr}{خلاصه سریع}
+این تمرین همان تمرین ۱۴ است، با این تفاوت که به جای کل دامنه \(X\)، برای
+هر زیرمجموعه دلخواه \(A\) بیان شده است.
+\end{tldr}
+\subsection{۱. صورت
+تمرین}\label{ux635ux648ux631ux62a-ux62aux645ux631ux6ccux646}
+\begin{info}{سوال}
+اگر \(f\) یک‌به‌یک باشد و \(A, B \subseteq X\)، ثابت کنید:
+\[f(A - B) = f(A) - f(B)\]
+\end{info}
+\subsection{۲. حل}\label{ux62dux644}
+\begin{info}{استراتژی}
+استدلال دقیقاً مشابه تمرین ۱۴ است.
+اگر \(y \in f(A) - f(B)\):
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  پس \(y = f(a)\) برای یک \(a \in A\).
+\item
+  و \(y \notin f(B)\).
+\item
+  اگر \(a \in B\) باشد، آنگاه \(f(a) \in f(B)\) که تناقض است (چون
+  \(y \notin f(B)\)).
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{نکته:} اینجا نیاز مبرم به \textbf{یک‌به‌یک} بودن داریم تا
+    مطمئن شویم تصویر \(a\) با تصویر هیچ عضو دیگری از \(B\) یکی نمی‌شود.
+  \end{itemize}
+\item
+  پس \(a \in A\) و \(a \notin B\)، یعنی \(a \in A - B\).
+\item
+  در نتیجه \(y \in f(A - B)\).
+\end{enumerate}
+\end{info}

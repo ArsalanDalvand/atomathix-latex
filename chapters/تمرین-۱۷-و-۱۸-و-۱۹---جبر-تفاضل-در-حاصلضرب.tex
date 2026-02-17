@@ -1,0 +1,39 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۱۷، ۱۸ و ۱۹: پخش‌پذیری حاصلضرب روی
+تفاضل}\label{تمرین-۱۷-و-۱۸-و-۱۹---جبر-تفاضل-در-حاصلضرب}
+\begin{tldr}{خلاصه}
+این تمرین‌ها فرمول‌های تجزیه تفاضل حاصلضرب‌ها را ثابت می‌کنند. تمرین ۱۹ حالت
+کلی تمرین ۱۷ و ۱۸ است.
+\end{tldr}
+\subsection{۱. تمرین ۱۹ (حالت
+کلی)}\label{ux62aux645ux631ux6ccux646-ux6f1ux6f9-ux62dux627ux644ux62a-ux6a9ux644ux6cc}
+\textbf{سوال:} ثابت کنید:
+\[(A \times B) - (C \times D) = [(A - C) \times B] \cup [A \times (B - D)]\]
+\textbf{اثبات:} \[(x,y) \in (A \times B) - (C \times D)\]
+\[\equiv (x \in A \wedge y \in B) \wedge \sim(x \in C \wedge y \in D)\]
+(نقیض ``و'' می‌شود ``یا'' - دمورگان):
+\[\equiv (x \in A \wedge y \in B) \wedge (x \notin C \lor y \notin D)\]
+(پخش کردن پرانتز اول روی پرانتز دوم):
+\[\equiv [(x \in A \wedge y \in B) \wedge x \notin C] \lor [(x \in A \wedge y \in B) \wedge y \notin D]\]
+(مرتب کردن جملات):
+\[\equiv [x \in (A-C) \wedge y \in B] \lor [x \in A \wedge y \in (B-D)]\]
+\[\equiv [(x,y) \in (A-C) \times B] \lor [(x,y) \in A \times (B-D)]\] که
+همان اجتماع دو طرف است .
+\subsection{۲. تمرین ۱۷ و
+۱۸}\label{ux62aux645ux631ux6ccux646-ux6f1ux6f7-ux648-ux6f1ux6f8}
+این دو تمرین حالت‌های خاص تمرین ۱۹ هستند:
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تمرین ۱۷:} با قرار دادن \(B=B\) و \(D=C\) و \(C=C\) (کمی
+  نامگذاری متفاوت است) فرمول برای \((A \times B) - (C \times C)\) اثبات
+  می‌شود.
+\item
+  \textbf{تمرین ۱۸:} اثبات برای \((A \times A) - (B \times C)\) که دقیقاً
+  با منطق بالا حل می‌شود.
+\end{itemize}

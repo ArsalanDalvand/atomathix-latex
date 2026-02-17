@@ -1,0 +1,69 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قضیه ۸: فرمول ترکیب
+\lr{(Combination)}}{قضیه ۸: فرمول ترکیب }}\label{قضیه-۸---ترکیب}
+\begin{tldr}{خلاصه سریع}
+این قضیه فرمول محاسبه تعداد راه‌های انتخاب \(r\) شیء از بین \(n\) شیء
+متمایز را می‌دهد، به شرطی که \textbf{ترتیب مهم نباشد}. به این مقدار،
+«ضریب دوجمله‌ای» نیز می‌گویند.
+\end{tldr}
+\subsection{۱. تعاریف
+پیش‌نیاز}\label{ux62aux639ux627ux631ux6ccux641-ux67eux6ccux634ux646ux6ccux627ux632}
+قبل از فرمول، نیاز به تعریف فاکتوریل و تعریف بازگشتی ترکیب داریم:
+\begin{itemize}
+\tightlist
+\item
+  \textbf{فاکتوریل (\(n!\)):} حاصل‌ضرب اعداد طبیعی از ۱ تا \(n\).
+  (قرارداد: \(0! = 1\)).
+\item
+  \textbf{تعریف بازگشتی \(C(n,r)\):}
+  \begin{itemize}
+  \tightlist
+  \item
+    \(C(n,0) = 1\)
+  \item
+    \(C(n,r) = C(n-1, r) + C(n-1, r-1)\).
+  \end{itemize}
+\end{itemize}
+\subsection{۲. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+اگر \(n\) و \(r\) اعداد صحیح باشند به‌طوری که \(0 \le r \le n\)، آنگاه:
+\begin{theorembox}{قضیه ۸}
+\[C(n, r) = \frac{n!}{r!(n-r)!}\]
+\end{theorembox}
+\subsection{۳. تحلیل}\label{ux62aux62dux644ux6ccux644}
+این فرمول نشان می‌دهد که \(C(n,r)\) همیشه یک عدد صحیح است.
+\begin{itemize}
+\tightlist
+\item
+  صورت کسر (\(n!\)) کل جایگشت‌هاست.
+\item
+  مخرج کسر (\(r!\)) ترتیبِ \(r\) شیء انتخاب شده را حذف می‌کند (چون در
+  ترکیب، ترتیب مهم نیست).
+\item
+  عبارت \((n-r)!\) ترتیبِ اشیاء باقی‌مانده را حذف می‌کند.
+\end{itemize}
+\subsection{\texorpdfstring{۴. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۴. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{مفهوم-استقرا}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux645ux641ux647ux648ux645-ux627ux633ux62aux642ux631ux627}
+\begin{itemize}
+\tightlist
+\item
+  این فرمول را می‌توان با استفاده از تعریف بازگشتی آن و روش
+  \textbf{\autoref{مفهوم-استقرا}} اثبات کرد (هرچند کتاب اثبات را واگذار
+  کرده است).
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۹---دو-جمله-ای}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f9---ux62fux648-ux62cux645ux644ux647-ux627ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{نقش کلیدی:} این اعداد \(C(n,r)\) دقیقاً همان ضرایبی هستند که در
+  بسط پرانتزهای توان‌دار \((x+y)^n\) ظاهر می‌شوند. به همین دلیل به آن‌ها
+  «ضرایب دوجمله‌ای» می‌گویند.
+\end{itemize}

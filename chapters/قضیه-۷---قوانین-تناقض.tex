@@ -1,0 +1,105 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قضیه ۷: قوانین مربوط به راستگو و تناقض
+\lr{(Identity and Domination Laws)}}{قضیه ۷: قوانین مربوط به راستگو و تناقض }}\label{قضیه-۷---قوانین-تناقض}
+\begin{tldr}{خلاصه سریع}
+این قضیه رفتار گزاره‌ها را در تعامل با «ثابت‌های منطقی» یعنی راستگو
+(\(t\)) و تناقض (\(c\)) مشخص می‌کند. در اینجا \(t\) شبیه عدد ۱ در ضرب
+(خنثی) یا بینهایت در جمع (غالب) عمل می‌کند و \(c\) شبیه ۰ در جمع (خنثی)
+یا ۰ در ضرب (غالب) است.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(t\) یک گزاره همیشه راست \lr{(Tautology)، }\(c\) یک گزاره
+همیشه دروغ \lr{(Contradiction) }و \(p\) یک گزاره دلبخواه باشد.
+\begin{theorembox}{قضیه ۷}
+\textbf{الف) قوانین همانی \lr{(Identity Laws):}} \[p \wedge t \equiv p\]
+\[p \vee c \equiv p\] \textbf{ب) قوانین سلطه \lr{(Domination Laws):}}
+\[p \vee t \equiv t\] \[p \wedge c \equiv c\] \textbf{ج) قوانین شرطی
+خاص:} \[p \rightarrow t \equiv t\] \[c \rightarrow p \equiv t\]
+\end{theorembox}
+\subsection{۲. اثبات و تحلیل (با جدول
+ارزش)}\label{ux627ux62bux628ux627ux62a-ux648-ux62aux62dux644ux6ccux644-ux628ux627-ux62cux62fux648ux644-ux627ux631ux632ux634}
+\subsubsection{\texorpdfstring{اثبات قانون همانی
+(\(p \wedge t \equiv p\))}{اثبات قانون همانی (p \textbackslash wedge t \textbackslash equiv p)}}\label{ux627ux62bux628ux627ux62a-ux642ux627ux646ux648ux646-ux647ux645ux627ux646ux6cc-p-wedge-t-equiv-p}
+در این جدول، ارزش \(t\) همواره \textbf{\lr{T}} در نظر گرفته می‌شود.
+{\def\LTcaptype{none}
+\begin{longtable}[]{@{}ccccc@{}}
+\toprule\noalign{}
+\(p\) & \(\wedge\) & \(t\) & \(\leftrightarrow\) & \(p\) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\lr{T} & \lr{T} & \lr{T} & \textbf{\lr{T}} & \lr{T} \\
+\lr{F} & \lr{F} & \lr{T} & \textbf{\lr{T}} & \lr{F} \\
+\emph{(جدول اثبات قانون همانی)} & & & & \\
+\end{longtable}
+}
+\begin{info}{تحلیل}
+وقتی یکی از طرفین «و» (\(\wedge\))، حقیقت محض (\(t\)) باشد، کل عبارت
+تنها زمانی درست است که طرف دیگر (\(p\)) درست باشد. اگر \(p\) غلط باشد،
+کل عبارت غلط می‌شود. پس نتیجه دقیقاً تابع \(p\) است.
+\end{info}
+\subsubsection{\texorpdfstring{اثبات قانون سلطه
+(\(p \vee t \equiv t\))}{اثبات قانون سلطه (p \textbackslash vee t \textbackslash equiv t)}}\label{ux627ux62bux628ux627ux62a-ux642ux627ux646ux648ux646-ux633ux644ux637ux647-p-vee-t-equiv-t}
+در این جدول نیز ارزش \(t\) همواره \textbf{\lr{T}} است.
+{\def\LTcaptype{none}
+\begin{longtable}[]{@{}ccccc@{}}
+\toprule\noalign{}
+\(p\) & \(\vee\) & \(t\) & \(\leftrightarrow\) & \(t\) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\lr{T} & \lr{T} & \lr{T} & \textbf{\lr{T}} & \lr{T} \\
+\lr{F} & \lr{T} & \lr{T} & \textbf{\lr{T}} & \lr{T} \\
+\emph{(جدول اثبات قانون سلطه)} & & & & \\
+\end{longtable}
+}
+\begin{info}{تحلیل}
+در ترکیب فصلی (\(\vee\))، اگر حداقل یک طرف درست باشد، کل عبارت درست است.
+چون \(t\) همیشه درست است، حضور آن کافی است تا کل عبارت (\(p \vee t\))
+صرف‌نظر از مقدار \(p\)، همیشه درست (\(t\)) شود.
+\end{info}
+\subsubsection{\texorpdfstring{اثبات قوانین شرطی
+(\(c \rightarrow p\))}{اثبات قوانین شرطی (c \textbackslash rightarrow p)}}\label{ux627ux62bux628ux627ux62a-ux642ux648ux627ux646ux6ccux646-ux634ux631ux637ux6cc-c-rightarrow-p}
+در این جدول، ارزش \(c\) همواره \textbf{\lr{F}} است.
+{\def\LTcaptype{none}
+\begin{longtable}[]{@{}ccccc@{}}
+\toprule\noalign{}
+\(c\) & \(\rightarrow\) & \(p\) & \(\leftrightarrow\) & \(t\) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\lr{F} & \lr{T} & \lr{T} & \textbf{\lr{T}} & \lr{T} \\
+\lr{F} & \lr{T} & \lr{F} & \textbf{\lr{T}} & \lr{T} \\
+\emph{(جدول اثبات انتفای مقدم)} & & & & \\
+\end{longtable}
+}
+\begin{info}{تحلیل}
+در گزاره شرطی، اگر مقدم (\(c\)) نادرست باشد، کل گزاره به صورت خودکار
+درست (\(t\)) می‌شود (انتفای مقدم). بنابراین، «از یک دروغ می‌توان هر
+نتیجه‌ای گرفت» و کل ساختار همیشه راستگوست.
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه ابزارهای جبری قدرتمندی برای ساده‌سازی عبارات منطقی و مجموعه‌ای
+فراهم می‌کند:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۶---قواعد-استنتاج} (برهان
+خلف)}{۱. ارتباط با  (برهان خلف)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f6---ux642ux648ux627ux639ux62f-ux627ux633ux62aux646ux62aux627ux62c-ux628ux631ux647ux627ux646-ux62eux644ux641}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تعریف فرمال تناقض:} در برهان خلف (قضیه ۶-ج) دیدیم که
+  \((p \wedge \sim q) \to c\). قضیه ۷ ماهیت جبری \(c\) را تعریف می‌کند.
+  مثلاً اگر در یک اثبات به \(A \wedge \sim A\) برسیم، می‌توانیم آن را با
+  \(c\) جایگزین کنیم و سپس با استفاده از قانون سلطه
+  (\(p \wedge c \equiv c\)) کل شاخه استدلال را باطل کنیم.
+\end{itemize}

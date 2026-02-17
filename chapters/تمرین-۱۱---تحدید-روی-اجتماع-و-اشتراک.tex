@@ -1,0 +1,26 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۱۱: رفتار تحدید با اجتماع و
+اشتراک}\label{تمرین-۱۱---تحدید-روی-اجتماع-و-اشتراک}
+\subsection{۱. صورت
+سوال}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644}
+ثابت کنید اگر \(D, E \subseteq A\): الف)
+\(\mathcal{R}|(D \cup E) = (\mathcal{R}|D) \cup (\mathcal{R}|E)\) ب)
+\(\mathcal{R}|(D \cap E) \subseteq (\mathcal{R}|D) \cap (\mathcal{R}|E)\)
+\subsection{۲. اثبات
+(الف)}\label{ux627ux62bux628ux627ux62a-ux627ux644ux641}
+\[(x,y) \in \mathcal{R}|(D \cup E)\]
+\[\iff (x,y) \in \mathcal{R} \wedge x \in (D \cup E)\]
+\[\iff (x,y) \in \mathcal{R} \wedge (x \in D \vee x \in E)\]
+\[\iff [(x,y) \in \mathcal{R} \wedge x \in D] \vee [(x,y) \in \mathcal{R} \wedge x \in E]\]
+(پخش‌پذیری) \[\iff (x,y) \in \mathcal{R}|D \cup \mathcal{R}|E\]
+\subsection{۳. اثبات (ب) - (در واقع تساوی برقرار
+است)}\label{ux627ux62bux628ux627ux62a-ux628---ux62fux631-ux648ux627ux642ux639-ux62aux633ux627ux648ux6cc-ux628ux631ux642ux631ux627ux631-ux627ux633ux62a}
+کتاب شمول یکطرفه خواسته، ولی مراحل اثبات نشان می‌دهد تساوی است:
+\[(x,y) \in \mathcal{R}|(D \cap E) \iff (x,y) \in \mathcal{R} \wedge x \in D \cap E\]
+\[\iff [(x,y) \in \mathcal{R} \wedge x \in D] \wedge [(x,y) \in \mathcal{R} \wedge x \in E]\]
+\[\iff (x,y) \in (\mathcal{R}|D) \cap (\mathcal{R}|E)\]

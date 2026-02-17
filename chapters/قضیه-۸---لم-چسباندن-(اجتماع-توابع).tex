@@ -1,0 +1,93 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قضیه ۸: لم چسباندن
+\lr{(Pasting Lemma)}}{قضیه ۸: لم چسباندن }}\label{قضیه-۸---لم-چسباندن-(اجتماع-توابع)}
+\begin{tldr}{خلاصه سریع}
+این قضیه شرط لازم و کافی برای «اجتماع دو تابع» را بیان می‌کند. اگر دو
+تابع \(f\) و \(g\) داشته باشیم، اجتماع آن‌ها (\(f \cup g\)) تنها در صورتی
+یک تابع خواهد بود که در دامنه مشترکشان، خروجی‌های یکسانی تولید کنند
+(توافق داشته باشند).
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(f\) و \(g\) دو تابع باشند. رابطه \(h = f \cup g\) یک تابع است
+اگر و تنها اگر \(f\) و \(g\) روی اشتراک دامنه‌هایشان هم‌مقدار باشند
+(سازگار باشند).
+\begin{theorembox}{قضیه ۸}
+\[f \cup g \text{ is a function} \iff \forall x \in \text{dom}(f) \cap \text{dom}(g), f(x) = g(x)\]
+در این صورت، دامنه تابع حاصل برابر است با:
+\[\text{dom}(f \cup g) = \text{dom}(f) \cup \text{dom}(g)\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+برای اثبات تابع بودن یک رابطه، باید نشان دهیم که به ازای هر ورودی، خروجی
+\textbf{یکتا} است (خوش‌تعریفی).
+\begin{info}{برهان}
+\textbf{فرض:} شرط سازگاری برقرار است:
+\(\forall x \in \text{dom}(f) \cap \text{dom}(g) \implies f(x) = g(x)\).
+\textbf{حکم:} \(h = f \cup g\) یک تابع است.
+۱. فرض کنید \(x\) عضوی از دامنه \(h\) باشد و دو زوج مرتب \((x, y_1)\) و
+\((x, y_2)\) در \(h\) وجود داشته باشند. ۲. طبق تعریف اجتماع مجموعه‌ها:
+\[[(x, y_1) \in f \lor (x, y_1) \in g] \wedge [(x, y_2) \in f \lor (x, y_2) \in g]\]
+۳. حال حالات ممکن برای \(x\) را بررسی می‌کنیم:
+\begin{itemize}
+\tightlist
+\item
+  \textbf{حالت اول (\(x \in \text{dom}(f) \setminus \text{dom}(g)\)):}
+  در این صورت زوج‌ها نمی‌توانند در \(g\) باشند، پس الزاماً
+  \((x, y_1) \in f\) و \((x, y_2) \in f\). چون \(f\) تابع است
+  \(\implies y_1 = y_2\).
+\item
+  \textbf{حالت دوم (\(x \in \text{dom}(g) \setminus \text{dom}(f)\)):}
+  مشابه حالت قبل، هر دو زوج در \(g\) هستند. چون \(g\) تابع است
+  \(\implies y_1 = y_2\).
+\item
+  \textbf{حالت سوم (\(x \in \text{dom}(f) \cap \text{dom}(g)\)):} در
+  اینجا ممکن است یک زوج از \(f\) و دیگری از \(g\) آمده باشد. مثلاً
+  \((x, y_1) \in f\) و \((x, y_2) \in g\). این یعنی \(y_1 = f(x)\) و
+  \(y_2 = g(x)\). اما طبق \textbf{فرض سازگاری قضیه}، می‌دانیم در اشتراک
+  دامنه‌ها \(f(x) = g(x)\). بنابراین \(y_1 = y_2\).
+\end{itemize}
+\textbf{نتیجه:} در تمام حالات، خروجی یکتاست. پس \(f \cup g\) تابع است.
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه ابزاری قدرتمند برای ساخت توابع پیچیده از توابع ساده‌تر است:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{تمرین-۱۳---تحدید-تابع} (عملیات
+معکوس)}{۱. ارتباط با  (عملیات معکوس)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux62aux645ux631ux6ccux646-ux6f1ux6f3---ux62aux62dux62fux6ccux62f-ux62aux627ux628ux639-ux639ux645ux644ux6ccux627ux62a-ux645ux639ux6a9ux648ux633}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{رابطه دوطرفه:} در تمرین ۱۳ دیدیم که اگر یک تابع بزرگ را به
+  زیرمجموعه‌ای از دامنه‌اش محدود کنیم \lr{(Restriction)، }حاصل همیشه تابع
+  است (\(f|_A\)). قضیه ۸ \lr{(Pasting) }عکس آن عمل را انجام می‌دهد: تلاش
+  می‌کند توابع کوچک (تحدیدها) را به هم بچسباند تا تابع اصلی (توسیع) را
+  بسازد. در واقع اگر \(h = f \cup g\) تابع باشد، آنگاه
+  \(f = h|_{\text{dom}(f)}\) و \(g = h|_{\text{dom}(g)}\).
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. کاربرد در
+\autoref{قضیه-۷---شرط-تساوی-توابع}}{۲. کاربرد در }}\label{ux6a9ux627ux631ux628ux631ux62f-ux62fux631-ux642ux636ux6ccux647-ux6f7---ux634ux631ux637-ux62aux633ux627ux648ux6cc-ux62aux648ux627ux628ux639}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{سازگاری:} شرط \(f(x)=g(x)\) در قضیه ۸، یادآور شرط تساوی توابع
+  در قضیه ۷ است. با این تفاوت که در قضیه ۷ دامنه‌ها برابر بودند، اما در
+  اینجا دامنه‌ها متفاوت‌اند و تساوی فقط در بخش مشترک (\(A \cap B\)) بررسی
+  می‌شود.
+\end{itemize}
+\subsubsection{۳. پیش‌نیاز توپولوژی و
+آنالیز}\label{ux67eux6ccux634ux646ux6ccux627ux632-ux62aux648ux67eux648ux644ux648ux698ux6cc-ux648-ux622ux646ux627ux644ux6ccux632}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{توابع چندضابطه‌ای:} تعریف توابع چندضابطه‌ای
+  \lr{(Piecewise functions) }که در حساب دیفرانسیل می‌بینید (مانند قدر
+  مطلق)، دقیقاً کاربرد عملی همین قضیه است. ما دو تابع \(y=x\) و \(y=-x\)
+  را در نقطه \(x=0\) (اشتراک دامنه‌ها) چک می‌کنیم. چون هر دو در صفر برابر
+  صفرند، می‌توانیم آن‌ها را بچسبانیم.
+\end{itemize}

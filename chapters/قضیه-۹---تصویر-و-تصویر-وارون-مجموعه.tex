@@ -1,0 +1,138 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{مفاهیم تصویر و تصویر وارون + قضیه
+۹}\label{قضیه-۹---تصویر-و-تصویر-وارون-مجموعه}
+\begin{tldr}{خلاصه سریع}
+این یادداشت ابتدا دو عملگر بنیادی روی مجموعه‌ها تحت اثر تابع (\(f(A)\) و
+\(f^{-1}(B)\)) را تعریف می‌کند. سپس در قضیه ۹ ثابت می‌کنیم که عملگر «تصویر
+مستقیم» ساختار اجتماع را حفظ می‌کند (\(=\))، اما در مورد اشتراک ضعیف‌تر
+عمل کرده و فقط زیرمجموعه بودن (\(\subseteq\)) را تضمین می‌کند.
+\end{tldr}
+\subsection{۱. تعاریف بنیادین (تصویر و
+وارون)}\label{ux62aux639ux627ux631ux6ccux641-ux628ux646ux6ccux627ux62fux6ccux646-ux62aux635ux648ux6ccux631-ux648-ux648ux627ux631ux648ux646}
+پیش از بیان قضیه، لازم است تعاریف دقیق «تصویر مستقیم» \lr{(Image) }و
+«تصویر وارون» \lr{(Inverse Image }/ \lr{Preimage) }را تثبیت کنیم. فرض
+کنید \(f: X \to Y\) یک تابع باشد.
+\subsubsection{\texorpdfstring{الف) تصویر مستقیم
+\lr{(Direct Image)}}{الف) تصویر مستقیم }}\label{ux627ux644ux641-ux62aux635ux648ux6ccux631-ux645ux633ux62aux642ux6ccux645-direct-image}
+اگر \(A \subseteq X\) باشد، تصویر \(A\) تحت تابع \(f\)، زیرمجموعه‌ای از
+\(Y\) است که شامل خروجی‌های متناظر با اعضای \(A\) می‌باشد.
+\begin{tldr}{تعریف ۱}
+\[f(A) = \{ y \in Y \mid \exists x \in A, y = f(x) \}\] معادل مجموعه‌ای:
+\(f(A) = \{ f(x) \mid x \in A \}\)
+\end{tldr}
+\subsubsection{\texorpdfstring{ب) تصویر وارون
+\lr{(Inverse Image)}}{ب) تصویر وارون }}\label{ux628-ux62aux635ux648ux6ccux631-ux648ux627ux631ux648ux646-inverse-image}
+اگر \(B \subseteq Y\) باشد، تصویر وارون \(B\) تحت تابع \(f\)،
+زیرمجموعه‌ای از \(X\) است که تمام اعضای آن توسط \(f\) به درون \(B\) پرتاب
+می‌شوند.
+\begin{tldr}{تعریف ۲}
+\[f^{-1}(B) = \{ x \in X \mid f(x) \in B \}\]
+\end{tldr}
+\begin{warning}{هشدار مهم}
+نماد \(f^{-1}\) در اینجا به معنای «تابع وارون» نیست. تصویر وارون برای
+\textbf{هر تابعی} (حتی اگر یک‌به‌یک یا پوشا نباشد) روی مجموعه‌ها تعریف
+می‌شود.
+\end{warning}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{۲. متن ریاضی قضیه
+۹}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647-ux6f9}
+فرض کنید \(f: X \to Y\) یک تابع باشد و \(A, B \subseteq X\). ویژگی‌های
+جبری تصویر مستقیم به شرح زیر است:
+\begin{theorembox}{قضیه ۹}
+\textbf{الف) حفظ شمول \lr{(Monotonicity):}}
+\[A \subseteq B \implies f(A) \subseteq f(B)\] \textbf{ب) پخش‌پذیری روی
+اجتماع:} \[f(A \cup B) = f(A) \cup f(B)\] \textbf{ج) رفتار روی اشتراک:}
+\[f(A \cap B) \subseteq f(A) \cap f(B)\] \emph{(نکته: تساوی در قسمت ج
+لزوماً برقرار نیست).}
+\end{theorembox}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۳. اثبات صوری
+\lr{(Formal Proof)}}{۳. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+\subsubsection{اثبات قسمت (الف): حفظ
+شمول}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux627ux644ux641-ux62dux641ux638-ux634ux645ux648ux644}
+\begin{info}{برهان}
+۱. فرض کنیم \(y \in f(A)\). ۲. طبق تعریف تصویر، یعنی \(\exists x \in A\)
+به طوری که \(y = f(x)\). ۳. چون طبق فرض \(A \subseteq B\)، پس این \(x\)
+متعلق به \(B\) نیز هست (\(x \in B\)). ۴. اکنون ما عنصری در \(B\) داریم
+(\(x\)) که تصویرش \(y\) است. ۵. پس طبق تعریف، \(y \in f(B)\). ۶.
+\lr{[cite\_start]نتیجه: }\(f(A) \subseteq f(B)\). \lr{[cite: }515-516{]}
+\end{info}
+\subsubsection{اثبات قسمت (ب):
+اجتماع}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux628-ux627ux62cux62aux645ux627ux639}
+باید تساوی دو مجموعه را با شمول دوطرفه ثابت کنیم.
+\begin{info}{برهان}
+\textbf{جهت اول (\(f(A \cup B) \subseteq f(A) \cup f(B)\)):} ۱. فرض کنیم
+\(y \in f(A \cup B)\). ۲. یعنی \(\exists x \in A \cup B\) که
+\(y = f(x)\). ۳. چون \(x \in A \cup B\)، پس (\(x \in A\)) یا
+(\(x \in B\)). ۴. اگر \(x \in A \implies y \in f(A)\). ۵. اگر
+\(x \in B \implies y \in f(B)\). ۶. در هر حال \(y \in f(A) \cup f(B)\).
+\textbf{جهت دوم (\(f(A) \cup f(B) \subseteq f(A \cup B)\)):} ۱. می‌دانیم
+\(A \subseteq A \cup B\) و \(B \subseteq A \cup B\). ۲. طبق قسمت (الف)
+همین قضیه (حفظ شمول):
+\[f(A) \subseteq f(A \cup B) \quad \text{و} \quad f(B) \subseteq f(A \cup B)\]
+۳. اجتماع دو زیرمجموعه از یک مجموعه، باز هم زیرمجموعه آن است:
+\[f(A) \cup f(B) \subseteq f(A \cup B)\]
+\textbf{نتیجه:} تساوی برقرار است.
+\end{info}
+\subsubsection{اثبات قسمت (ج):
+اشتراک}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux62c-ux627ux634ux62aux631ux627ux6a9}
+\begin{info}{برهان}
+۱. می‌دانیم \(A \cap B \subseteq A\) و \(A \cap B \subseteq B\). ۲. طبق
+قسمت (الف) (حفظ شمول):
+\[f(A \cap B) \subseteq f(A) \quad \text{و} \quad f(A \cap B) \subseteq f(B)\]
+۳. چون مجموعه سمت چپ زیرمجموعه هر دو مجموعه سمت راست است، پس زیرمجموعه
+اشتراک آن‌ها نیز می‌باشد: \[f(A \cap B) \subseteq f(A) \cap f(B)\]
+\end{info}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۴. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۴. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۱---پخش‌پذیری-حاصلضرب-دکارتی}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1---ux67eux62eux634ux67eux630ux6ccux631ux6cc-ux62dux627ux635ux644ux636ux631ux628-ux62fux6a9ux627ux631ux62aux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{چرا اشتراک برابر نمی‌شود؟} در اثبات اجتماع (بخش ب)، ما از
+  هم‌ارزی
+  \((\exists x, P(x) \lor Q(x)) \iff (\exists x, P(x)) \lor (\exists x, Q(x))\)
+  استفاده کردیم. اما سور وجودی (\(\exists\)) روی اشتراک (\(\land\)) پخش
+  نمی‌شود. به همین دلیل \(f(A \cap B) \neq f(A) \cap f(B)\).
+\item
+  \textbf{مثال نقض:} تابع \(f(x)=x^2\) را در نظر بگیرید. \(A=\{-2\}\) و
+  \(B=\{2\}\).
+  \begin{itemize}
+  \tightlist
+  \item
+    \(A \cap B = \emptyset \implies f(A \cap B) = \emptyset\).
+  \item
+    \(f(A) = \{4\}\) و \(f(B) = \{4\} \implies f(A) \cap f(B) = \{4\}\).
+  \item
+    واضح است که \(\emptyset \neq \{4\}\).
+  \end{itemize}
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۵---متمم-و-زیرمجموعه} (تصویر
+وارون)}{۲. ارتباط با  (تصویر وارون)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f5---ux645ux62aux645ux645-ux648-ux632ux6ccux631ux645ux62cux645ux648ux639ux647-ux62aux635ux648ux6ccux631-ux648ux627ux631ux648ux646}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{رفتار بهتر وارون:} در قضایای بعدی خواهیم دید که \(f^{-1}\)
+  (تصویر وارون) برخلاف \(f\) (تصویر مستقیم)، رفتار بسیار منظمی دارد و با
+  تمام عملیات (اجتماع، اشتراک و تفاضل) سازگار است
+  (\(f^{-1}(A \cap B) = f^{-1}(A) \cap f^{-1}(B)\)). این تفاوت بنیادی
+  بین «تابع» و «رابطه» را نشان می‌دهد.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۸---لم-چسباندن-(اجتماع-توابع)}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f8---ux644ux645-ux686ux633ux628ux627ux646ux62fux646-ux627ux62cux62aux645ux627ux639-ux62aux648ux627ux628ux639}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ساختار اجتماع:} قضیه ۹-ب نشان می‌دهد که تصویرِ اجتماع دامنه‌ها،
+  برابر با اجتماعِ تصویرهاست. این مفهوم با لم چسباندن سازگار است؛ اگر
+  توابع را روی دامنه‌های جداگانه تعریف کنیم، برد نهایی اجتماع بردهای
+  آنهاست.
+\end{itemize}

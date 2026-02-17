@@ -1,0 +1,132 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{قضیه ۳: ویژگی‌های بنیادی کلاس‌های
+هم‌ارزی}\label{قضیه-۳---ویژگی‌های-بنیادی-کلاس-هم‌ارزی}
+\begin{tldr}{خلاصه سریع}
+این قضیه هندسهٔ فضایی را که یک «رابطه هم‌ارزی» روی یک مجموعه ایجاد می‌کند،
+ترسیم می‌نماید. طبق این قضیه، کلاس‌های هم‌ارزی یا کاملاً بر هم منطبق‌اند و یا
+کاملاً از هم جدا \lr{(Disjoint) }هستند. این ویژگی، زیربنای مفهوم «افراز»
+و ساختارهای جبری مانند گروه‌های خارج‌قسمتی است.
+\end{tldr}
+\subsection{۱. تعاریف و مفاهیم
+پیش‌نیاز}\label{ux62aux639ux627ux631ux6ccux641-ux648-ux645ux641ux627ux647ux6ccux645-ux67eux6ccux634ux646ux6ccux627ux632}
+پیش از ورود به اثبات، لازم است تعاریف صوری «کلاس هم‌ارزی» و «مجموعه
+خارج‌قسمتی» را که در این قضیه محوریت دارند، مرور کنیم.
+\subsubsection{\texorpdfstring{الف) کلاس هم‌ارزی
+\lr{(Equivalence Class)}}{الف) کلاس هم‌ارزی }}\label{ux627ux644ux641-ux6a9ux644ux627ux633-ux647ux645ux627ux631ux632ux6cc-equivalence-class}
+فرض کنید \(\xi\) یک رابطه هم‌ارزی روی مجموعه \(X\) باشد. برای هر عنصر
+\(x \in X\)، کلاس هم‌ارزی \(x\) (که با \(x/\xi\) یا \([x]_\xi\) نمایش
+داده می‌شود)، مجموعه‌ی تمام عناصری از \(X\) است که با \(x\) هم‌ارز هستند:
+\[x/\xi = \{ y \in X \mid y \xi x \}\] در اینجا \(x\) را
+\textbf{نماینده} \lr{(Representative) }کلاس می‌نامیم.
+\subsubsection{\texorpdfstring{ب) مجموعه خارج‌قسمتی
+\lr{(Quotient Set)}}{ب) مجموعه خارج‌قسمتی }}\label{ux628-ux645ux62cux645ux648ux639ux647-ux62eux627ux631ux62cux642ux633ux645ux62aux6cc-quotient-set}
+مجموعه تمام کلاس‌های هم‌ارزی متمایز حاصل از رابطه \(\xi\) را مجموعه
+خارج‌قسمتی \(X\) نسبت به \(\xi\) می‌نامند و با \(X/\xi\) نمایش می‌دهند:
+\[X/\xi = \{ x/\xi \mid x \in X \}\]
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{۲. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(\xi\) یک رابطه هم‌ارزی روی مجموعه ناتهی \(X\) باشد. احکام زیر
+برقرارند:
+\begin{theorembox}{قضیه ۳}
+\textbf{الف) اصل ناتهی بودن:}
+\[\forall x \in X, \quad x/\xi \neq \emptyset\] \textbf{ب) شرط تلاقی
+(اشتراک):} \[x/\xi \cap y/\xi \neq \emptyset \iff x \xi y\] \textbf{ج)
+اصل انطباق (تساوی کلاس‌ها):} \[x/\xi = y/\xi \iff x \xi y\]
+\end{theorembox}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۳. اثبات صوری
+\lr{(Formal Proof)}}{۳. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+اثبات این قضیه کاربرد مستقیم ویژگی‌های سه‌گانه رابطه هم‌ارزی (بازتابی،
+تقارنی، تعدی) در نظریه مجموعه‌هاست.
+\subsubsection{اثبات قسمت
+(الف)}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux627ux644ux641}
+\begin{info}{برهان}
+۱. طبق تعریف، \(\xi\) یک رابطه هم‌ارزی است، بنابراین دارای ویژگی
+\textbf{بازتابی \lr{(Reflexive)}} است: \[\forall x \in X, (x \xi x)\] ۲.
+طبق تعریف کلاس هم‌ارزی (\(y \in x/\xi \iff y \xi x\))، چون \(x \xi x\)
+برقرار است، نتیجه می‌شود: \[x \in x/\xi\] ۳. چون حداقل خود عنصر \(x\) در
+کلاسش وجود دارد، پس این مجموعه هرگز تهی نیست.
+\end{info}
+\subsubsection{اثبات قسمت
+(ب)}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux628}
+اثبات دوطرفه (\(\iff\)) انجام می‌شود.
+\begin{info}{برهان}
+\textbf{جهت رفت (\(\Rightarrow\)):} فرض کنیم اشتراک تهی نیست
+(\(x/\xi \cap y/\xi \neq \emptyset\)). ۱. وجود دارد عنصری مانند \(z\) که
+در هر دو کلاس باشد (\(z \in x/\xi \wedge z \in y/\xi\)). ۲. طبق تعریف
+کلاس‌ها: \((z \xi x) \wedge (z \xi y)\). ۳. از ویژگی \textbf{تقارنی} برای
+جمله اول استفاده می‌کنیم (\(z \xi x \implies x \xi z\)). 4. اکنون داریم:
+\((x \xi z) \wedge (z \xi y)\). ۵. طبق ویژگی \textbf{تعدی}، نتیجه می‌شود:
+\(x \xi y\).
+\textbf{جهت برگشت (\(\Leftarrow\)):} فرض کنیم \(x \xi y\). ۱. طبق ویژگی
+بازتابی، \(x \xi x\)، پس \(x \in x/\xi\). ۲. چون \(x \xi y\) (فرض) و
+رابطه متقارن است، پس \(y \xi x\). طبق تعریف کلاس \(x\)، یعنی
+\(y \in x/\xi\). (و همچنین \(x \in y/\xi\)). ۳. بنابراین عنصر \(x\) (و
+حتی \(y\)) در هر دو کلاس حضور دارد. ۴. پس اشتراک ناتهی است
+(\(x \in x/\xi \cap y/\xi\)).
+\end{info}
+\subsubsection{اثبات قسمت
+(ج)}\label{ux627ux62bux628ux627ux62a-ux642ux633ux645ux62a-ux62c}
+\begin{info}{برهان}
+\textbf{جهت رفت (\(\Rightarrow\)):} فرض کنیم \(x/\xi = y/\xi\). ۱. طبق
+قسمت (الف)، کلاس‌ها ناتهی هستند، پس اشتراک آن‌ها (\(x/\xi \cap y/\xi\))
+نیز ناتهی است (چون با خود مجموعه‌ها برابر است). ۲. طبق قسمت (ب)، ناتهی
+بودن اشتراک ایجاب می‌کند که \(x \xi y\).
+\textbf{جهت برگشت (\(\Leftarrow\)):} فرض کنیم \(x \xi y\). باید ثابت
+کنیم \(x/\xi = y/\xi\). (از روش شمول دوطرفه
+\(A \subseteq B \wedge B \subseteq A\) استفاده می‌کنیم).
+\begin{itemize}
+\item
+  \textbf{گام ۱ (\(x/\xi \subseteq y/\xi\)):} فرض کنیم \(z\) عضو دلخواهی
+  از \(x/\xi\) باشد. پس \(z \xi x\). از طرفی طبق فرض \(x \xi y\). بنابر
+  ویژگی \textbf{تعدی}: \((z \xi x \wedge x \xi y \implies z \xi y)\). پس
+  \(z \in y/\xi\).
+\item
+  \textbf{گام ۲ (\(y/\xi \subseteq x/\xi\)):} فرض کنیم \(w\) عضو دلخواهی
+  از \(y/\xi\) باشد. پس \(w \xi y\). چون \(x \xi y\)، طبق \textbf{تقارن}
+  \(y \xi x\). بنابر ویژگی \textbf{تعدی}:
+  \((w \xi y \wedge y \xi x \implies w \xi x)\). پس \(w \in x/\xi\).
+\end{itemize}
+\textbf{نتیجه:} دو مجموعه زیرمجموعه یکدیگرند، پس \(x/\xi = y/\xi\).
+\end{info}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۴. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۴. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه پل ارتباطی بین ``جبر رابطه‌ها'' و ``ساختار افراز'' است:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{پیشنیاز---مفاهیم-پایه-رابطه-و-تابع}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux67eux6ccux634ux646ux6ccux627ux632---ux645ux641ux627ux647ux6ccux645-ux67eux627ux6ccux647-ux631ux627ux628ux637ux647-ux648-ux62aux627ux628ux639}
+\begin{itemize}
+\tightlist
+\item
+  اثبات این قضیه تماماً بر پایه ویژگی‌های تعریف شده در پیش‌نیاز (بازتابی،
+  تقارنی، تعدی) استوار است. این قضیه نشان می‌دهد که چگونه انتزاعی‌ترین
+  ویژگی‌های یک رابطه، منجر به نتایج ملموس مجموعه‌ای (تساوی یا جدایی کامل)
+  می‌شود.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۴---افراز-ناشی-از-رابطه-هم‌ارزی}}{۲. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f4---ux627ux641ux631ux627ux632-ux646ux627ux634ux6cc-ux627ux632-ux631ux627ux628ux637ux647-ux647ux645ux627ux631ux632ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  این قضیه (بخش‌های ب و ج) ``لم اصلی'' برای اثبات قضیه ۴ است. قضیه ۳
+  تضمین می‌کند که کلاس‌ها ``دو به دو جدا'' \lr{(Mutually Disjoint) }هستند.
+  بدون قضیه ۳، نمی‌توان ثابت کرد که \(X/\xi\) تشکیل یک افراز می‌دهد.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{مفهوم-پارادوکس-راسل} (مفهوم
+خوش‌تعریفی)}{۳. ارتباط با  (مفهوم خوش‌تعریفی)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux645ux641ux647ux648ux645-ux67eux627ux631ux627ux62fux648ux6a9ux633-ux631ux627ux633ux644-ux645ux641ux647ux648ux645-ux62eux648ux634ux62aux639ux631ux6ccux641ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  در مباحث پیشرفته‌تر، وقتی روی کلاس‌های هم‌ارزی عملیاتی تعریف می‌کنیم (مثل
+  جمع در \(\mathbb{Z}_n\))، بخش (ج) این قضیه
+  (\(x/\xi = y/\xi \iff x \xi y\)) ابزار اصلی برای بررسی ``خوش‌تعریفی''
+  \lr{(Well-definedness) }آن عملیات است؛ یعنی نتیجه عملیات نباید وابسته
+  به نماینده کلاس (\(x\) یا \(y\)) باشد.
+\end{itemize}

@@ -1,0 +1,26 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{تمرین ۳: اثبات پخش‌پذیری حاصلضرب دکارتی روی
+اجتماع}\label{تمرین-۳---پخش‌پذیری-روی-اجتماع}
+\subsection{۱. صورت
+سوال}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644}
+قضیه ۱ (ب) را ثابت کنید:
+\[A \times (B \cup C) = (A \times B) \cup (A \times C)\]
+\subsection{۲. حل تشریحی (روش زنجیره
+هم‌ارزی)}\label{ux62dux644-ux62aux634ux631ux6ccux62dux6cc-ux631ux648ux634-ux632ux646ux62cux6ccux631ux647-ux647ux645ux627ux631ux632ux6cc}
+برای اثبات تساوی دو مجموعه، نشان می‌دهیم عضو بودن در سمت چپ معادل عضو
+بودن در سمت راست است.
+\begin{info}{مراحل اثبات}
+\[(x,y) \in A \times (B \cup C)\] طبق تعریف حاصلضرب دکارتی:
+\[\equiv (x \in A) \wedge (y \in B \cup C)\] طبق تعریف اجتماع:
+\[\equiv (x \in A) \wedge (y \in B \lor y \in C)\] طبق قانون پخش‌پذیری
+منطق (پخش \(\wedge\) روی \(\lor\)):
+\[\equiv [(x \in A) \wedge (y \in B)] \lor [(x \in A) \wedge (y \in C)]\]
+طبق تعریف حاصلضرب دکارتی برای هر کروشه:
+\[\equiv [(x,y) \in A \times B] \lor [(x,y) \in A \times C]\] طبق تعریف
+اجتماع: \[\equiv (x,y) \in (A \times B) \cup (A \times C)\]
+\end{info}

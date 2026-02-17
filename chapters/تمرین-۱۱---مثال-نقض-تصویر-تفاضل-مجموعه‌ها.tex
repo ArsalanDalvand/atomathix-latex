@@ -1,0 +1,83 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{مثال نقض: عدم تساوی تصویر تفاضل با تفاضل
+تصاویر}\label{تمرین-۱۱---مثال-نقض-تصویر-تفاضل-مجموعه‌ها}
+\begin{tldr}{خلاصه سریع}
+برخلاف «نگاره وارون»، خودِ «نگاره» (\(f\)) تفاضل را حفظ نمی‌کند.
+\[f(A - B) \neq f(A) - f(B)\] معمولاً \(f(A - B)\) بزرگتر یا مساوی طرف
+راست است، اما تساوی کلی برقرار نیست.
+\end{tldr}
+\subsection{۱. صورت سوال (تمرین
+۱۱)}\label{ux635ux648ux631ux62a-ux633ux648ux627ux644-ux62aux645ux631ux6ccux646-ux6f1ux6f1}
+\begin{info}{سوال}
+تابعی مثال بزنید که نشان دهد رابطه \(f(A - B) = f(A) - f(B)\) نادرست
+است.
+\end{info}
+\subsection{۲. استراتژی حل (ساخت مثال
+نقض)}\label{ux627ux633ux62aux631ux627ux62aux698ux6cc-ux62dux644-ux633ux627ux62eux62a-ux645ux62bux627ux644-ux646ux642ux636}
+برای ساخت مثال نقض، باید حالتی را پیدا کنیم که دو عضو متفاوت، تصویر
+یکسان داشته باشند (تابع یک‌به‌یک نباشد). اگر عضوی در \(A-B\) باشد اما
+تصویرش با تصویر عضوی در \(B\) یکی شود، در سمت راست معادله (تفاضل) حذف
+می‌شود، اما در سمت چپ باقی می‌ماند.
+\subsection{۳. حل
+تشریحی}\label{ux62dux644-ux62aux634ux631ux6ccux62dux6cc}
+\begin{note}{مثال نقض}
+\textbf{فرض‌ها:}
+\begin{itemize}
+\tightlist
+\item
+  مجموعه مبدا: \(X = \{1, 2, 3\}\)
+\item
+  مجموعه مقصد: \(Y = \{a, b\}\)
+\item
+  زیرمجموعه‌ها: \(A = \{1, 2\}\) و \(B = \{2\}\)
+\item
+  تعریف تابع \(f\):
+  \begin{itemize}
+  \tightlist
+  \item
+    \(f(1) = a\)
+  \item
+    \(f(2) = a\)
+  \item
+    \(f(3) = b\)
+  \end{itemize}
+\end{itemize}
+\textbf{محاسبه سمت چپ \lr{(LHS):}}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ابتدا \(A - B\) را حساب می‌کنیم: \[A - B = \{1, 2\} - \{2\} = \{1\}\]
+\item
+  حالا تصویر آن را می‌گیریم: \[f(A - B) = f(\{1\}) = \{a\}\]
+\end{enumerate}
+\textbf{محاسبه سمت راست \lr{(RHS):}}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  تصویر \(A\): \[f(A) = \{f(1), f(2)\} = \{a, a\} = \{a\}\]
+\item
+  تصویر \(B\): \[f(B) = \{f(2)\} = \{a\}\]
+\item
+  تفاضل تصاویر: \[f(A) - f(B) = \{a\} - \{a\} = \emptyset\]
+\end{enumerate}
+\textbf{نتیجه‌گیری:}
+\[\{a\} \neq \emptyset \implies f(A - B) \neq f(A) - f(B)\]
+\end{note}
+\begin{warning}{تحلیل علت}
+مشکل اینجا بود که \(1\) و \(2\) هر دو به \(a\) می‌روند.
+\begin{itemize}
+\tightlist
+\item
+  عضو \(1\) در \(A-B\) هست، پس \(a\) در تصویرِ چپ هست.
+\item
+  اما چون \(2\) در \(B\) هست و تصویرش هم \(a\) است، باعث می‌شود \(a\) از
+  تصویرِ \(A\) (در سمت راست) حذف شود.
+\end{itemize}
+\end{warning}

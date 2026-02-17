@@ -1,0 +1,86 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{مفهوم استقرای ریاضی
+\lr{(Mathematical Induction)}}{مفهوم استقرای ریاضی }}\label{مفهوم-استقرا}
+\begin{tldr}{خلاصه سریع}
+استقرای ریاضی یک تکنیک قدرتمند برای اثبات قضایایی است که برای «تمام
+اعداد طبیعی» بیان می‌شوند. این روش شبیه «ریختن دومینو» است: ۱. ضربه به
+اولی (پایه)، ۲. اطمینان از اینکه افتادن هر مهره باعث افتادن مهره بعدی
+می‌شود (گام استقرا).
+\end{tldr}
+\subsection{۱. درک شهودی (اثر
+دومینو)}\label{ux62fux631ux6a9-ux634ux647ux648ux62fux6cc-ux627ux62bux631-ux62fux648ux645ux6ccux646ux648}
+فرض کنید صفی بی‌نهایت از دومینوها چیده‌ایم. برای اینکه مطمئن شویم
+\textbf{همه} دومینوها می‌ریزند، فقط باید دو چیز را ثابت کنیم:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{شرط شروع:} دومینو اول می‌افتد.
+\item
+  \textbf{مکانیزم انتقال:} هر دومینویی که بیفتد، حتماً دومینو بعدی‌اش را
+  می‌اندازد. اگر این دو برقرار باشند، کل صف تا بی‌نهایت خواهد ریخت.
+\end{enumerate}
+\subsection{۲. متن ریاضی اصل
+استقرا}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux627ux635ux644-ux627ux633ux62aux642ux631ux627}
+اگر \(P(n)\) یک حکم مربوط به عدد طبیعی \(n\) باشد، چنانچه دو شرط زیر
+برقرار باشند:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{پایه استقرا:} \(P(1)\) راست باشد.
+\item
+  \textbf{گام استقرا:} برای هر عدد طبیعی \(k\)، اگر \(P(k)\) راست باشد،
+  آنگاه \(P(k+1)\) نیز راست باشد (\(P(k) \Rightarrow P(k+1)\)).
+\end{enumerate}
+آنگاه \(P(n)\) برای \textbf{هر عدد طبیعی} \(n\) راست است.
+\subsection{۳. مثال آموزشی (جمع
+اعداد)}\label{ux645ux62bux627ux644-ux622ux645ux648ux632ux634ux6cc-ux62cux645ux639-ux627ux639ux62fux627ux62f}
+\textbf{حکم:} ثابت کنید \(1 + 2 + \dots + n = \frac{n(n+1)}{2}\).
+\begin{info}{مراحل اثبات}
+\textbf{۱. بررسی پایه (\(n=1\)):} \[1 = \frac{1(1+1)}{2} = 1\] (سمت چپ و
+راست برابرند، پس درست است).
+\textbf{۲. فرض استقرا (\(n=k\)):} فرض می‌کنیم حکم برای \(k\) درست است:
+\[1 + \dots + k = \frac{k(k+1)}{2}\]
+\textbf{۳. حکم استقرا (\(n=k+1\)):} باید ثابت کنیم تساوی برای \(k+1\) هم
+برقرار است. به طرفین فرض استقرا، عدد بعدی یعنی \((k+1)\) را اضافه
+می‌کنیم: \[1 + \dots + k + (k+1) = \frac{k(k+1)}{2} + (k+1)\] با مخرج
+مشترک گرفتن: \[= \frac{k(k+1) + 2(k+1)}{2} = \frac{(k+1)(k+2)}{2}\] این
+دقیقاً همان فرمول حکم برای \(n=k+1\) است. پس حکم ثابت شد.
+\end{info}
+\subsection{\texorpdfstring{۴. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۴. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۶---قواعد-استنتاج} (قیاس
+استثنایی)}{۱. ارتباط با  (قیاس استثنایی)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f6---ux642ux648ux627ux639ux62f-ux627ux633ux62aux646ux62aux627ux62c-ux642ux6ccux627ux633-ux627ux633ux62aux62bux646ux627ux6ccux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{موتور محرک:} در گام دوم استقرا، ما ثابت می‌کنیم
+  \(P(k) \Rightarrow P(k+1)\). اما این به تنهایی کافی نیست. وقتی پایه
+  استقرا (\(P(1)\)) را ثابت کردیم، عملاً از \textbf{قیاس استثنایی}
+  استفاده می‌کنیم:
+  \begin{itemize}
+  \tightlist
+  \item
+    مقدم ۱: \(P(1)\) (ثابت شده در پایه)
+  \item
+    مقدم ۲: \(P(1) \Rightarrow P(2)\) (ثابت شده در گام)
+  \item
+    نتیجه: \(P(2)\) (و این زنجیره ادامه می‌یابد\ldots).
+  \end{itemize}
+\end{itemize}
+\subsubsection{۲. ارتباط با تعاریف
+بازگشتی}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux62aux639ux627ux631ux6ccux641-ux628ux627ux632ux6afux634ux62aux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تعریف بازگشتی:} استقرا ارتباط نزدیکی با تعاریفی دارد که خودشان
+  را صدا می‌زنند (مثل تعریف توان \(x^{n+1} = x^n \cdot x\) یا فاکتوریل).
+  این تعاریف، مواد اولیه برای اثبات‌های استقرایی هستند.
+\end{itemize}

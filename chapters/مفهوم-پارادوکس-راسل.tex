@@ -1,0 +1,93 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{مفهوم پارادوکس راسل
+\lr{(Russell’s Paradox)}}{مفهوم پارادوکس راسل }}\label{مفهوم-پارادوکس-راسل}
+\begin{tldr}{خلاصه سریع}
+پارادوکس راسل نشان می‌دهد که «اصل تصریح نامحدود»
+\lr{(Unrestricted Comprehension) }در نظریه مجموعه‌های کانتور منجر به
+تناقض می‌شود. اگر اجازه دهیم هر ویژگی دلخواهی یک مجموعه بسازد، می‌توانیم
+مجموعه‌ای مثل \(R\) بسازیم که همزمان باید «عضو خودش باشد» و «عضو خودش
+نباشد».
+\end{tldr}
+\subsection{۱. ساختار صوری
+پارادوکس}\label{ux633ux627ux62eux62aux627ux631-ux635ux648ux631ux6cc-ux67eux627ux631ux627ux62fux648ux6a9ux633}
+در نظریه مجموعه‌های کلاسیک \lr{(Naive Set Theory)، }فرض بر این بود که
+برای هر ویژگی \(P(x)\)، مجموعه‌ای وجود دارد شامل تمام عناصری که در \(P\)
+صدق می‌کنند: \(\{x \mid P(x)\}\). برتراند راسل در سال ۱۹۰۲ با تعریف ویژگی
+\(P(x): x \notin x\) این فرض را به چالش کشید.
+مجموعه \(R\) را به صورت زیر تعریف می‌کنیم:
+\[R = \{ x \mid x \notin x \}\] \emph{(مجموعه تمام مجموعه‌هایی که عضو
+خودشان نیستند)}.
+\subsection{۲. تحلیل منطقی (تضاد
+درونی)}\label{ux62aux62dux644ux6ccux644-ux645ux646ux637ux642ux6cc-ux62aux636ux627ux62f-ux62fux631ux648ux646ux6cc}
+سوال اساسی این است: \textbf{آیا \(R \in R\)؟} برای پاسخ، دو حالت ممکن در
+منطق دوارزشی را بررسی می‌کنیم:
+\subsubsection{\texorpdfstring{حالت اول: فرض کنیم
+\(R \in R\)}{حالت اول: فرض کنیم R \textbackslash in R}}\label{ux62dux627ux644ux62a-ux627ux648ux644-ux641ux631ux636-ux6a9ux646ux6ccux645-r-in-r}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  اگر \(R \in R\) باشد، طبق تعریف مجموعه \(R\)، باید ویژگی شرطی مجموعه
+  (\(x \notin x\)) را داشته باشد.
+\item
+  بنابراین \(R \notin R\).
+\item
+  نتیجه: \((R \in R) \implies (R \notin R)\). (تناقض)
+\end{enumerate}
+\subsubsection{\texorpdfstring{حالت دوم: فرض کنیم
+\(R \notin R\)}{حالت دوم: فرض کنیم R \textbackslash notin R}}\label{ux62dux627ux644ux62a-ux62fux648ux645-ux641ux631ux636-ux6a9ux646ux6ccux645-r-notin-r}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  اگر \(R \notin R\) باشد، پس \(R\) ویژگی لازم برای عضویت در مجموعه
+  \(R\) (که همان عضو خود نبودن است) را دارد.
+\item
+  بنابراین \(R \in R\).
+\item
+  نتیجه: \((R \notin R) \implies (R \in R)\). (تناقض)
+\end{enumerate}
+\subsubsection{نتیجه
+نهایی}\label{ux646ux62aux6ccux62cux647-ux646ux647ux627ux6ccux6cc}
+گزاره \((R \in R) \iff (R \notin R)\) یک تناقض منطقی
+\lr{(Contradiction) }است که نشان می‌دهد سیستم اصل موضوعی ما ایراد دارد.
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این پارادوکس نقطه عطفی است که نیاز به بازبینی در تعاریف پایه (فصل ۱ و ۲)
+را ایجاد می‌کند:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۱۰---عدم-وجود-مجموعه-جهانی}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1ux6f0---ux639ux62fux645-ux648ux62cux648ux62f-ux645ux62cux645ux648ux639ux647-ux62cux647ux627ux646ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{نتیجه مستقیم:} پارادوکس راسل ابزار اصلی اثبات
+  \autoref{قضیه-۱۰---عدم-وجود-مجموعه-جهانی} است. آن قضیه نشان می‌دهد که
+  برای رفع این پارادوکس، باید فرض «وجود مجموعه تمام مجموعه‌ها» را کنار
+  بگذاریم.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۵---متمم-و-زیرمجموعه} (قانون عکس
+نقیض)}{۲. ارتباط با  (قانون عکس نقیض)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f5---ux645ux62aux645ux645-ux648-ux632ux6ccux631ux645ux62cux645ux648ux639ux647-ux642ux627ux646ux648ux646-ux639ux6a9ux633-ux646ux642ux6ccux636}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تحلیل ساختاری:} استدلال راسل شبیه به استفاده از قطری‌سازی
+  کانتور و قانون عکس نقیض است. اگر نگاشتی وجود داشته باشد که ساختار را
+  حفظ کند، با منفی کردن آن (متمم) به تناقض می‌رسیم.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۶---قواعد-استنتاج} (برهان
+خلف)}{۳. ارتباط با  (برهان خلف)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f6---ux642ux648ux627ux639ux62f-ux627ux633ux62aux646ux62aux627ux62c-ux628ux631ux647ux627ux646-ux62eux644ux641}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{متدولوژی:} کل این پارادوکس یک مثال کلاسیک از رسیدن به
+  \(p \land \sim p\) است که در منطق کلاسیک باطل است. این امر ریاضیدانان
+  را مجبور کرد اصول موضوعی جدیدی (مانند \lr{ZFC) }تدوین کنند که در آن
+  تشکیل مجموعه \(R\) غیرقانونی است.
+\end{itemize}

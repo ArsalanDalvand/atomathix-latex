@@ -1,0 +1,97 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{مفهوم ترکیب توابع
+\lr{(Function Composition)}}{مفهوم ترکیب توابع }}\label{مفهوم-ترکیب-توابع}
+\begin{tldr}{خلاصه سریع}
+ترکیب توابع یعنی اتصال سریالی دو ماشین پردازشگر. خروجی ماشین اول،
+مستقیماً به عنوان ورودی وارد ماشین دوم می‌شود. اگر \(f\) کارش «شستن» و
+\(g\) کارش «خشک کردن» باشد، \(g \circ f\) ماشینی است که لباس چرک را
+می‌گیرد و لباس شسته و خشک شده تحویل می‌دهد.
+\end{tldr}
+\subsection{۱. درک شهودی: آنالیز
+ماشین‌ها}\label{ux62fux631ux6a9-ux634ux647ux648ux62fux6cc-ux622ux646ux627ux644ux6ccux632-ux645ux627ux634ux6ccux646ux647ux627}
+بهترین راه برای درک ترکیب توابع، تصور آن‌ها به عنوان \textbf{ماشین} است:
+فرض کنید دو ماشین داریم:
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{ماشین \(f\) (لباسشویی):} لباس چرک (\(x\)) را می‌گیرد و لباس خیس
+  و تمیز (\(f(x)\)) تحویل می‌دهد.
+  \begin{itemize}
+  \tightlist
+  \item
+    \(f: X \to Y\)
+  \end{itemize}
+\item
+  \textbf{ماشین \(g\) (خشک‌کن):} لباس خیس (\(y\)) را می‌گیرد و لباس خشک و
+  تمیز (\(g(y)\)) تحویل می‌دهد.
+  \begin{itemize}
+  \tightlist
+  \item
+    \(g: Y \to Z\)
+  \end{itemize}
+\end{enumerate}
+اگر این دو ماشین را به هم وصل کنیم (خروجی اولی به ورودی دومی)، یک ماشین
+جدید و پیشرفته \(h\) ساخته‌ایم که لباس چرک می‌گیرد و لباس آماده پوشیدن
+تحویل می‌دهد. این ماشین جدید را \textbf{ترکیب \(g\) با \(f\)} می‌نامیم و
+با نماد \textbf{\(g \circ f\)} نشان می‌دهیم.
+\begin{warning}{نکته مهم در نمادگذاری}
+در نماد \(g \circ f\)، با اینکه \(g\) سمت چپ نوشته شده، اما در عمل
+\textbf{دومین} تابعی است که اجرا می‌شود.
+\[(\underbrace{g}_{\text{دوم}} \circ \underbrace{f}_{\text{اول}})(x) = g(f(x))\]
+چون \(x\) ابتدا وارد \(f\) می‌شود.
+\end{warning}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۲. تعریف ریاضی
+\lr{(Definition }13)}{۲. تعریف ریاضی 13)}}\label{ux62aux639ux631ux6ccux641-ux631ux6ccux627ux636ux6cc-definition-13}
+فرض کنید \(f: X \to Y\) و \(g: Y \to Z\) دو تابع باشند (دقت کنید که
+هم‌دامنه اولی باید با دامنه دومی سازگار باشد).
+\begin{tldr}{تعریف ترکیب}
+تابع \(g \circ f: X \to Z\) به صورت زیر تعریف می‌شود:
+\[\forall x \in X, \quad (g \circ f)(x) = g(f(x))\]
+\end{tldr}
+\subsubsection{تعریف مجموعه‌ای
+(دقیق)}\label{ux62aux639ux631ux6ccux641-ux645ux62cux645ux648ux639ux647ux627ux6cc-ux62fux642ux6ccux642}
+از آنجا که تابع مجموعه‌ای از زوج‌های مرتب است، تعریف دقیق مجموعه‌ای
+\(g \circ f\) چنین است:
+\[g \circ f = \{ (x, z) \in X \times Z \mid \exists y \in Y : (x, y) \in f \wedge (y, z) \in g \}\]
+\emph{(ترجمه: زوج \((x,z)\) در ترکیب است اگر واسطه‌ای مثل \(y\) وجود
+داشته باشد که \(x\) را به \(y\) (توسط \(f\)) و \(y\) را به \(z\) (توسط
+\(g\)) وصل کند).}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{مفهوم-تابع-و-قضیه-۶---تعریف-و-دامنه}}{۱. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux645ux641ux647ux648ux645-ux62aux627ux628ux639-ux648-ux642ux636ux6ccux647-ux6f6---ux62aux639ux631ux6ccux641-ux648-ux62fux627ux645ux646ux647}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{شرط وجود:} برای اینکه \(g \circ f\) قابل تعریف باشد، خروجی‌های
+  \(f\) (یعنی \(Im(f)\)) باید حتماً زیرمجموعه‌ای از ورودی‌های مجاز \(g\)
+  (یعنی \(Dom(g)\)) باشند. اگر \(Range(f) \not\subseteq Dom(g)\)، ماشین
+  دوم ممکن است ورودی نامعتبر دریافت کند و خراب شود.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. پیش‌نیاز
+\autoref{قضیه-۱۵---شرکت‌پذیری-ترکیب-توابع}}{۲. پیش‌نیاز }}\label{ux67eux6ccux634ux646ux6ccux627ux632-ux642ux636ux6ccux647-ux6f1ux6f5---ux634ux631ux6a9ux62aux67eux630ux6ccux631ux6cc-ux62aux631ux6a9ux6ccux628-ux62aux648ux627ux628ux639}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{مقدمه:} در قضایای بعدی خواهیم دید که ترکیب توابع خاصیت جابجایی
+  ندارد (\(f \circ g \neq g \circ f\))، اما خاصیت شرکت‌پذیری دارد
+  (\(h \circ (g \circ f) = (h \circ g) \circ f\)).
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۱۴---وجود-و-ویژگی‌های-تابع-وارون}}{۳. ارتباط با }}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f1ux6f4---ux648ux62cux648ux62f-ux648-ux648ux6ccux698ux6afux6ccux647ux627ux6cc-ux62aux627ux628ux639-ux648ux627ux631ux648ux646}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{خنثی‌سازی:} مفهوم «تابع وارون» دقیقاً بر عکس کردنِ عملیات ترکیب
+  است. اگر \(f\) لباسی را بشوید، \(f^{-1}\) باید بتواند آن را دوباره چرک
+  کند! رابطه آن‌ها چنین است:
+  \[f^{-1} \circ f = I_X \quad (\text{تابع همانی})\]
+\end{itemize}

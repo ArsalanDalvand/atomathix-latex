@@ -1,0 +1,92 @@
+% ---------------------------------------------------------------------
+% Copyright (c) 2026 Arsalan Dalvand & Reyhaneh Darvishi.
+% Licensed under CC BY-NC-SA 4.0.
+% See LICENSE file for details.
+% ---------------------------------------------------------------------
+
+\section{\texorpdfstring{قضیه ۴: قوانین جبر مجموعه‌ها
+\lr{(Set Algebra Laws)}}{قضیه ۴: قوانین جبر مجموعه‌ها }}\label{قضیه-۴---جبر-مجموعه-ها}
+\begin{tldr}{خلاصه سریع}
+این قضیه ساختار جبری حاکم بر مجموعه‌ها را تبیین می‌کند. این قوانین نشان
+می‌دهند که \((\mathcal{P}(X), \cup, \cap, ', \emptyset, X)\) یک
+\textbf{جبر بول \lr{(Boolean Algebra)}} است که دقیقاً ایزومورف با جبر
+گزاره‌ها در منطق ریاضی می‌باشد.
+\end{tldr}
+\subsection{۱. متن ریاضی
+قضیه}\label{ux645ux62aux646-ux631ux6ccux627ux636ux6cc-ux642ux636ux6ccux647}
+فرض کنید \(X\) مجموعه مرجع باشد و \(A, B, C\) زیرمجموعه‌هایی از \(X\)
+باشند. قوانین زیر همواره برقرارند:
+\begin{theorembox}{قضیه ۴}
+\textbf{الف) قوانین یکه \lr{(Identity Laws):}} \[A \cup \emptyset = A\]
+\[A \cap X = A\]
+\textbf{ب) قوانین خودتوانی \lr{(Idempotent Laws):}} \[A \cup A = A\]
+\[A \cap A = A\]
+\textbf{ج) قوانین جابجایی \lr{(Commutative Laws):}}
+\[A \cup B = B \cup A\] \[A \cap B = B \cap A\]
+\textbf{د) قوانین شرکت‌پذیری \lr{(Associative Laws):}}
+\[A \cup (B \cup C) = (A \cup B) \cup C\]
+\[A \cap (B \cap C) = (A \cap B) \cap C\]
+\textbf{ه) قوانین پخش‌پذیری \lr{(Distributive Laws):}}
+\[A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\]
+\[A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\]
+\end{theorembox}
+\subsection{\texorpdfstring{۲. اثبات صوری
+\lr{(Formal Proof)}}{۲. اثبات صوری }}\label{ux627ux62bux628ux627ux62a-ux635ux648ux631ux6cc-formal-proof}
+اثبات این قوانین مبتنی بر ترجمه گزاره‌های مجموعه‌ای به گزاره‌های منطقی و
+استفاده از هم‌ارزی‌های فصل ۱ است. در اینجا اثبات قانون شرکت‌پذیری اجتماع
+(بخش د) به عنوان نمونه ارائه می‌شود.
+\begin{info}{اثبات \(A \cup (B \cup C) = (A \cup B) \cup C\)}
+برای اثبات تساوی دو مجموعه، نشان می‌دهیم تابع گزاره‌نمای عضویت
+(\(x \in S\)) برای هر دو طرف هم‌ارز است:
+۱. تعریف طرف چپ:
+\[x \in A \cup (B \cup C) \iff x \in A \vee (x \in B \cup C)\]
+\[\iff x \in A \vee (x \in B \vee x \in C)\]
+۲. اعمال قانون شرکت‌پذیری در منطق (طبق
+\textbf{\autoref{قضیه-۴---قوانین-شرکت-پذیری-و-پخش-پذیری}}):
+\[\iff (x \in A \vee x \in B) \vee x \in C\]
+۳. بازگردانی به تعریف مجموعه: \[\iff x \in (A \cup B) \vee x \in C\]
+\[\iff x \in (A \cup B) \cup C\]
+۴. نتیجه: چون شرط عضویت برای هر \(x\) در دو مجموعه یکسان است، پس دو
+مجموعه برابرند.
+\end{info}
+\subsection{\texorpdfstring{۳. شبکه ارتباطی با سایر قضایا
+\lr{(Analytic Map)}}{۳. شبکه ارتباطی با سایر قضایا }}\label{ux634ux628ux6a9ux647-ux627ux631ux62aux628ux627ux637ux6cc-ux628ux627-ux633ux627ux6ccux631-ux642ux636ux627ux6ccux627-analytic-map}
+این قضیه تجلی مستقیم قوانین منطق در دنیای مجموعه‌هاست:
+\subsubsection{\texorpdfstring{۱. ارتباط با
+\autoref{قضیه-۴---قوانین-شرکت-پذیری-و-پخش-پذیری} (ساختار
+مشترک)}{۱. ارتباط با  (ساختار مشترک)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f4---ux642ux648ux627ux646ux6ccux646-ux634ux631ux6a9ux62a-ux67eux630ux6ccux631ux6cc-ux648-ux67eux62eux634-ux67eux630ux6ccux631ux6cc-ux633ux627ux62eux62aux627ux631-ux645ux634ux62aux631ux6a9}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ایزومورفیسم:} قوانین شرکت‌پذیری و پخش‌پذیری در مجموعه‌ها، تصویر
+  دقیق قوانین متناظر در منطق هستند. اگر جای \(\cup\) را با \(\vee\) و
+  جای \(\cap\) را با \(\wedge\) عوض کنیم، دقیقاً به فرمول‌های منطقی فصل ۱
+  می‌رسیم. این نشان می‌دهد که منطق و نظریه مجموعه‌ها دو مدل مختلف از یک
+  ساختار جبری واحد (جبر بول) هستند.
+\end{itemize}
+\subsubsection{\texorpdfstring{۲. ارتباط با
+\autoref{قضیه-۷---قوانین-تناقض} (یکه و
+خودتوانی)}{۲. ارتباط با  (یکه و خودتوانی)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f7---ux642ux648ux627ux646ux6ccux646-ux62aux646ux627ux642ux636-ux6ccux6a9ux647-ux648-ux62eux648ux62fux62aux648ux627ux646ux6cc}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{تناظر ثابت‌ها:} قوانین یکه \lr{(Identity) }در مجموعه‌ها
+  (\(A \cup \emptyset = A\)) متناظر با قوانین همانی در منطق
+  (\(p \vee c \equiv p\)) هستند. در این تناظر، مجموعه تهی
+  (\(\emptyset\)) نقش تناقض (\(c\)) و مجموعه مرجع (\(X\)) نقش راستگو
+  (\(t\)) را بازی می‌کند.
+\item
+  \textbf{خودتوانی:} قوانین \(A \cup A = A\) نیز مستقیماً از معادل منطقی
+  \(p \vee p \equiv p\) (قضیه ۲ فصل ۱) نشأت می‌گیرند.
+\end{itemize}
+\subsubsection{\texorpdfstring{۳. ارتباط با
+\autoref{قضیه-۹---تعمیم-پخش-پذیری}
+(تعمیم)}{۳. ارتباط با  (تعمیم)}}\label{ux627ux631ux62aux628ux627ux637-ux628ux627-ux642ux636ux6ccux647-ux6f9---ux62aux639ux645ux6ccux645-ux67eux62eux634-ux67eux630ux6ccux631ux6cc-ux62aux639ux645ux6ccux645}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{گسترش به خانواده‌ها:} قوانین پخش‌پذیری بیان شده در اینجا (بخش ه)
+  محدود به دو یا سه مجموعه هستند. در قضیه ۹ همین فصل، این قوانین برای
+  خانواده‌های نامتناهی از مجموعه‌ها تعمیم داده می‌شوند
+  (\(A \cap (\bigcup B_i) = \bigcup (A \cap B_i)\)).
+\end{itemize}
